@@ -16,7 +16,7 @@ copilot-workshops/
 │   ├── vscode/                  ← VS Code lessons (0-prerequisites.md + numbered exercises)
 │   ├── cloud/                   ← Cloud agent lessons (0-prerequisites.md + numbered exercises)
 │   ├── app/                     ← GitHub Copilot app lessons (setup folded into Exercise 1)
-│   ├── es-es/ ja-jp/ ...        ← Translated locale trees (currently the app harness)
+│   ├── es-es/ ja-jp/ ko-kr/ pl-pl/ pt-br/ zh-cn/  ← Translated locale trees (app + cli)
 │   └── _images/                 ← Screenshots and diagrams (shared across locales)
 ├── website/                     ← Optional Astro + Starlight publisher
 │   ├── astro.config.mjs         ← Site URL, base path, locales, sidebar
@@ -113,7 +113,7 @@ The site runs at <http://localhost:4321/copilot-workshops/>.
 **Verify** before committing:
 
 1. **Build** — `cd website && rm -rf dist && npm run build`. Must succeed.
-2. **Page-count invariant** — Starlight emits 36 workshop routes for English and each of the five configured locales, then adds the legacy redirect. This equals 217 built `index.html` pages when excluding the 404 page; the build reports 218 HTML files including the 404 page.
+2. **Page-count invariant** — Starlight emits 36 workshop routes for English and each of the six configured locales, then adds the legacy redirect. This equals 253 built `index.html` pages when excluding the 404 page; the build reports 254 HTML files including the 404 page.
 3. **Link check** — lychee (offline) against the built `website/dist/`. Catches broken internal links/images.
 
 **What CI enforces vs. what you run locally:** CI (`pages.yml`) runs the **build** and the **lychee** link check on every PR. It does not run browser validation or the content-alignment agentic workflow as part of the Pages build job. After merge to `main`, `pages.yml` deploys the site to GitHub Pages.
