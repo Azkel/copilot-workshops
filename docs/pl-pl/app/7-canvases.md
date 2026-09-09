@@ -3,33 +3,34 @@ title: "Lekcja 7 - Planowanie z kanwami"
 description: "Utwórz współdzieloną, sterowaną agentem kanwę w aplikacji GitHub Copilot, aby planować i śledzić pracę razem z agentem."
 authors:
   - geektrainer
-lastUpdated: 2026-07-09
+  - azkel
+lastUpdated: 2026-09-09
 ---
 
-Dotąd kierowałeś agentami przez czat. Ale wiele pracy nie żyje w rozmowie — żyje na tablicy, w dokumencie albo na liście kontrolnej. **Kanwy** dają Tobie i agentowi współdzieloną powierzchnię właśnie do takiej pracy, bezpośrednio w aplikacji. Podczas tej lekcji utworzysz prostą kanwę do planowania i śledzenia backlogu, nad którym pracowałeś.
+Dotąd kierowałeś agentami przez czat. Ale wiele pracy nie żyje w rozmowie — żyje na tablicy, w dokumencie albo na liście zadań. **Kanwy** dają Tobie i agentowi współdzieloną powierzchnię właśnie do takiej pracy, bezpośrednio w aplikacji. Podczas tej lekcji utworzysz prostą kanwę do planowania i śledzenia backlogu, nad którym pracowałeś.
 
 Podczas tej lekcji:
 
 - zrozumiesz, czym jest kanwa i kiedy jej używać.
-- utworzysz współdzieloną kanwę tablicy Kanban do triażu backlogu.
-- zapiszesz kanwę w repozytorium i scalisz ją dla zespołu.
+- utworzysz współdzieloną kanwę tablicy Kanban do zarzadzania backlogiem.
+- zapiszesz kanwę w repozytorium i udostępnisz ją dla zespołu.
 - otworzysz kanwę w nowej sesji i zaczniesz z niej pracę.
 
 ## Scenariusz
 
-Patrzenie na listę zgłoszeń (issues) może być przytłaczające, nawet w najlepszych czasach. Programiści Tailspin Toys szukali narzędzia, które pozwoliłoby szybko triażować zgłoszenia i zaczynać nad nimi pracę w aplikacji Copilot.
+Patrzenie na listę zgłoszeń (issues) może być przytłaczające, nawet w spokojniejszym okresie życia projektu. Programiści Tailspin Toys szukali narzędzia, które pozwoliłoby szybko przeglądać zgłoszenia i zaczynać nad nimi pracę w aplikacji Copilot.
 
 ## Czym jest kanwa?
 
-[Kanwa][canvas-docs] to współdzielona, interaktywna powierzchnia dla artefaktu pracy — planu, tablicy triażu, listy kontrolnej wydania, pulpitu lub dokumentu. Choć czat świetnie opisuje intencję i pomaga rozumować przez niejasności, większość pracy dzieje się na *powierzchni*. Kanwy pozwalają współpracować z agentem bezpośrednio na tej powierzchni.
+[Kanwa][canvas-docs] to współdzielona, interaktywna powierzchnia dla całej wykonanej pracy w projekcie — planu, tablicy zarządzania backlogiem, listy wydań, pulpitu lub dokumentów. Choć czat świetnie opisuje intencję i pomaga weryfikować niejasności, większość pracy dzieje się na *powierzchni*. Kanwy pozwalają współpracować z agentem bezpośrednio na tej powierzchni.
 
-Kanwy są **dwukierunkowe**: agent może aktualizować kanwę podczas pracy, a Ty możesz edytować tę samą powierzchnię samodzielnie. Gdy tworzysz kanwę, agent buduje ją na podstawie Twojego monitu i przepływu pracy, a Ty możesz prosić o dodanie, usunięcie lub zmianę możliwości w trakcie. Po utworzeniu kanwa otwiera się w prawym panelu bocznym aplikacji.
+Kanwy są **dwukierunkowe**: agent może aktualizować kanwę podczas pracy, a Ty możesz edytować tę samą powierzchnię samodzielnie. Gdy tworzysz kanwę, agent buduje ją na podstawie Twojego polecenia i przepływu pracy, a Ty możesz prosić o dodanie, usunięcie lub zmianę możliwości w trakcie. Po utworzeniu kanwa otwiera się w prawym panelu bocznym aplikacji.
 
 Typowe przykłady:
 
 - **Kanwy Markdown** do planowania dnia i priorytetyzacji zgłoszeń oraz pull requestów.
 - **Agentowe tablice kanban**, na których ludzie i agenci dodają karty i przesuwają pracę między kolumnami.
-- **Tablice triażu zgłoszeń**, które podsumowują najważniejsze zgłoszenia i powtarzające się tematy w repozytorium.
+- **Tablice zarzadzania zgłoszeniami**, które podsumowują najważniejsze zgłoszenia i powtarzające się tematy w repozytorium.
 
 ## Po co używać kanwy?
 
@@ -37,31 +38,31 @@ Sięgnij po kanwę, gdy zadanie wymaga struktury, iteracji i weryfikacji, a sam 
 
 - oprzeć pracę agenta na rzeczywistym artefakcie pasującym do Twojego przepływu.
 - kierować lub korygować pracę bezpośrednio na współdzielonej powierzchni, a potem pozwolić agentowi kontynuować od Twoich zmian.
-- śledzić postęp jako widoczne zmiany artefaktu, a nie tylko odpowiedzi w czacie.
+- śledzić postęp jako widoczne zmiany w całym produkcie, a nie tylko odpowiedzi w czacie.
 
 ## Utwórz kanwę do śledzenia pracy
 
-Wypchnąłeś sporo: ocena gwiazdkowa, standard dokumentacji i funkcja filtrowania są scalone. Ale w backlogu nadal są elementy. Utwórzmy kanwę, by szybko triażować pracę.
+Wdrożyłeś sporo rzeczy: ocena gwiazdkowa, standard dokumentacji i funkcję filtrowania - wszystkie są już scalone. Ale w backlogu nadal są elementy. Utwórzmy kanwę, by szybko zaplanować pracę.
 
 1. Wróć do (lub otwórz) aplikacji GitHub Copilot.
 2. Wybierz **Home screen**.
 3. Upewnij się, że dla repozytorium wybrane jest `tailspin-toys`.
-4. W polu monitu użyj poniższego monitu, aby utworzyć kanwę spełniającą potrzeby:
+4. W polu polecenia użyj poniższego tekstu, aby utworzyć kanwę spełniającą potrzeby:
 
    ```plaintext
    Create a basic Kanban board canvas that allows me to quickly triage work. Highlight the three issues which are most likely to need attention right now, with the remainder in a second section down below. The top three cards should include a description of the issue's content and a justification of why they're at the top of the list. Each issue should have a button that allows me to add it to the current context for the current session so I can get to work on it straightaway.
    ```
 
-Copilot zabierze się do tworzenia kanwy!
+Copilot zabierze się za tworzenie kanwy!
 
 > [!NOTE]
-> Zajmie to kilka minut. Ponieważ to skomplikowane zadanie, możesz nie być zadowolony z pierwszej wersji. Możesz kontynuować monity, by zbudować narzędzie swoich marzeń!
+> Zajmie to kilka minut. Ponieważ to skomplikowane zadanie, możesz nie być zadowolony z pierwszej wersji. Możesz wysyłać kolejne polecenia, by zbudować narzędzie swoich marzeń!
 
 ## Zapisz kanwę i scal ją z repozytorium
 
 Kanwy mogą stać się zasobami w repozytorium, tak jak pliki instrukcji i skille. Poprośmy Copilota o dodanie jej do repozytorium i scalenie, by cały zespół mógł z niej korzystać.
 
-1. W tej samej sesji poproś Copilota o zapisanie kanwy w repozytorium poniższym monitem:
+1. W tej samej sesji poproś Copilota o zapisanie kanwy w repozytorium poniższym poleceniem:
 
    ```plaintext
    Let's save this canvas definition to the repository so I can share it with my development team
@@ -75,9 +76,9 @@ Kanwy mogą stać się zasobami w repozytorium, tak jak pliki instrukcji i skill
 4. Tekst przycisku zmienia się teraz na **Agent merge**.
 5. Wybierz przycisk **Agent merge**, aby uruchomić proces agent merge.
 
-Aplikacja Copilot rozpoczyna proces tworzenia i zarządzania PR. Zaczyna od zbadania projektu, by ustalić, jak najlepiej utworzyć PR, a potem go tworzy.
+Aplikacja Copilot rozpocznie proces tworzenia i zarządzania PR. Zacznie od przejrzenia projektu, by ustalić, jak najlepiej utworzyć PR, a potem go stworzy.
 
-Po chwili zauważysz, że Copilot znów zaczyna pracę, patrząc na warunki PR — proces CI uruchamiający wszystkie testy w repozytorium. Zgłosi status wszelkich przeglądów pozostawionych przez innych członków zespołu, sprawdzeń do uruchomienia (proces CI) oraz tego, czy PR jest możliwy do scalenia.
+Po chwili zauważysz, że Copilot znów zabierze się do pracy, patrząc na warunki PR — proces CI uruchamiający wszystkie testy w repozytorium. Zgłosi status wszelkich komentarzy pozostawionych przez innych członków zespołu, walidacji do uruchomienia (proces CI) oraz tego, czy PR jest możliwy do scalenia.
 
 6. Pozwól agent merge scalić pull request, wybierając listę rozwijaną obok **Agent merge**, a następnie **Merge pull request**.
 
@@ -92,7 +93,7 @@ Utworzyłeś nową współdzieloną kanwę dla zespołu!
 Gdy kanwa jest utworzona, rozpocznijmy nową sesję i użyjmy jej!
 
 1. W aplikacji Copilot rozpocznij nową sesję, wybierając **New session** obok **tailspin-toys**.
-2. Poproś Copilota o otwarcie kanwy triażu poniższym monitem:
+2. Poproś Copilota o otwarcie kanwy zadań poniższym poleceniem:
 
    ```plaintext
    Open the triage issues canvas
@@ -100,20 +101,20 @@ Gdy kanwa jest utworzona, rozpocznijmy nową sesję i użyjmy jej!
 
 3. Powinieneś zauważyć, że kanwa, którą zbudowałeś, jest teraz otwarta w tej nowej sesji!
 4. Wybierz **Add to current context** na jednym ze zgłoszeń, które najbardziej Cię interesuje.
-5. Copilot zabiera się do pracy nad zgłoszeniem!
+5. Copilot zabierze się za pracę nad zgłoszeniem!
 
 Użyłeś utworzonej kanwy, by usprawnić proces deweloperski.
 
 ## Podsumowanie i kolejne kroki
 
-Utworzyłeś współdzieloną powierzchnię, na której Ty i agent możecie współpracować! Ty:
+Utworzyłeś współdzieloną powierzchnię, na której Ty i agent możecie współpracować! W ramach tej lekcji:
 
 - poznałeś, czym są kanwy i kiedy ich używać.
-- utworzyłeś z agentem współdzieloną kanwę tablicy Kanban do triażu.
+- utworzyłeś z agentem współdzieloną kanwę tablicy Kanban do zarządzania zadaniami.
 - zapisałeś i scaliłeś kanwę z repozytorium za pomocą Agent Merge.
 - otworzyłeś kanwę w nowej sesji i użyłeś jej do rozpoczęcia pracy.
 
-Gdy backlog jest śledzony, zrób krok wstecz, by przejrzeć wszystko, co zbudowałeś, i dokąd iść dalej. Przejdź do [Lekcji 8 - Podsumowanie i kolejne kroki][next-lesson].
+Gdy backlog jest widoczny, zrób krok wstecz, by przejrzeć wszystko, co zbudowałeś, i dokąd iść dalej. Przejdź do [Lekcji 8 - Podsumowanie i kolejne kroki][next-lesson].
 
 ## Zasoby
 

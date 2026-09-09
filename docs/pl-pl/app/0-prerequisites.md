@@ -69,7 +69,7 @@ Warsztaty będą prowadzone na własnej kopii projektu Tailspin Toys. Utwórz j�
 
 Jesteś gotowy! Zainstalowałeś Node.js, aby projekt mógł się budować i być testowany na Twojej maszynie, oraz utworzyłeś własną kopię repozytorium Tailspin Toys.
 
-W następnym kroku zainstalujesz aplikację GitHub Copilot, podłączysz właśnie utworzone repozytorium i zapoznasz się z obszarem roboczym. Przejdź do [Lekcji 1 - Instalacja aplikacji GitHub Copilot][next-lesson].
+W następnym kroku zainstalujesz aplikację GitHub Copilot, podłączysz właśnie utworzone repozytorium i zapoznasz się z interfejsem aplikacji. Przejdź do [Lekcji 1 - Instalacja aplikacji GitHub Copilot][next-lesson].
 
 ## Zasoby
 
