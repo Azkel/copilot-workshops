@@ -110,6 +110,12 @@ Mirror the English harness structure, but keep these Polish naming patterns esta
 
 - Use concise professional prose. Prefer direct instructions such as **Uruchom poniższe polecenie**.
 - Address the learner with consistent second-person singular (**ty**) and masculine past-tense narrative forms common in Polish technical docs (**zainstalowałeś**, **użyłeś**, **przejrzałeś**) unless the source explicitly requires inclusive double forms.
+- Prefer **polecenie** (or **zapytanie** when asking for an example/output) over **monit** for what the learner sends to Copilot (`Użyj poniższego polecenia`, `Wyślij poniższe polecenie`). English *prompt* may remain in UI sense as **pole monitu** / **interfejs** when naming the input box; do not force **monit** for instructional steps.
+- Keyboard: **Wciśnij** for single keys (`Enter`); **Użyj kombinacji** for chords (`Ctrl`+`C`).
+- Browser auth flows: **postępuj zgodnie z instrukcjami** (not *monitami*).
+- Prefer future tense when narrating what Copilot will do next (**zabierze się za**, **zbada**, **stworzy**).
+- Prefer **na podstawie zgłoszenia** when starting a session from an issue.
+- Prefer instructional **Zwróć uwagę** / **Przejrzyj** / **Upewnij się** over bare **Zauważ** / **Potwierdź** where the learner must verify something.
 - Avoid unnecessary courtesy formulas and repeated reader pronouns. Do not pad instructions with **proszę**.
 - Preserve distinctions among requirements (**musi** / **wymagane**), recommendations (**zalecane** / **powinien**), and possibilities (**może**). Never weaken or strengthen normative language.
 
