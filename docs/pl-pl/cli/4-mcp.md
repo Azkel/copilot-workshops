@@ -1,9 +1,9 @@
 ---
-title: "Ćwiczenie 4 — Testowanie funkcji serwerem Playwright MCP"
+title: "Ćwiczenie 4 - Testowanie funkcji serwerem Playwright MCP"
 authors:
   - geektrainer
   - azkel
-lastUpdated: 2026-09-09
+lastUpdated: 2026-09-10
 ---
 
 Właśnie wygenerowałeś funkcję filtrowania wykorzystując Copilot CLI. Zanim otworzysz pull request, upewnij się, że działa w przeglądarce. Zamiast klikać po aplikacji samodzielnie, połączysz **serwer Playwright MCP** i pozwolisz Copilotowi sterować prawdziwą przeglądarką, aby przetestować funkcję za Ciebie.

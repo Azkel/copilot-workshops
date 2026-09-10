@@ -18,7 +18,7 @@ Podczas tej lekcji:
 
 ## Scenariusz
 
-Jak każdy dobry zespół developerski, Tailspin Toys ma zestaw wytycznych i wymagań dotyczących praktyk tworzenia oprogramowania. Sa one następujące:
+Jak każdy dobry zespół deweloperski, Tailspin Toys ma zestaw wytycznych i wymagań dotyczących praktyk tworzenia oprogramowania. Są one następujące:
 
 - Dokumentacja powinna być dodawana do kodu w formie komentarzy TSDoc.
 - Formatowanie powinno być udokumentowane i egzekwowane przez linting.
@@ -70,7 +70,7 @@ Poświęć chwilę na przeczytanie plików instrukcji dostarczanych z tym repozy
    ![Przycisk Show folder view w panelu przeglądu z otwartym plikiem w aplikacji GitHub Copilot](../../_images/app-show-folder-view.png)
 
 8. Przejdź do folderu `.github/instructions` i zbadaj pliki. Zauważ, że są instrukcje dla plików Astro, warstwy danych Drizzle, testów i innych.
-9. Otwórz `.github/instructions/unit-tests.instructions.md`. Zwróc uwagę na pole `applyTo` na górze — ustawia glob (względem katalogu głównego repozytorium), który określa, do których plików instrukcje się stosują. W tym wypadku pasuje każdy plik testów TypeScript (np. pasujący do `**/*.test.ts`).
+9. Otwórz `.github/instructions/unit-tests.instructions.md`. Zwróć uwagę na pole `applyTo` na górze — ustawia glob (względem katalogu głównego repozytorium), który określa, do których plików instrukcje się stosują. W tym wypadku pasuje każdy plik testów TypeScript (np. pasujący do `**/*.test.ts`).
 10. Zwróć uwagę na instrukcje dotyczące tworzenia testów jednostkowych dla tego projektu.
 11. Na koniec otwórz `.github/instructions/drizzle.instructions.md` i przewiń na dół. Przejrzyj linki do innych plików instrukcji (np. `unit-tests.instructions.md`) oraz istniejących plików w projekcie. Dzięki temu możesz dzielić większe zestawy instrukcji na mniejsze, wielokrotnego użytku pliki i wskazywać Copilotowi przykłady do naśladowania przy generowaniu kodu. (Ścieżki tam są względne wobec pliku instrukcji, a nie katalogu głównego repozytorium.)
 
@@ -82,7 +82,7 @@ Poświęć chwilę na przeczytanie plików instrukcji dostarczanych z tym repozy
 W poprzedniej lekcji rozpocząłeś sesję od bezpośredniego polecenia do Agenta. Większość pracy zaczyna się jednak od zgłoszenia. Utwórzmy nową sesję na podstawie zgłoszenia o aktualizacji plików instrukcji, a potem poprośmy o aktualizację.
 
 > [!NOTE]
-> Ponieważ pliki instrukcji mają duży wpływ na kod generowany przez Copilota, należy dbać o to, by jasno go prowadziły. Pozwolenie Copilotowi na utworzenie pierwszej wersji — jak zrobisz w tej lekcji — to dobre podejście, lecz potem pownieneś samodzielnie go przejrzeć, by upewnić się, że aktualizacje spełniają wymagania.
+> Ponieważ pliki instrukcji mają duży wpływ na kod generowany przez Copilota, należy dbać o to, by jasno go prowadziły. Pozwolenie Copilotowi na utworzenie pierwszej wersji — jak zrobisz w tej lekcji — to dobre podejście, lecz potem powinieneś samodzielnie go przejrzeć, by upewnić się, że aktualizacje spełniają wymagania.
 
 1. Wybierz **My work** na pasku bocznym
 2. Wybierz zgłoszenie o tytule **Update our repository coding standards**, aby je otworzyć.
@@ -117,7 +117,7 @@ Przeczytajmy zmiany w kodzie wprowadzone przez Copilota, a także poprośmy go o
   Do not make any updates, but show me what the code would look like. Based on the new instructions, if I asked Copilot to create a new library component to return all Publishers what would that code look like?
   ```
 
-4. Przejrzyj kod zaproponowany przez Copilota. Zwróc uwagę na komentarze TSDoc i nagłówek komentarza pliku — to dokładnie to, o co proszą zaktualizowane instrukcje.
+4. Przejrzyj kod zaproponowany przez Copilota. Zwróć uwagę na komentarze TSDoc i nagłówek komentarza pliku — to dokładnie to, o co proszą zaktualizowane instrukcje.
 
 Zaktualizowałeś pliki instrukcji w projekcie i sprawdziłeś, jaki będzie ich wpływ!
 
@@ -146,7 +146,7 @@ Zbadałeś, jak aplikacja pobiera kontekst z plików instrukcji, a następnie u�
 - poprosiłeś agenta o dodanie standardu dokumentacji do `.github/copilot-instructions.md`.
 - przejrzałeś zmianę i scaliłeś ją jako pull request.
 
-W następnym kroku zbudujesz funkcję filtrowania w świeżej sesji — i zobaczysz, jak Agnet wdraża standard, który właśnie scaliłeś. Przejdź do [Lekcji 4 - Budowanie funkcji z Autopilot][next-lesson].
+W następnym kroku zbudujesz funkcję filtrowania w świeżej sesji — i zobaczysz, jak Agent wdraża standard, który właśnie scaliłeś. Przejdź do [Lekcji 4 - Budowanie funkcji z Autopilot][next-lesson].
 
 ## Zasoby
 

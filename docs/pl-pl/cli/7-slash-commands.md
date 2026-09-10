@@ -1,9 +1,9 @@
 ---
-title: "Ćwiczenie 7 — Polecenia slash w GitHub Copilot CLI"
+title: "Ćwiczenie 7 - Polecenia slash w GitHub Copilot CLI"
 authors:
   - geektrainer
   - azkel
-lastUpdated: 2026-09-09
+lastUpdated: 2026-09-10
 ---
 
 Jak każde dobre narzędzie CLI, GitHub Copilot CLI zawiera wiele poleceń slash do interakcji z nim. Te polecenia udostępniają zaawansowane funkcje, informacje „za kulisami” lub dodatkowe opcje konfiguracji. Już poznałeś kilka z nich: `/clear` do czyszczenia kontekstu i `/mcp` do przeglądania serwerów MCP. Przyjrzyjmy się kilku innym potężnym, w tym `/context`, `/model`, `/share` i `/delegate`.
@@ -55,12 +55,12 @@ Przy większych lub bardziej złożonych zadaniach możesz dojść do maksymalne
 
 3. Zwróć uwagę na wyświetlony model (może różnić się od tego na obrazku) oraz bieżący procent użytych tokenów. Pozostałe informacje podkreślają:
 
-    | Tytuł        | Opis                                                   |
-    | ------------ | ------------------------------------------------------ |
-    | System/Tools | Pliki instrukcji, zawartość plików i definicje narzędzi |
-    | Messages     | Historia rozmowy między Tobą a Copilotem               |
-    | Buffer       | Zarezerwowane miejsce przez Copilot CLI na generowanie odpowiedzi |
-    | Free space   | Pozostałe wolne miejsce                                |
+    | Tytuł                  | Opis                                                   |
+    | ---------------------- | ------------------------------------------------------ |
+    | System/Tools (system/narzędzia) | Pliki instrukcji, zawartość plików i definicje narzędzi |
+    | Messages (wiadomości)  | Historia rozmowy między Tobą a Copilotem               |
+    | Buffer (bufor)         | Zarezerwowane miejsce przez Copilot CLI na generowanie odpowiedzi |
+    | Free space (wolne)     | Pozostałe wolne miejsce                                |
 
 4. Skompaktuj historię rozmowy, wysyłając do Copilot CLI poniższe polecenie slash:
 
@@ -118,7 +118,7 @@ Czasem chcesz dalej pracować w terminalu, ale przekazać dłuższe zadanie do C
     /clear
     ```
 
-2. Wyślij małe, dobrze określone polecenie. Na przykład możesz oddelegować paginację ze stretch goal z backlogu:
+2. Wyślij małe, dobrze określone polecenie. Na przykład możesz oddelegować paginację z celu rozszerzonego (stretch goal) z backlogu:
 
     ```
     Implement pagination on the game list page so it shows a fixed number of games per page with Previous and Next controls, and add tests.

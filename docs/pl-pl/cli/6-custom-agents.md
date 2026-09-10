@@ -1,9 +1,9 @@
 ---
-title: "Ćwiczenie 6 — Agenci niestandardowi z GitHub Copilot CLI"
+title: "Ćwiczenie 6 - Agenci niestandardowi z GitHub Copilot CLI"
 authors:
   - geektrainer
   - azkel
-lastUpdated: 2026-09-09
+lastUpdated: 2026-09-10
 ---
 
 ## Czym są agenci niestandardowi?
@@ -28,6 +28,7 @@ Wiele aplikacji webowych nie jest w pełni dostępnych dla wszystkich użytkowni
 Tailspin Toys zobowiązuje się, by ich platforma crowdfundingowa była dostępna dla wszystkich użytkowników, niezależnie od możliwości wzrokowych czy preferencji. Niedawna opinia użytkowników wskazała, że niektórzy uznają obecny ciemny motyw za trudny do odczytania z powodu niewystarczającego kontrastu między tekstem a kolorami tła. Aby rozwiązać ten problem dostępności, zespół projektowy poprosił o implementację trybu wysokiego kontrastu, który użytkownicy mogą włączać i wyłączać.
 
 Ponieważ dostępność jest krytyczna, chcesz wdrożyć to jak najszybciej. Użyjesz agenta niestandardowego do wygenerowania funkcjonalności.
+
 Podczas tego ćwiczenia:
 
 - poznasz agentów niestandardowych.

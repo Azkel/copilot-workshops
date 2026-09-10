@@ -40,7 +40,7 @@ Aby korzystać z aplikacji GitHub Copilot, pierwszym krokiem — jak można się
 
 ## Zapoznaj się z obszarem roboczym
 
-Gdy projekt jest już pobrany, poświęć chwilę na rozpoznanie, co jest gdzie w wyświetlanym interfejsie. Aplikacja dzieli wszystko na kilku obszarów na pasku bocznym:
+Gdy projekt jest już pobrany, poświęć chwilę na rozpoznanie, co jest gdzie w wyświetlanym interfejsie. Aplikacja dzieli wszystko na kilka obszarów na pasku bocznym:
 
 - **Sessions** — miejsce, w którym agenci wykonują pracę. Każda sesja działa we własnym izolowanym obszarze roboczym, więc możesz uruchomić kilka sesji naraz bez kolizji zmian. Pierwszą sesję rozpoczniesz w następnej lekcji.
 - **Quick chats** — lekkie rozmowy do pytań i burzy mózgów, które nie potrzebują własnej gałęzi ani obszaru roboczego. Wypróbujesz jedną na końcu tej lekcji.
@@ -82,7 +82,7 @@ Gratulacje! Zainstalowałeś aplikację GitHub Copilot, podłączyłeś projekt 
 
 - instalować aplikację i logować się do GitHuba.
 - dodawać projekt z jego repozytorium na GitHubie.
-- jak używaćinterfejsu i znajdować przygotowany backlog w **My work**.
+- jak używać interfejsu i znajdować przygotowany backlog w **My work**.
 - używać szybkiego czatu do szybkiego, jednorazowego pytania.
 
 W następnym kroku rozpoczniesz pierwszą sesję agenta i wprowadzisz pierwszą zmianę w projekcie — wyświetlenie oceny za pomocą gwiazdek na kartach gier. Przejdź do [Lekcji 2 - Uruchomienie pierwszej sesji agenta][next-lesson].

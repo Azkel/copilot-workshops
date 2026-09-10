@@ -19,7 +19,7 @@ Podczas tej lekcji:
 
 ## Scenariusz
 
-Każda gra w Tailspin Toys może mieć ocenę gwiazdkową i aktualnie pojawia się ona na stronie szczegółów gry. Karty gier na stronie głównej pokazują jednak tylko tytuł, kategorię, wydawcę i opis. Na rozgrzewkę agent powinien umożliwić wyświetlanie istniejącej ocenę na każdej karcie — drobna, samodzielna zmiana, idealna na pierwszą sesję.
+Każda gra w Tailspin Toys może mieć ocenę gwiazdkową i aktualnie pojawia się ona na stronie szczegółów gry. Karty gier na stronie głównej pokazują jednak tylko tytuł, kategorię, wydawcę i opis. Na rozgrzewkę agent powinien umożliwić wyświetlanie istniejącej oceny na każdej karcie — drobna, samodzielna zmiana, idealna na pierwszą sesję.
 
 ## Anatomia sesji
 
@@ -58,7 +58,7 @@ Wszystkie zmiany wygenerowane przez AI zasługują na przegląd przed scaleniem,
 
    ![Górny pasek narzędzi aplikacji GitHub Copilot ze strzałką wskazującą przycisk Toggle review panel na prawo od Create PR](../../_images/app-2-review-panel.png)
 
-2. Powinieneś zauważyć kod dodany do `GameCard.astro`, głównego pliku używanego do wyświetlania szczegółów gry. Powinien być podobny do poniższego — małe pole, które wyśweitla ocenę, gdy jest obecna, a gdy `starRating` ma wartość `null`, pokazuje „No rating yet”:
+2. Powinieneś zauważyć kod dodany do `GameCard.astro`, głównego pliku używanego do wyświetlania szczegółów gry. Powinien być podobny do poniższego — małe pole, które wyświetla ocenę, gdy jest obecna, a gdy `starRating` ma wartość `null`, pokazuje „No rating yet”:
 
    ```astro
    {game.starRating !== null ? (

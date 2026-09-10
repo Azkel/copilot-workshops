@@ -1,9 +1,9 @@
 ---
-title: "Ćwiczenie 8 — Podsumowanie i kolejne kroki"
+title: "Ćwiczenie 8 - Podsumowanie i kolejne kroki"
 authors:
   - geektrainer
   - azkel
-lastUpdated: 2026-09-09
+lastUpdated: 2026-09-10
 ---
 
 W ostatnich ćwiczeniach poznałeś niektóre z najczęstszych przypadków użycia GitHub Copilot CLI, w tym:
@@ -18,7 +18,7 @@ Omówmy kilka poleceń slash, dobre praktyki i kolejne kroki.
 
 ## Polecenia slash
 
-Copilot CLI ma szereg poleceń slash do interakcji z nim, w tym takie, które pozwalają go konfigurować lub zobaczyć, co dzieje się za kulisami. Już użyłeś `/clear`, aby rozpocząć nowy chat czyszczący bieżący kontekst, oraz `/mcp` do przeglądania i zarządzania serwerami MCP. Kilka dodatkowych, które mogą być pomocne:
+Copilot CLI ma szereg poleceń slash do interakcji z nim, w tym takie, które pozwalają go konfigurować lub zobaczyć, co dzieje się za kulisami. Już użyłeś `/clear`, aby rozpocząć nową rozmowę czyszczącą bieżący kontekst, oraz `/mcp` do przeglądania i zarządzania serwerami MCP. Kilka dodatkowych, które mogą być pomocne:
 
 | Polecenie          | Opis                                                          |
 | ------------------ | ------------------------------------------------------------- |
@@ -31,7 +31,7 @@ Copilot CLI ma szereg poleceń slash do interakcji z nim, w tym takie, które po
 | `/plan <prompt>`   | Utwórz plan implementacji przed kodowaniem                    |
 | `/review <prompt>` | Uruchom agenta przeglądu kodu do analizy zmian                |
 | `/delegate`        | Deleguj zadanie do Copilot cloud agent do przetwarzania asynchronicznego |
-| `/session`         | Pokaż informacje o sesji i podsumowanie workspace             |
+| `/session`         | Pokaż informacje o sesji i podsumowanie obszaru roboczego |
 | `/share`           | Udostępnij sesję do pliku markdown lub gista GitHub           |
 | `/skills`          | Zarządzaj skillami w celu rozszerzenia możliwości             |
 | `/usage`           | Wyświetl metryki i statystyki użycia sesji                    |

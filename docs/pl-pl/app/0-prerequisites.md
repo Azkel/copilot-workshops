@@ -16,7 +16,7 @@ Podczas tej lekcji:
 
 ## Zainstaluj Node.js
 
-W niektórych lekcjach agent kompiluje funkcje i uruchamia lokalnie zestaw testów Tailspin Toys, co wymaga **[Node.js][nodejs]** — jedynego środowiska uruchomieniowego (runtime), którego projekt potrzebuje. Zainstaluj wersję **22 lub nowszą**; bieżące wydanie **LTS** to bezpieczny wybór.
+W niektórych lekcjach agent buduje funkcje i uruchamia lokalnie zestaw testów Tailspin Toys, co wymaga **[Node.js][nodejs]** — jedynego środowiska uruchomieniowego (runtime), którego projekt potrzebuje. Zainstaluj wersję **22 lub nowszą**; bieżące wydanie **LTS** to bezpieczny wybór.
 
 Najprostsza opcja na każdej platformie to oficjalny instalator:
 

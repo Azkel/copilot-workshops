@@ -1,19 +1,19 @@
 ---
-title: "Ćwiczenie 2 — Instrukcje niestandardowe (Copilot CLI)"
+title: "Ćwiczenie 2 - Instrukcje niestandardowe (Copilot CLI)"
 authors:
   - geektrainer
   - azkel
-lastUpdated: 2026-09-09
+lastUpdated: 2026-09-10
 ---
 
 [← Poprzednie ćwiczenie: Instalacja Copilot CLI][previous-lesson] · [Następne ćwiczenie: Generowanie kodu z CLI →][next-lesson]
 
-Kontekst jest kluczowy przy pracy z generatywną AI. Jeśli zadanie ma być wykonane w określony sposób — albo jest informacja tła, którą Copilot powinien znać — chcesz mieć pewność, że ten kontekst jest dostępny. Masz kilka narzędzi, które pomagają Copilotowi; poznamy je w trakcie tych warsztatów. Zaczynamy od [plików instrukcji][instruction-files], które zwykle skupiają się na tym, jak sam kod powinien być ustrukturyzowany. Dzięki temu Copilot rozumie nie tylko *jaki* kod chcesz, ale też *jak* powinien być zbudowany.
+Kontekst jest kluczowy przy pracy z generatywną AI. Jeśli zadanie ma być wykonane w określony sposób — albo istnie kontekst, który Copilot powinien znać — chcesz mieć pewność, że te informacje są dostępne dla agenta. Masz kilka narzędzi, które pomagają Copilotowi; poznamy je w trakcie tych warsztatów. Zaczynamy od [plików instrukcji][instruction-files], które zwykle skupiają się na tym, jak sam kod powinien być ustrukturyzowany. Dzięki temu Copilot rozumie nie tylko *jaki* kod chcesz, ale też *jak* powinien być zbudowany.
 
 Podczas tego ćwiczenia:
 
 - zobaczysz, jak kontekst projektu, wytyczne kodowania i standardy dokumentacji docierają do Copilota przez instrukcje niestandardowe repozytorium oraz pliki instrukcji ograniczone ścieżką,
-- wygenerujesz pierwszy fragment danych pod filtrowanie (helper wydawców) przy *obecnych* instrukcjach,
+- wygenerujesz pierwszy fragment kodu pod filtrowanie danych przy *obecnych* instrukcjach,
 - dodasz nowy standard dla całego repozytorium do `.github/copilot-instructions.md`,
 - uruchomisz polecenie uzupełniające i zobaczysz, jak zregenerowany kod przyjmie nowy standard,
 - zatwierdzisz (commit) zmiany w instrukcjach i helperze, aby kolejne ćwiczenie mogło na nich budować.
@@ -36,23 +36,23 @@ Dzięki plikom instrukcji zapewnisz Copilotowi właściwe informacje, aby wykony
 
 ### Instrukcje niestandardowe
 
-Instrukcje niestandardowe pozwalają przekazać Copilotowi kontekst i preferencje, żeby lepiej rozumiał styl kodowania i wymagania. To potężna funkcja, która pomaga kierować Copilota ku bardziej trafnym sugestiom i fragmentom kodu. Możesz określić preferowane konwencje kodowania, biblioteki, a nawet typy komentarzy, które lubisz w kodzie. Instrukcje możesz tworzyć dla całego repozytorium albo dla konkretnych typów plików — z kontekstem na poziomie zadania.
+Instrukcje niestandardowe pozwalają przekazać Copilotowi kontekst i preferencje, żeby lepiej rozumiał styl programowania i oczekiwania. To potężna funkcja, która pomaga kierować Copilota ku bardziej trafnym sugestiom i fragmentom kodu. Możesz określić preferowane konwencje pisania kodu, wykorzystywanych bibliotek, a nawet typy komentarzy, które lubisz w kodzie. Instrukcje możesz tworzyć dla całego repozytorium albo dla konkretnych typów plików — z kontekstem na poziomie zadania.
 
 Są dwa typy plików instrukcji:
 
-- `.github/copilot-instructions.md` — jeden plik instrukcji wysyłany do Copilota przy **każdym** żądaniu dla repozytorium. Powinien zawierać informacje na poziomie projektu — kontekst istotny dla większości żądań chat lub CLI do Copilota. Może to być używany stack technologiczny, przegląd tego, co budujesz, dobre praktyki i inne globalne wskazówki.
+- `.github/copilot-instructions.md` — jeden plik instrukcji wysyłany do Copilota przy **każdym** żądaniu dla repozytorium. Powinien zawierać informacje na poziomie projektu — kontekst istotny dla większości żądań czatu lub CLI do Copilota. Może to być używany stack technologiczny, przegląd tego, co budujesz, dobre praktyki i inne globalne wskazówki.
 - Pliki `.github/instructions/*.instructions.md` można tworzyć dla konkretnych zadań lub typów plików. Użyjesz ich do wytycznych dla określonych języków (np. TypeScript lub Astro) albo zadań takich jak tworzenie komponentu UI czy nowego zestawu testów jednostkowych.
 
 > [!NOTE]
 > W IDE pliki instrukcji są używane tylko do generowania kodu w Copilot Chat — nie do uzupełnień kodu ani sugestii następnej edycji.
 >
-> Copilot Chat, Copilot CLI i Copilot cloud agent korzystają zarówno z plików na poziomie repozytorium, jak i z plików `*.instructions.md` (z front matter `applyTo`) przy generowaniu kodu.
+> Copilot Chat, Copilot CLI i Copilot cloud agent korzystają zarówno z plików na poziomie repozytorium, jak i z plików `*.instructions.md` (zaczyjających się od `applyTo`) przy generowaniu kodu.
 >
 > Ponadto Copilot [obsługuje pliki instrukcji według innych standardów][custom-instructions-support], w tym AGENTS.md i CLAUDE.md.
 
 ### Dobre praktyki zarządzania plikami instrukcji
 
-Pełna rozmowa o tworzeniu plików instrukcji wykracza poza zakres tych warsztatów. Przykłady w projekcie przykładowym pokazują jednak reprezentatywne podejście. Na wysokim poziomie:
+Zaawansowane metodologie tworzenia plików instrukcji wykraczają poza zakres warsztatu. Przykłady w tym projekcie pokazują jednak reprezentatywne podejście. Na wysokim poziomie:
 
 - W `copilot-instructions.md` trzymaj wskazówki na poziomie projektu: opis tego, co budujesz, strukturę projektu i globalne standardy kodowania.
 - Używaj plików `*.instructions.md` do konkretnych instrukcji dla typów plików (testy jednostkowe, komponenty Astro, warstwa danych) lub zadań.
@@ -63,7 +63,7 @@ Nie ma jednej właściwej metody tworzenia plików instrukcji — tak jak nie ma
 > [!TIP]
 > Każdy projekt korzystający z GitHub Copilot powinien mieć solidny zestaw plików instrukcji. Przeglądając te w tym projekcie, możesz zauważyć pliki dla wielu typów zadań, w tym [aktualizacji UI][ui-instructions] i [Astro][astro-instructions].
 >
-> Copilot może też pomóc wygenerować pliki instrukcji. Każda powierzchnia robi to inaczej (np. **Configure Chat → Generate Agent Instructions** w VS Code albo `/init` w Copilot CLI) — ćwiczenie dla powierzchni, na której jesteś, wskaże to, gdy będzie to istotne.
+> Copilot może też pomóc wygenerować pliki instrukcji. Każde środowisko robi to inaczej (np. **Configure Chat → Generate Agent Instructions** w VS Code albo `/init` w Copilot CLI) — ćwiczenie dla środowiska, w którym jesteś, wskaże to, gdy będzie to istotne.
 >
 > Szukasz szablonów lub punktu startowego? Zobacz [awesome-copilot][awesome-copilot] — repozytorium pełne plików instrukcji, agentów niestandardowych i innych zasobów.
 
@@ -73,13 +73,13 @@ Poświęć chwilę na przeczytanie plików instrukcji dostarczonych z tym repozy
 
 1. Otwórz `.github/copilot-instructions.md`.
 2. Przejrzyj plik, zwracając uwagę na krótki opis projektu oraz sekcje takie jak **Agent notes**, **Code standards**, **Scripts** i **Repository Structure**. W **Code standards** zwróć uwagę na zagnieżdżone wskazówki **GitHub Actions Workflows**. Dotyczą one każdej interakcji z Copilotem.
-3. Otwórz folder `.github/instructions` i rozejrzyj się. Są instrukcje dla plików Astro, warstwy danych Drizzle, testów i innych.
-4. Otwórz `.github/instructions/unit-tests.instructions.md`. Zwróć uwagę na pole `applyTo` na górze — ustawia glob (względem katalogu głównego repozytorium), który określa, do których plików instrukcje się stosują. Tutaj pasuje każdy plik testów TypeScript (np. zgodny z `**/*.test.ts`).
+3. Otwórz folder `.github/instructions` i przejrzyj dostępne pliki. Są instrukcje dla plików Astro, warstwy danych Drizzle, testów i innych.
+4. Otwórz `.github/instructions/unit-tests.instructions.md`. Zwróć uwagę na pole `applyTo` na górze — ustawia glob (względem katalogu głównego repozytorium), który określa, do których plików instrukcje się stosują. Tutaj pasuje każdy plik testów TypeScript (np. zgodny ze ścieżką `**/*.test.ts`).
 5. Zwróć uwagę na instrukcje dotyczące tworzenia testów jednostkowych w tym projekcie.
-6. Na koniec otwórz `.github/instructions/drizzle.instructions.md` i przewiń na dół. Zwróć uwagę na odnośniki do innych plików instrukcji (np. `unit-tests.instructions.md`) oraz istniejących plików w projekcie. Dzięki temu możesz dzielić większe zestawy instrukcji na mniejsze, wielokrotnego użytku pliki i wskazywać Copilotowi przykłady do naśladowania przy generowaniu kodu. (Ścieżki tam są względne względem pliku instrukcji, a nie katalogu głównego repozytorium.)
+6. Na koniec otwórz `.github/instructions/drizzle.instructions.md` i przewiń na dół. Zwróć uwagę na odnośniki do innych plików instrukcji (np. `unit-tests.instructions.md`) oraz istniejących plików w projekcie. Dzięki temu możesz dzielić większe zestawy instrukcji na mniejsze pliki wielokrotnego użytku i wskazywać Copilotowi przykłady do naśladowania przy generowaniu kodu. (Ścieżki tam są względne w odniesieniu do pliku instrukcji, a nie katalogu głównego repozytorium.)
 
 > [!NOTE]
-> Sekcja **Code formatting requirements** w `copilot-instructions.md` dokumentuje standardy kodowania projektu, ale jeszcze nie wymaga dokumentacji w kodzie. W kolejnych krokach dodasz reguły dla komentarzy TSDoc i nagłówków komentarzy plików.
+> Sekcja **Code formatting requirements** w `copilot-instructions.md` dokumentuje standardy pisania kodu w projekcie, ale jeszcze nie wymaga dokumentacji w kodzie. W kolejnych krokach dodasz reguły dla komentarzy TSDoc i nagłówków komentarzy plików.
 
 ## Utwórz gałąź
 
@@ -97,7 +97,7 @@ Będziesz wprowadzać zmiany w kodzie, więc utwórz gałąź do pracy.
    copilot --version
    ```
 
-   Jeśli polecenie nie zostanie znalezione lub nie jesteś zalogowany, wróć do [Ćwiczenia 1 — Instalacja GitHub Copilot CLI](../1-install-copilot-cli/).
+   Jeśli polecenie nie zostanie znalezione lub nie jesteś zalogowany, wróć do [Ćwiczenia 1 - Instalacja GitHub Copilot CLI](../1-install-copilot-cli/).
 
 ## Użyj Copilot CLI *przed* aktualizacją instrukcji
 
@@ -110,15 +110,15 @@ Uruchomienie Copilot CLI z **katalogu głównego repozytorium** zapewnia automat
 
 1. Wróć do codespace. Jeśli go zamknąłeś, przejdź do repozytorium na GitHub.com, wybierz **Code** > **Codespaces**, a następnie ponownie otwórz istniejący codespace.
 2. Wróć do otwartej sesji Copilot CLI. Jeśli terminal jest zamknięty lub wyszedłeś z Copilot CLI, otwórz terminal. Użyj kombinacji <kbd>Ctrl</kbd>+<kbd>\`</kbd>, a następnie uruchom go z katalogu głównego repozytorium poleceniem `copilot --yolo --enable-all-github-mcp-tools`. Zaufaj folderowi projektu, jeśli zostaniesz o to poproszony, potem uruchom `/models` i wybierz **Auto**.
-3. W interfejsie Copilot CLI poproś o wygenerowanie helpera wydawców, którego użyje UI filtrowania:
+3. W interfejsie Copilot CLI poproś o wygenerowanie funkcji wspomagającej filtrowanie danych o dostępnych wydawcach:
 
    ```plaintext
    Create a new data-access helper at src/lib/publishers.ts to return a list of all publishers. It should return the name and id for all publishers. Do not run the tests yet.
    ```
 
-4. Copilot CLI zbada projekt, zaproponuje plan i zapisze plik w tej sesji `--yolo`. Monitoruj zmiany w wyjściu terminala, a następnie przejrzyj je w edytorze.
+4. Copilot CLI zbada projekt, zaproponuje plan i zapisze plik w tej sesji `--yolo`. Monitoruj zmiany w oknie terminala, a następnie przejrzyj je w edytorze.
 5. Otwórz wygenerowany `src/lib/publishers.ts` w edytorze.
-6. Zwróć uwagę, że helper to typowana funkcja przyjmująca klienta `db` jako pierwszy argument i zwracająca typowaną tablicę wydawców — to wynika z konwencji warstwy danych w `.github/instructions/drizzle.instructions.md` (które dotyczą `src/lib/*.ts`).
+6. Zwróć uwagę, że funkcja wspomagająca to typowana metoda przyjmująca klienta `db` jako pierwszy argument i zwracająca typowaną tablicę wydawców — to wynika z konwencji warstwy danych w `.github/instructions/drizzle.instructions.md` (które dotyczą `src/lib/*.ts`).
 7. Zwróć uwagę, że w wygenerowanym kodzie **brakuje** komentarzy TSDoc oraz nagłówka komentarza na poziomie pliku.
 
 > [!CAUTION]
@@ -129,8 +129,8 @@ Uruchomienie Copilot CLI z **katalogu głównego repozytorium** zapewnia automat
 Jak wspomniano wcześniej, `.github/copilot-instructions.md` służy do przekazywania Copilotowi informacji na poziomie projektu. Upewnijmy się, że standardy kodowania repozytorium są udokumentowane, aby poprawić sugestie kodu.
 
 1. Ponownie otwórz `.github/copilot-instructions.md`.
-2. Znajdź sekcję **Code formatting requirements**, która powinna być w okolicy linii 27. Zwróć uwagę, jak dokumentuje standardy kodowania projektu — ale nie ma jeszcze reguły dla dokumentacji w kodzie, dlatego wygenerowany helper nie miał komentarzy dokumentacyjnych.
-3. Dodaj poniższe linie markdown tuż pod istniejącymi standardami, aby poinstruować Copilota o nagłówkach komentarzy plików i komentarzach TSDoc:
+2. Znajdź sekcję **Code formatting requirements**, która powinna być w okolicy linii 27. Zwróć uwagę, jak dokumentuje standardy samego pisania kodu w projekcie — ale nie ma jeszcze reguły odnośnie pisania dokumentacji w kodzie, dlatego wygenerowany helper nie miał adekwatnej dokumentacji w postaci komentarzy.
+3. Dodaj poniższe linie markdown tuż pod istniejącymi standardami, aby poinstruować Copilota o nagłówkach z komentarzami w plikach i komentarzach TSDoc:
 
    ```markdown
    - Every exported function should have a TSDoc comment describing its purpose, parameters, and return value.
@@ -144,7 +144,7 @@ Jak wspomniano wcześniej, `.github/copilot-instructions.md` służy do przekazy
 
 ## Ponownie uruchom polecenie i zaobserwuj zmianę
 
-Skoro instrukcje mają regułę komentarzy dokumentacyjnych, poproś Copilot CLI o aktualizację właśnie wygenerowanego pliku wydawców. Ta sama dyrektywa standardów pokieruje przepisaniem.
+Skoro instrukcje mają już wpis o generowaniu komentarzy, poproś Copilot CLI o aktualizację właśnie wygenerowanego pliku wydawców. Ta sama dyrektywa standardów pokieruje przepisaniem.
 
 1. Wyślij `/clear` w sesji Copilot CLI, aby zacząć od czystej rozmowy.
 2. Wyślij poniższe polecenie:
@@ -174,7 +174,7 @@ Skoro instrukcje mają regułę komentarzy dokumentacyjnych, poproś Copilot CLI
     */
    ```
 
-6. Zostaw ten zaktualizowany plik na miejscu. To pierwszy fragment danych, na którym zbudujesz w następnym ćwiczeniu.
+6. Zostaw ten zaktualizowany plik na miejscu. To pierwszy fragment danych, na którym zbudujesz kolejne funkcjonalności w następnym ćwiczeniu.
 
 ## Commit i push pierwszego fragmentu filtrowania
 
@@ -184,7 +184,7 @@ Skoro instrukcje mają regułę komentarzy dokumentacyjnych, poproś Copilot CLI
    git status
    ```
 
-2. Dodaj do stagingu zmianę instrukcji i helpera:
+2. Dodaj do listy zmian aktualizację instrukcji i zmodyfikowany kod:
 
    ```bash
    git add .github/copilot-instructions.md src/lib/publishers.ts
@@ -206,10 +206,10 @@ Skoro instrukcje mają regułę komentarzy dokumentacyjnych, poproś Copilot CLI
 
 Zobaczyłeś, jak Copilot pobiera kontekst z plików instrukcji w tym projekcie, a następnie użyłeś Copilot CLI do:
 
-- wygenerowania fundamentu helpera dostępu do danych wydawców pod filtrowanie przy *istniejących* instrukcjach,
+- wygenerowania fundamentu funkcji wspomagającej filtrowanie danych wydawców za pomocą *istniejących* instrukcji,
 - dodania nowego standardu dla całego repozytorium w `.github/copilot-instructions.md`,
-- uruchomienia polecenia uzupełniającego i obserwacji, jak zregenerowany kod przyjął nowy standard,
-- zatwierdzenia i wypchnięcia zarówno zmian w instrukcjach, jak i fundamentu helpera.
+- uruchomienia polecenia aktualizującego poprzednie instrukcje i obserwacji, jak zregenerowany kod przyjął nowy standard,
+- zatwierdzenia i wypchnięcia zarówno zmian w instrukcjach, jak i pierwszych zmian w kodzie.
 
 W następnym kroku zastosujesz te instrukcje, realizując pracę z backlogu w [ćwiczeniu generowania kodu][next-lesson].
 
