@@ -30,10 +30,10 @@ Kilka popularnych istniejących serwerów MCP:
 - **[GitHub MCP Server](https://github.com/github/github-mcp-server)**: Ten serwer zapewnia dostęp do zestawu API do zarządzania repozytoriami GitHub. Pozwala agentowi AI wykonywać działania takie jak tworzenie nowych repozytoriów, aktualizowanie istniejących oraz zarządzanie zgłoszeniami (issues) i pull requestami.
 - **[Playwright MCP Server][playwright-mcp-server]**: Ten serwer zapewnia automatyzację przeglądarki za pomocą Playwright. Pozwala agentowi AI wykonywać działania takie jak nawigacja pomiędzy stronami, wypełnianie formularzy i klikanie przycisków.
 
-Dostępnych jest wiele innych serwerów MCP zapewniających dostęp do różnych narzędzi i zasobów. GitHub hostuje [rejestr MCP](https://github.com/mcp), aby ułatwić dostęp do tych, które możecie potrzebować, jednocześnie wspierając cały ekosystem.
+Dostępnych jest wiele innych serwerów MCP zapewniających dostęp do różnych narzędzi i zasobów. GitHub hostuje [rejestr MCP](https://github.com/mcp), aby ułatwić dostęp do tych, których możesz potrzebować, jednocześnie wspierając cały ekosystem.
 
 > [!CAUTION]
-> Traktuj serwery MCP jak każdą inną zależność w projekcie. Przed użyciem serwera MCP dokładnie przejrzyj jego kod źródłowy, zweryfikuj wydawcę i rozważ potencjalne konsekwencje dla bezpieczeństwa rzeczy, z którym pracujesz. Używaj tylko serwerów MCP, którym ufasz, i ostrożnie przyznawaj dostęp do wrażliwych zasobów lub operacji.
+> Traktuj serwery MCP jak każdą inną zależność w projekcie. Przed użyciem serwera MCP dokładnie przejrzyj jego kod źródłowy, zweryfikuj wydawcę i rozważ potencjalne konsekwencje dla bezpieczeństwa rzeczy, z którymi pracujesz. Używaj tylko serwerów MCP, którym ufasz, i ostrożnie przyznawaj dostęp do wrażliwych zasobów lub operacji.
 
 ## Dodaj serwer Playwright MCP
 

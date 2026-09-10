@@ -20,7 +20,7 @@ W ramach tych lekcji zainstalujesz aplikację i skonfigurujesz projekt, a nastę
 | [2. Uruchomienie pierwszej sesji agenta][ex2] | Pierwsza zmiana | Rozpocznij sesję i wypchnij małą zmianę przy użyciu pierwszego pull requesta |
 | [3. Instrukcje niestandardowe w Copilocie][ex3] | Kontekst | Dodaj standard dokumentacji na podstawie zgłoszenia i scal go |
 | [4. Budowanie funkcji z Autopilot][ex4] | Główna funkcja | Użyj Plan i Autopilot do zbudowania filtrowania, potem zweryfikuj je skillem |
-| [5. Testowanie z Playwright MCP][ex5] | Narzędzia zewnętrzne | Dodaj serwer Playwright MCP i prztestuj funkcjonalność w przeglądarce |
+| [5. Testowanie z Playwright MCP][ex5] | Narzędzia zewnętrzne | Dodaj serwer Playwright MCP i przetestuj funkcjonalność w przeglądarce |
 | [6. Scalanie z Agent Merge][ex6] | Scalanie | Pozwól Agent Merge naprawić i scalić pull request filtrowania |
 | [7. Planowanie z kanwami][ex7] | Współpraca | Utwórz współdzieloną kanwę do planowania i śledzenia pracy |
 | [8. Podsumowanie i kolejne kroki][ex8] | Podsumowanie | Zautomatyzuj powtarzalne zadania i odkryj, co dalej |
@@ -34,7 +34,7 @@ Przed udziałem w tych warsztatach upewnij się, że masz:
 - [ ] [Zainstalowany Git][install-git] na komputerze
 
 > [!TIP]
-> Brak płatnego planu? Zweryfikowani studenci mogą otrzymać GitHub Copilot za darmo przez [GitHub Education][callout-student-plan-education]. Plan **Copilot Student** obejmuje agenta, MCP, przeglądanie kodu i funkcje Copilot CLI używane w tych warsztatach — więc możesz ukończyć każdą ze ściezek.
+> Brak płatnego planu? Zweryfikowani studenci mogą otrzymać GitHub Copilot za darmo przez [GitHub Education][callout-student-plan-education]. Plan **Copilot Student** obejmuje agenta, MCP, przeglądanie kodu i funkcje Copilot CLI używane w tych warsztatach — więc możesz ukończyć każdą ze ścieżek.
 
 > [!NOTE]
 > Ponieważ aplikacja Copilot działa na Twoim komputerze, a nie w codespace, [Lekcja 0][ex0] zaczyna się od instalacji Node.js i utworzenia kopii projektu przed instalacją aplikacji.

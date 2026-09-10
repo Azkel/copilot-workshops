@@ -16,7 +16,7 @@ Niedawne rozszerzenia możliwości GitHub Copilot dają programistom potężne n
 
 ## Wybierz środowisko
 
-GitHub Copilot czeka na Ciebie tam, gdzie pracujesz. Wybierz środowisko dopasowane do sposobu, w jaki chcesz budować, i przejdź przez ćwiczenia implementujące zadania z backlogu Tailspin Toys. Każde środowisko zaczyna się od konfiguracji Twojej maszyny - wybierz tą, którą preferujesz.
+GitHub Copilot czeka na Ciebie tam, gdzie pracujesz. Wybierz środowisko dopasowane do sposobu, w jaki chcesz budować, i przejdź przez ćwiczenia implementujące zadania z backlogu Tailspin Toys. Każde środowisko zaczyna się od konfiguracji Twojej maszyny - wybierz tę, którą preferujesz.
 
 ### 🖥️ [VS Code](../vscode/)
 
@@ -24,7 +24,7 @@ GitHub Copilot w **Visual Studio Code** i GitHub Codespaces. Pracuj w trybie age
 
 ### 💻 [Copilot CLI](cli/)
 
-**GitHub Copilot CLI** — asystent oparty na agentach działający w terminalu. Zainstaluj go, podłącz serwery MCP, generuj kod w trybie planowania i twórz własne skille, agentów niestandardowych oraz polecenia  — wszystko z wiersza poleceń, bez przełączania się do edytora graficznego.
+**GitHub Copilot CLI** — asystent oparty na agentach działający w terminalu. Zainstaluj go, podłącz serwery MCP, generuj kod w trybie planowania i twórz własne skille, agentów niestandardowych oraz polecenia — wszystko z wiersza poleceń, bez przełączania się do edytora graficznego.
 
 ### 🤖 [Copilot App](app/)
 
@@ -36,7 +36,7 @@ GitHub Copilot w **Visual Studio Code** i GitHub Codespaces. Pracuj w trybie age
 
 ## Scenariusz
 
-Jesteś nowym programistą w Tailspin Toys, fikcyjnej firmie oferującej crowdfunding gier planszowych o tematyce developerskiej — ogromny rynek! Backlog zespołu jest już stworzony jako zgłoszenia w GitHubie, gotowe do podjęcia — zarówno prace funkcjonalne (np. filtrowanie i paginacja), jak i poprawa jakości (np. dostępność i standardy kodowania). Będziesz pracować iteracyjnie, eksplorując zarówno witrynę, jak i możliwości Copilota, aby dokończyć zadania.
+Jesteś nowym programistą w Tailspin Toys, fikcyjnej firmie oferującej crowdfunding gier planszowych o tematyce deweloperskiej — ogromny rynek! Backlog zespołu jest już stworzony jako zgłoszenia w GitHubie, gotowe do podjęcia — zarówno prace funkcjonalne (np. filtrowanie i paginacja), jak i poprawa jakości (np. dostępność i standardy kodowania). Będziesz pracować iteracyjnie, eksplorując zarówno witrynę, jak i możliwości Copilota, aby dokończyć zadania.
 
 ## Rozpocznij
 

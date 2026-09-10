@@ -1,9 +1,9 @@
 ---
-title: "Ćwiczenie 3 — Dodawanie funkcji projektu z GitHub Copilot CLI"
+title: "Ćwiczenie 3 - Dodawanie funkcji projektu z GitHub Copilot CLI"
 authors:
   - geektrainer
   - azkel
-lastUpdated: 2026-09-09
+lastUpdated: 2026-09-10
 ---
 
 Jak można się spodziewać, podstawowe zadania z GitHub Copilot CLI to dodawanie funkcji, możliwości i kodu do projektu. Weźmy jedno ze zgłoszeń z backlogu i poprośmy Copilota o pomoc w implementacji.
@@ -34,7 +34,7 @@ Zaczniesz tworzenie nowej funkcjonalności od trybu planowania w Copilot CLI.
     ```
 
 4. Copilot może zadawać pytania uzupełniające podczas budowania planu. Odpowiadaj na nie zgodnie z tym, jak zbudowałbyś funkcjonalność.
-5. Gdy plan zostanie wygenerowany, przejrzyj blueprint. Powinieneś zauważyć rekomendacje pozostałych zmian w warstwie danych i UI oraz generowanie testów.
+5. Gdy plan zostanie wygenerowany, przejrzyj go. Powinieneś zauważyć rekomendacje pozostałych zmian w warstwie danych i UI oraz generowanie testów.
 6. Copilot CLI pozwoli Ci przekazać dodatkową opinię do planu. Możesz przejść kursorem w dół do wskazanej sekcji i wpisać sugestie. Copilot uwzględni je w nowej wersji planu.
 7. Gdy będziesz zadowolony, wybierz opcję oferowaną przez Copilota, aby rozpocząć budowanie nowej funkcji!
 

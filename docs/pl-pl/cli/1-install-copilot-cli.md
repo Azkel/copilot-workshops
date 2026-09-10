@@ -1,12 +1,12 @@
 ---
-title: "Ćwiczenie 1 — Instalacja GitHub Copilot CLI"
+title: "Ćwiczenie 1 - Instalacja GitHub Copilot CLI"
 authors:
   - geektrainer
   - azkel
-lastUpdated: 2026-09-09
+lastUpdated: 2026-09-10
 ---
 
-[GitHub Copilot CLI][about-copilot-cli] to potężny agentyczny asystent programowania działający w terminalu. Pozwala eksplorować bazy kodu, generować kod, uruchamiać polecenia i korzystać z zewnętrznych narzędzi — wszystko z linii poleceń. Możesz odciążyć się od zadań, zlecać zmiany i pozostać w strefie skupienia. Pierwszy krok, jak można się spodziewać, to instalacja narzędzia! Na szczęście da się to zrobić za pomocą narzędzi, które już znasz.
+[GitHub Copilot CLI][about-copilot-cli] to wielozadaniowy oparty na pracy agentów asystent programowania działający w terminalu. Pozwala eksplorować kod źródłowy, generować nowy, uruchamiać polecenia i korzystać z zewnętrznych narzędzi — wszystko za pomocą linii poleceń. Możesz zlecać zadania, prosić o zmiany samemu skupiając się na wysoko-poziomowych zadaniach. Pierwszy krok, jak można się spodziewać, to instalacja narzędzia! Na szczęście da się to zrobić za pomocą innych narzędzi, które już znasz.
 
 Podczas tego ćwiczenia:
 
@@ -53,7 +53,7 @@ Copilot CLI możesz zainstalować przez [npm][install-npm], [WinGet][install-win
    Powinieneś zobaczyć numer wersji (np. `v1.0.XX`).
 
 > [!TIP]
-> Jeśli napotkasz błędy uprawnień, na niektórych systemach może być potrzebne `sudo npm install -g @github/copilot`. W GitHub Codespaces zwykle nie jest to konieczne.
+> Jeśli napotkasz błędy związane z uprawnieniami, na niektórych systemach może być potrzebne `sudo npm install -g @github/copilot`. W GitHub Codespaces zwykle nie jest to konieczne.
 
 ## Uwierzytelnij się w GitHubie
 
@@ -65,7 +65,7 @@ Przy pierwszym uruchomieniu Copilot CLI poprosi Cię o uwierzytelnienie kontem G
    copilot
    ```
 
-2. Jeśli nie jesteś zalogowany, zobaczysz prośby o uwierzytelnienie. Copilot CLI wyświetli kod urządzenia i poprosi o odwiedzenie adresu URL.
+2. Jeśli nie jesteś zalogowany, zobaczysz prośbę o uwierzytelnienie. Copilot CLI wyświetli kod urządzenia i poprosi o odwiedzenie adresu URL.
 3. Postępuj zgodnie z instrukcjami na ekranie:
    - Otwórz podany adres URL w przeglądarce
    - Wprowadź kod urządzenia, gdy zostaniesz o to poproszony
@@ -77,7 +77,7 @@ Przy pierwszym uruchomieniu Copilot CLI poprosi Cię o uwierzytelnienie kontem G
 
 ## Zaufaj katalogowi i sprawdź, czy wszystko działa
 
-Skoro jesteś po raz pierwszy w interfejsie Copilot CLI, zaufaj temu repozytorium warsztatowemu i upewnij się, że Copilot CLI jest poprawnie zainstalowany i połączony.
+Skoro jesteś po raz pierwszy w interfejsie Copilot CLI, gdy wyświetli się stosowne powiadomienie, zaufaj temu repozytorium i upewnij się, że Copilot CLI jest poprawnie zainstalowany i połączony.
 
 1. Gdy Copilot CLI poprosi o potwierdzenie, że ufasz plikom w tym folderze, zobaczysz trzy opcje:
    - **Yes, proceed**: Zaufaj tylko w tej sesji
@@ -112,7 +112,7 @@ Gratulacje! Pomyślnie zainstalowałeś i uwierzytelniłeś GitHub Copilot CLI. 
 - ufać katalogowi, z którym ma pracować Copilot CLI.
 - weryfikować, że instalacja działa poprawnie.
 
-W następnym kroku dasz Copilotowi kontekst projektu. Przejdź do [Ćwiczenia 2 — Instrukcje niestandardowe z CLI][next-lesson].
+W następnym kroku dasz Copilotowi kontekst projektu. Przejdź do [Ćwiczenia 2 - Instrukcje niestandardowe (Copilot CLI)][next-lesson].
 
 ## Zasoby
 

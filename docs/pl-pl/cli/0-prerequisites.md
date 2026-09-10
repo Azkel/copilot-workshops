@@ -1,16 +1,16 @@
 ---
-title: "Ćwiczenie 0: Wymagania wstępne"
+title: "Ćwiczenie 0 - Wymagania wstępne"
 authors:
   - geektrainer
   - azkel
-lastUpdated: 2026-09-09
+lastUpdated: 2026-09-10
 ---
 
-Zanim zaczniesz ćwiczenia Copilot CLI, przygotuj środowisko. W ramach tego ćwiczenia utworzysz własną kopię repozytorium Tailspin Toys i uruchomisz [codespace][codespaces], którego zintegrowanego terminala użyjesz do instalacji i uruchomienia Copilot CLI w następnym ćwiczeniu.
+Zanim zaczniesz ćwiczenia Copilot CLI, przygotuj środowisko. W ramach tego ćwiczenia utworzysz własną kopię repozytorium Tailspin Toys i uruchomisz [codespace][codespaces], wewnątrz którego za pomocą zintegrowanego terminala zainstalujesz i uruchomisz Copilot CLI w następnym ćwiczeniu.
 
 ## Skonfiguruj repozytorium
 
-Warsztaty będą prowadzone na własnej kopii projektu Tailspin Toys. Utwórz ją teraz za pomocą [repozytorium szablonu][template-repository]. Nowe repozytorium zawiera wszystkie pliki potrzebne w laboratorium — w kolejnych ćwiczeniach będziesz z niego korzystać.
+Warsztaty będą prowadzone na własnej kopii projektu Tailspin Toys. Utwórz ją teraz za pomocą [repozytorium szablonu][template-repository]. Nowe repozytorium zawiera wszystkie pliki potrzebne w warsztatach — w kolejnych ćwiczeniach będziesz z niego korzystać.
 
 1. W nowym oknie przeglądarki przejdź do repozytorium tych warsztatów na GitHubie: `https://github.com/github-samples/tailspin-toys`.
 2. Utwórz własną kopię repozytorium, wybierając przycisk **Use this template** na stronie repozytorium. Następnie wybierz **Create a new repository**.
@@ -28,7 +28,7 @@ Warsztaty będą prowadzone na własnej kopii projektu Tailspin Toys. Utwórz j�
 
 ## Tworzenie codespace
 
-Wykorzystasz codespace do wykonania ćwiczeń tych warsztatów.
+Wykorzystasz codespace do wykonania ćwiczeń w ramach tych warsztatów.
 
 [GitHub Codespaces][codespaces] to chmurowe środowisko deweloperskie, które pozwala pisać, uruchamiać i debugować kod bezpośrednio w przeglądarce. Zapewnia pełnoprawne IDE z obsługą wielu języków programowania, rozszerzeń i narzędzi.
 
@@ -44,7 +44,7 @@ Wykorzystasz codespace do wykonania ćwiczeń tych warsztatów.
 Utworzenie codespace zajmie kilka minut, choć i tak jest to znacznie szybsze niż ręczne instalowanie wszystkich bibliotek lokalnie. Możesz wykorzystać ten czas na poznanie innych funkcji GitHub Copilot, do których przejdziemy dalej.
 
 > [!CAUTION]
-> Wrócisz do codespace w kolejnym ćwiczeniu. Na razie zostaw go otwartego w karcie przeglądarki.
+> Wrócisz do codespace w kolejnym ćwiczeniu. Na razie zostaw je otwarte w karcie przeglądarki.
 
 > [!NOTE]
 > Ten warsztat jest przeznaczony do uruchamiania w codespace lub lokalnym [kontenerze deweloperskim][dev-containers]. Oba rozwiązania zapewniają środowisko ze wszystkimi wymaganymi zależnościami. Jeśli wolisz pracować lokalnie, otwórz sklonowane repozytorium w VS Code i wybierz **Reopen in Container**, gdy zostaniesz o to poproszony — VS Code zbuduje ten sam kontener deweloperski, którego używa codespace.
@@ -55,7 +55,7 @@ Gratulacje — utworzyłeś własną kopię repozytorium Tailspin Toys! Rozpocz�
 
 ## Następny krok
 
-W następnym kroku zainstalujesz Copilot CLI i uwierzytelnisz go za pomocą konta GitHub. Przejdź do [Ćwiczenia 1 — Instalacja GitHub Copilot CLI][next-lesson].
+W następnym kroku zainstalujesz Copilot CLI i uwierzytelnisz się za pomocą konta GitHub. Przejdź do [Ćwiczenia 1 - Instalacja GitHub Copilot CLI][next-lesson].
 
 ## Zasoby
 

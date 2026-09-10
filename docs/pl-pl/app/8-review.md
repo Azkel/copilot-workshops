@@ -41,7 +41,7 @@ Aplikacja może uruchamiać agentów według harmonogramu lub na żądanie przez
 
 Przy każdym narzędziu AI infrastruktura wokół niego determinuje jakość tego, co otrzymujesz. Pliki instrukcji, skille i agenci niestandardowi odegrały rolę w tym warsztacie — inwestuj w nie i wykorzystuj ponownie między sesjami.
 
-Dopasuj **tryb i model** do zadania. Używaj **Plan**, by przemyśleć podejście przed budowaniem, **Interactive**, by na bieżaco rozmawiać z agentem przy złożonych zmianach, a **Autopilot** tylko przy dobrze opisanych, wyizolowanych zadaniach. Wybierz szybszy model do rutynowych edycji albo bardziej zdolny model z większymi możliwościami rozumowania do złożonej pracy — dopasuj wybór do konkretnego zadania.
+Dopasuj **tryb i model** do zadania. Używaj **Plan**, by przemyśleć podejście przed budowaniem, **Interactive**, by na bieżąco rozmawiać z agentem przy złożonych zmianach, a **Autopilot** tylko przy dobrze opisanych, wyizolowanych zadaniach. Wybierz szybszy model do rutynowych edycji albo bardziej zdolny model z większymi możliwościami rozumowania do złożonej pracy — dopasuj wybór do konkretnego zadania.
 
 Kontekst nadal ma znaczenie tak samo jak infrastruktura. Jasne opisanie *co* ma powstać, *dlaczego* i *jak* istotnie zmienia wynik. Szybkie czaty to świetne miejsce, by określić zakres pomysłu, zanim przeniesiesz się do pełnej sesji.
 

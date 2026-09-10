@@ -12,7 +12,7 @@ Dotąd kierowałeś agentami przez czat. Ale wiele pracy nie żyje w rozmowie �
 Podczas tej lekcji:
 
 - zrozumiesz, czym jest kanwa i kiedy jej używać.
-- utworzysz współdzieloną kanwę tablicy Kanban do zarzadzania backlogiem.
+- utworzysz współdzieloną kanwę tablicy Kanban do zarządzania backlogiem.
 - zapiszesz kanwę w repozytorium i udostępnisz ją dla zespołu.
 - otworzysz kanwę w nowej sesji i zaczniesz z niej pracę.
 
@@ -30,7 +30,7 @@ Typowe przykłady:
 
 - **Kanwy Markdown** do planowania dnia i priorytetyzacji zgłoszeń oraz pull requestów.
 - **Agentowe tablice kanban**, na których ludzie i agenci dodają karty i przesuwają pracę między kolumnami.
-- **Tablice zarzadzania zgłoszeniami**, które podsumowują najważniejsze zgłoszenia i powtarzające się tematy w repozytorium.
+- **Tablice zarządzania zgłoszeniami**, które podsumowują najważniejsze zgłoszenia i powtarzające się tematy w repozytorium.
 
 ## Po co używać kanwy?
 

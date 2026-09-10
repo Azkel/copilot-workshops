@@ -1,9 +1,9 @@
 ---
-title: "Ćwiczenie 5 — Korzystanie ze skilli agenta"
+title: "Ćwiczenie 5 - Korzystanie ze skilli agenta"
 authors:
   - geektrainer
   - azkel
-lastUpdated: 2026-09-09
+lastUpdated: 2026-09-10
 ---
 
 Tworzenie aplikacji często obejmuje powtarzalne zadania, takie jak generowanie buildów, uruchamianie testów czy tworzenie pull requestów. **Skille agenta (agent skills)** pozwalają dać Copilotowi — i innym agentom AI — wskazówki, jak wykonywać te zadania. Skill to folder z instrukcjami, skryptami i zasobami, które agent może wczytać na żądanie. [Agent Skills to otwarty standard][agent-skills-repo] używany przez różne agenty, więc ten sam skill może działać w Copilot Chat w trybie agenta, Copilot cloud agent, Copilot CLI oraz aplikacji GitHub Copilot.
@@ -73,7 +73,7 @@ Jak wspomniano wcześniej, skille są automatycznie wywoływane przez Copilot CL
 4. Copilot potwierdzi żądanie. Po chwili zauważysz, że Copilot wskaże, iż korzysta ze skillu **make-contribution**.
 5. Następnie Copilot będzie postępował zgodnie z instrukcjami w skillu. Zacznie od uruchomienia testów, potem utworzy gałąź, committy i w końcu PR.
 6. Gdy PR zostanie utworzony, wróć do repozytorium i otwórz PR. Zwróć uwagę, że sekcje odpowiadają wytycznym ze skillu i wymaganiom zespołu.
-7. Przed przejściem do następnego ćwiczenia zresetuj lokalny workspace do świeżej gałęzi z `main`, aby praca nad dostępnością pozostała oddzielona od tego PR dotyczącego filtrowania:
+7. Przed przejściem do następnego ćwiczenia zresetuj lokalny obszar roboczy do świeżej gałęzi z `main`, aby praca nad dostępnością pozostała oddzielona od tego PR dotyczącego filtrowania:
 
     ```bash
     git checkout main
