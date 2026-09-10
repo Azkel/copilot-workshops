@@ -2,14 +2,15 @@
 title: "Ćwiczenie 6 — Agenci niestandardowi z GitHub Copilot CLI"
 authors:
   - geektrainer
-lastUpdated: 2026-06-30
+  - azkel
+lastUpdated: 2026-09-09
 ---
 
 ## Czym są agenci niestandardowi?
 
 [Agenci niestandardowi][custom-agents-concept] w GitHub Copilot pozwalają tworzyć wyspecjalizowanych asystentów AI dostosowanych do konkretnych zadań lub domen w przepływie pracy deweloperskiej. Definiując agentów przez pliki markdown w folderze `.github/agents` repozytorium, możesz dać Copilotowi skupione instrukcje, dobre praktyki, wzorce kodowania i wiedzę domenową, które pomagają mu skuteczniej wykonywać określone typy pracy. Zespoły mogą kodyfikować swoją ekspertyzę w wielokrotnego użytku agentach — agent dostępności egzekwujący zgodność z [WCAG][wcag], agent bezpieczeństwa stosujący praktyki bezpiecznego kodowania albo agent testujący utrzymujący spójne wzorce testów.
 
-Agenci niestandardowi są definiowani plikami markdown w folderze `.github/agents` projektu albo globalnie w `~/.copilot/agents`. Każdy plik ma YAML frontmatter z co najmniej polami `name` i `description`, a następnie prompt markdown definiujący zachowanie, ekspertyzę i instrukcje agenta.
+Agenci niestandardowi są definiowani plikami markdown w folderze `.github/agents` projektu albo globalnie w `~/.copilot/agents`. Każdy plik ma YAML frontmatter z co najmniej polami `name` i `description`, a następnie treść markdown definiującą zachowanie, ekspertyzę i instrukcje agenta.
 
 ### Agenci niestandardowi a skille agenta
 
@@ -53,16 +54,16 @@ Agent niestandardowy dostępności został już dla Ciebie utworzony. Przejrzyjm
 Możesz uruchomić agenta niestandardowego w Copilot CLI poleceniem `/agent`. Wykonajmy przegląd dostępności naszej witryny.
 
 1. Wróć do codespace. Jeśli go zamknąłeś, przejdź do repozytorium na GitHub.com, wybierz **Code** > **Codespaces**, a następnie ponownie otwórz istniejący codespace.
-2. Wróć do otwartej sesji Copilot CLI. Jeśli terminal jest zamknięty lub wyszedłeś z Copilot CLI, otwórz terminal, naciskając <kbd>Ctrl</kbd>+<kbd>\`</kbd>, a następnie uruchom go z katalogu głównego repozytorium poleceniem `copilot --yolo --enable-all-github-mcp-tools`. Zaufaj folderowi projektu, jeśli zostaniesz o to poproszony, potem uruchom `/models` i wybierz **Auto**.
-3. Wyświetl listę agentów, wpisując `/agent` w oknie promptu Copilot CLI i naciskając <kbd>Enter</kbd>.
+2. Wróć do otwartej sesji Copilot CLI. Jeśli terminal jest zamknięty lub wyszedłeś z Copilot CLI, otwórz terminal. Użyj kombinacji <kbd>Ctrl</kbd>+<kbd>\`</kbd>, a następnie uruchom go z katalogu głównego repozytorium poleceniem `copilot --yolo --enable-all-github-mcp-tools`. Zaufaj folderowi projektu, jeśli zostaniesz o to poproszony, potem uruchom `/models` i wybierz **Auto**.
+3. Wyświetl listę agentów: wpisz `/agent` w interfejsie Copilot CLI i wciśnij <kbd>Enter</kbd>.
 4. Wybierz **Accessibility agent** z listy dostępnych agentów.
-5. Użyj poniższego promptu, aby poprosić agenta dostępności o przegląd i wygenerowanie poprawek dla elementu backlogu dotyczącego dostępności:
+5. Użyj poniższego polecenia, aby poprosić agenta dostępności o przegląd i wygenerowanie poprawek dla elementu backlogu dotyczącego dostępności:
 
     ```
     Perform an accessibility review of the site. Pull the related issue down from the repository for details. Implement a high-contrast mode toggle that persists the user's preference across page reloads. Ensure there are e2e tests for any updates made to the project. Then create a PR with the updates.
     ```
 
-6. Copilot zabiera się do pracy! Zacznie od pobrania zgłoszenia, potem wykona przegląd, wygeneruje aktualizacje i na koniec utworzy PR. Powinieneś też zauważyć, że przy tworzeniu PR korzysta ze skillu skoncentrowanego na PR-ach w projekcie.
+6. Copilot zabierze się do pracy! Zacznie od pobrania zgłoszenia, potem wykona przegląd, wprowadzi zmiany i na koniec utworzy PR. Powinieneś też zauważyć, że przy tworzeniu PR korzysta ze skillu skoncentrowanego na PR-ach w projekcie.
 
 > [!NOTE]
 > Ten proces prawdopodobnie zajmie kilka minut. To dobra chwila, by zastanowić się nad wszystkim, czego się nauczyłeś, napić się czegoś albo zajrzeć do następnego modułu o dodatkowych poleceniach dostępnych w Copilot CLI.

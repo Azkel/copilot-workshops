@@ -2,7 +2,8 @@
 title: "Ćwiczenie 8 — Podsumowanie i kolejne kroki"
 authors:
   - geektrainer
-lastUpdated: 2026-06-30
+  - azkel
+lastUpdated: 2026-09-09
 ---
 
 W ostatnich ćwiczeniach poznałeś niektóre z najczęstszych przypadków użycia GitHub Copilot CLI, w tym:
