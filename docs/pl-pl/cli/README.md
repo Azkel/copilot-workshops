@@ -3,7 +3,8 @@ slug: pl-pl/cli
 title: "GitHub Copilot CLI"
 authors:
   - geektrainer
-lastUpdated: 2026-06-30
+  - azkel
+lastUpdated: 2026-09-09
 ---
 
 **[GitHub Copilot CLI](https://docs.github.com/copilot/concepts/agents/about-copilot-cli)** umieszcza GitHub Copilot w terminalu jako agentycznego asystenta programowania. Eksploruje bazy kodu, generuje kod, uruchamia polecenia i łączy się z zewnętrznymi narzędziami — wszystko z linii poleceń, dzięki czemu możesz pozostać w przepływie pracy bez przełączania się na edytor graficzny.

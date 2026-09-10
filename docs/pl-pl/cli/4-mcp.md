@@ -2,10 +2,11 @@
 title: "Ćwiczenie 4 — Testowanie funkcji serwerem Playwright MCP"
 authors:
   - geektrainer
-lastUpdated: 2026-06-30
+  - azkel
+lastUpdated: 2026-09-09
 ---
 
-Właśnie wygenerowałeś funkcję filtrowania wykorzystując Copilot CLI. Zanim otworzysz pull request, potwierdź, że działa w przeglądarce. Zamiast klikać po aplikacji samodzielnie, połączysz **serwer Playwright MCP** i pozwolisz Copilotowi sterować prawdziwą przeglądarką, aby przetestować funkcję za Ciebie.
+Właśnie wygenerowałeś funkcję filtrowania wykorzystując Copilot CLI. Zanim otworzysz pull request, upewnij się, że działa w przeglądarce. Zamiast klikać po aplikacji samodzielnie, połączysz **serwer Playwright MCP** i pozwolisz Copilotowi sterować prawdziwą przeglądarką, aby przetestować funkcję za Ciebie.
 
 Podczas tego ćwiczenia:
 
@@ -37,7 +38,7 @@ Dostępnych jest wiele innych serwerów MCP z dostępem do różnych narzędzi i
 Najszybszym sposobem dodania serwera jest interaktywne polecenie `/mcp add`. Zarejestrujesz [serwer Playwright MCP][playwright-mcp-server], który da Copilotowi przeglądarkę, którą może sterować.
 
 1. Wróć do codespace. Jeśli go zamknąłeś, przejdź do repozytorium na GitHub.com, wybierz **Code** > **Codespaces**, a następnie ponownie otwórz istniejący codespace.
-2. Wróć do otwartej sesji Copilot CLI. Jeśli terminal jest zamknięty lub wyszedłeś z Copilot CLI, otwórz terminal, naciskając <kbd>Ctrl</kbd>+<kbd>\`</kbd>, a następnie uruchom go z katalogu głównego repozytorium poleceniem `copilot --yolo --enable-all-github-mcp-tools`. Zaufaj folderowi projektu, jeśli zostaniesz o to poproszony, potem uruchom `/models` i wybierz **Auto**.
+2. Wróć do otwartej sesji Copilot CLI. Jeśli terminal jest zamknięty lub wyszedłeś z Copilot CLI, otwórz terminal. Użyj kombinacji <kbd>Ctrl</kbd>+<kbd>\`</kbd>, a następnie uruchom go z katalogu głównego repozytorium poleceniem `copilot --yolo --enable-all-github-mcp-tools`. Zaufaj folderowi projektu, jeśli zostaniesz o to poproszony, potem uruchom `/models` i wybierz **Auto**.
 3. W sesji Copilot CLI wpisz:
 
     ```text
@@ -51,7 +52,7 @@ Najszybszym sposobem dodania serwera jest interaktywne polecenie `/mcp add`. Zar
     - **Command**: `npx @playwright/mcp@latest --headless`
     - **Tools**: zostaw `*`, aby zezwolić na wszystkie narzędzia serwera
 
-5. Naciśnij <kbd>Ctrl</kbd>+<kbd>S</kbd>, aby zapisać. Serwer jest dodany i od razu dostępny — restart nie jest wymagany.
+5. Użyj kombinacji <kbd>Ctrl</kbd>+<kbd>S</kbd>, aby zapisać. Serwer jest dodany i od razu dostępny — restart nie jest wymagany.
 
 Flaga `--headless` każe Playwrightowi uruchamiać przeglądarkę bez widocznego okna, co jest wymagane w codespace, gdzie nie ma pulpitu do wyświetlenia. W tle zapisuje to serwer w pliku `~/.copilot/mcp-config.json`:
 
@@ -68,7 +69,7 @@ Flaga `--headless` każe Playwrightowi uruchamiać przeglądarkę bez widocznego
 }
 ```
 
-6. Potwierdź, że serwer jest zarejestrowany i aktywny, listując serwery MCP:
+6. Upewnij się, że serwer jest zarejestrowany i aktywny, listując serwery MCP:
 
     ```text
     /mcp show
@@ -83,7 +84,7 @@ Flaga `--headless` każe Playwrightowi uruchamiać przeglądarkę bez widocznego
 
 Serwer Playwright MCP potrzebuje działającej aplikacji do testów. Uruchom serwer deweloperski Astro w **osobnym** terminalu, żeby działał dalej, gdy pracujesz w Copilot CLI.
 
-1. Otwórz nowy terminal w codespace, naciskając <kbd>Ctrl</kbd>+<kbd>\`</kbd>.
+1. Otwórz nowy terminal w codespace. Użyj kombinacji <kbd>Ctrl</kbd>+<kbd>\`</kbd>.
 2. Uruchom witrynę:
 
     ```bash
@@ -96,7 +97,7 @@ Serwer Playwright MCP potrzebuje działającej aplikacji do testów. Uruchom ser
 
 Wróć do sesji Copilot CLI i poproś Copilota o przetestowanie funkcji.
 
-[Serwer Playwright MCP][playwright-mcp-server] daje Copilotowi prawdziwą przeglądarkę do sterowania. Zamiast klikać po aplikacji, by sprawdzić pracę, agent może otworzyć stronę, nawigować, zastosować filtry i odczytać wynik — a potem podsumować, co zobaczył. To najszybszy sposób potwierdzenia, że funkcja zachowuje się zgodnie z oczekiwaniami, bez opuszczania rozmowy.
+[Serwer Playwright MCP][playwright-mcp-server] daje Copilotowi prawdziwą przeglądarkę do sterowania. Zamiast klikać po aplikacji, by sprawdzić pracę, agent może otworzyć stronę, nawigować, zastosować filtry i odczytać wynik — a potem podsumować, co zobaczył. To najszybszy sposób upewnienia się, że funkcja zachowuje się zgodnie z oczekiwaniami, bez opuszczania rozmowy.
 
 Pod spodem serwer Playwright MCP działa na [drzewie dostępności][playwright-mcp-server] strony, a nie na zrzutach ekranu. Agent rozumuje więc nad ustrukturyzowanymi, oznaczonymi etykietami elementami (przyciski, linki, elementy list) tak samo jak technologie asystujące — szybki test funkcjonalny jest jednocześnie lekką kontrolą dostępności.
 
@@ -116,7 +117,7 @@ Report what you observe at each step, and call out anything that does not behave
 Copilot uruchomi przeglądarkę przez serwer Playwright MCP, przejdzie przez każdy krok i zgłosi, co znalazł. Porównaj jego podsumowanie z kryteriami akceptacji w zgłoszeniu — jeśli coś wygląda nie tak, zadaj pytania uzupełniające lub wyślij go z powrotem, by naprawił kod, zanim otworzysz pull request.
 
 > [!NOTE]
-> Aplikacja musi działać pod adresem `http://localhost:4321` na potrzeby tego testu. Jeśli zatrzymałeś serwer deweloperski, uruchom go ponownie przed wysłaniem promptu. Przy pierwszym użyciu serwera Playwright MCP Copilot może potrzebować pobrać przeglądarkę — jeśli zgłosi brak przeglądarki, każ mu uruchomić `npx playwright install chromium` i spróbuj ponownie.
+> Aplikacja musi działać pod adresem `http://localhost:4321` na potrzeby tego testu. Jeśli zatrzymałeś serwer deweloperski, uruchom go ponownie przed wysłaniem polecenia. Przy pierwszym użyciu serwera Playwright MCP Copilot może potrzebować pobrać przeglądarkę — jeśli zgłosi brak przeglądarki, każ mu uruchomić `npx playwright install chromium` i spróbuj ponownie.
 
 ## Podsumowanie i kolejne kroki
 

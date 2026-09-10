@@ -2,7 +2,8 @@
 title: "Ćwiczenie 3 — Dodawanie funkcji projektu z GitHub Copilot CLI"
 authors:
   - geektrainer
-lastUpdated: 2026-06-30
+  - azkel
+lastUpdated: 2026-09-09
 ---
 
 Jak można się spodziewać, podstawowe zadania z GitHub Copilot CLI to dodawanie funkcji, możliwości i kodu do projektu. Weźmy jedno ze zgłoszeń z backlogu i poprośmy Copilota o pomoc w implementacji.
@@ -25,8 +26,8 @@ Jednym z najlepszych zastosowań AI jest planowanie. Często masz dobrą koncepc
 Zaczniesz tworzenie nowej funkcjonalności od trybu planowania w Copilot CLI.
 
 1. Wróć do codespace. Jeśli go zamknąłeś, przejdź do repozytorium na GitHub.com, wybierz **Code** > **Codespaces**, a następnie ponownie otwórz istniejący codespace.
-2. Wróć do otwartej sesji Copilot CLI. Jeśli terminal jest zamknięty lub wyszedłeś z Copilot CLI, otwórz terminal, naciskając <kbd>Ctrl</kbd>+<kbd>\`</kbd>, a następnie uruchom go z katalogu głównego repozytorium poleceniem `copilot --yolo --enable-all-github-mcp-tools`. Zaufaj folderowi projektu, jeśli zostaniesz o to poproszony, potem uruchom `/models` i wybierz **Auto**.
-3. Wprowadź poniższy prompt do Copilot CLI, aby utworzyć plan na podstawie zgłoszenia o filtrowaniu:
+2. Wróć do otwartej sesji Copilot CLI. Jeśli terminal jest zamknięty lub wyszedłeś z Copilot CLI, otwórz terminal. Użyj kombinacji <kbd>Ctrl</kbd>+<kbd>\`</kbd>, a następnie uruchom go z katalogu głównego repozytorium poleceniem `copilot --yolo --enable-all-github-mcp-tools`. Zaufaj folderowi projektu, jeśli zostaniesz o to poproszony, potem uruchom `/models` i wybierz **Auto**.
+3. Użyj poniższego polecenia w Copilot CLI, aby utworzyć plan na podstawie zgłoszenia o filtrowaniu:
 
     ```
     /plan Retrieve the issue on the repository related to adding filtering. We already added a publishers helper in src/lib/publishers.ts, so treat that as existing work and plan the remaining updates (games filtering logic, UI, and tests).
@@ -59,7 +60,7 @@ Każdy kod AI należy przejrzeć przed scaleniem do produkcji. Poświęćmy tera
     /diff
     ```
 
-2. Zwróć uwagę na zmienione pliki. Użyj klawiszy strzałek w lewo i w prawo, aby przeglądać różne pliki. Powinieneś zobaczyć aktualizacje m.in. strony listy gier (gdzie żyją nowe elementy sterujące filtrem i filtrowanie po stronie klienta) oraz `src/lib/games.ts`, a także testy takie jak `games.test.ts`. Możesz też zobaczyć aktualizacje `publishers.ts`, jeśli Copilot dopracuje istniejący helper pod pełną implementację.
+2. Zwróć uwagę na zmienione pliki. Użyj klawiszy strzałek w lewo i w prawo, aby przeglądać różne pliki. Powinieneś zobaczyć zmiany m.in. na stronie listy gier (gdzie żyją nowe elementy sterujące filtrem i filtrowanie po stronie klienta) oraz w `src/lib/games.ts`, a także testy takie jak `games.test.ts`. Możesz też zobaczyć zmiany w `publishers.ts`, jeśli Copilot dopracuje istniejący helper pod pełną implementację.
 
 ## Podsumowanie i kolejne kroki
 

@@ -2,7 +2,8 @@
 title: "Ćwiczenie 0: Wymagania wstępne"
 authors:
   - geektrainer
-lastUpdated: 2026-06-30
+  - azkel
+lastUpdated: 2026-09-09
 ---
 
 Zanim zaczniesz ćwiczenia Copilot CLI, przygotuj środowisko. W ramach tego ćwiczenia utworzysz własną kopię repozytorium Tailspin Toys i uruchomisz [codespace][codespaces], którego zintegrowanego terminala użyjesz do instalacji i uruchomienia Copilot CLI w następnym ćwiczeniu.
@@ -27,7 +28,7 @@ Warsztaty będą prowadzone na własnej kopii projektu Tailspin Toys. Utwórz j�
 
 ## Tworzenie codespace
 
-Wykorzytasz codespace do wykonania ćwiczeń tych warsztatów.
+Wykorzystasz codespace do wykonania ćwiczeń tych warsztatów.
 
 [GitHub Codespaces][codespaces] to chmurowe środowisko deweloperskie, które pozwala pisać, uruchamiać i debugować kod bezpośrednio w przeglądarce. Zapewnia pełnoprawne IDE z obsługą wielu języków programowania, rozszerzeń i narzędzi.
 

@@ -2,7 +2,8 @@
 title: "Ćwiczenie 1 — Instalacja GitHub Copilot CLI"
 authors:
   - geektrainer
-lastUpdated: 2026-06-30
+  - azkel
+lastUpdated: 2026-09-09
 ---
 
 [GitHub Copilot CLI][about-copilot-cli] to potężny agentyczny asystent programowania działający w terminalu. Pozwala eksplorować bazy kodu, generować kod, uruchamiać polecenia i korzystać z zewnętrznych narzędzi — wszystko z linii poleceń. Możesz odciążyć się od zadań, zlecać zmiany i pozostać w strefie skupienia. Pierwszy krok, jak można się spodziewać, to instalacja narzędzia! Na szczęście da się to zrobić za pomocą narzędzi, które już znasz.
@@ -22,7 +23,7 @@ Twój zespół zaczyna używać agentów AI do pracy nad rosnącym backlogiem. C
 Przed instalacją Copilot CLI otwórz okno terminala w codespace.
 
 1. Wróć do codespace, jeśli jeszcze go nie masz otwartego.
-2. Otwórz okno terminala, naciskając <kbd>Ctrl</kbd>+<kbd>\`</kbd>.
+2. Otwórz okno terminala. Użyj kombinacji <kbd>Ctrl</kbd>+<kbd>\`</kbd>.
 3. Na dole okna VS Code powinien pojawić się panel terminala.
 
 ## Zainstaluj Copilot CLI
@@ -64,19 +65,19 @@ Przy pierwszym uruchomieniu Copilot CLI poprosi Cię o uwierzytelnienie kontem G
    copilot
    ```
 
-2. Jeśli nie jesteś zalogowany, zobaczysz monity o uwierzytelnienie. Copilot CLI wyświetli kod urządzenia i poprosi o odwiedzenie adresu URL.
+2. Jeśli nie jesteś zalogowany, zobaczysz prośby o uwierzytelnienie. Copilot CLI wyświetli kod urządzenia i poprosi o odwiedzenie adresu URL.
 3. Postępuj zgodnie z instrukcjami na ekranie:
    - Otwórz podany adres URL w przeglądarce
    - Wprowadź kod urządzenia, gdy zostaniesz o to poproszony
    - Autoryzuj Copilot CLI do dostępu do konta GitHuba
-4. Po uwierzytelnieniu zobaczysz prompt Copilot CLI, gotowy na pytania i polecenia.
+4. Po uwierzytelnieniu zobaczysz interfejs Copilot CLI, gotowy na pytania i polecenia.
 
 > [!NOTE]
-> W codespace możesz być już uwierzytelniony przez sesję GitHuba. Jeśli Copilot CLI uruchomi się bez monitu o uwierzytelnienie, wszystko jest w porządku!
+> W codespace możesz być już uwierzytelniony przez sesję GitHuba. Jeśli Copilot CLI uruchomi się bez prośby o uwierzytelnienie, wszystko jest w porządku!
 
 ## Zaufaj katalogowi i sprawdź, czy wszystko działa
 
-Skoro jesteś po raz pierwszy przy monicie Copilot CLI, zaufaj temu repozytorium warsztatowemu i upewnij się, że Copilot CLI jest poprawnie zainstalowany i połączony.
+Skoro jesteś po raz pierwszy w interfejsie Copilot CLI, zaufaj temu repozytorium warsztatowemu i upewnij się, że Copilot CLI jest poprawnie zainstalowany i połączony.
 
 1. Gdy Copilot CLI poprosi o potwierdzenie, że ufasz plikom w tym folderze, zobaczysz trzy opcje:
    - **Yes, proceed**: Zaufaj tylko w tej sesji
@@ -89,7 +90,7 @@ Skoro jesteś po raz pierwszy przy monicie Copilot CLI, zaufaj temu repozytorium
    What files are in this project?
    ```
 
-4. Copilot powinien zbadać repozytorium i podsumować strukturę projektu.
+4. Copilot zbada repozytorium i podsumuje strukturę projektu.
 5. Wypróbuj polecenie `/help`, aby zobaczyć dostępne polecenia slash:
 
    ```
