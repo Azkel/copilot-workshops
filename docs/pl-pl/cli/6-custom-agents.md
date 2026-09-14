@@ -8,18 +8,18 @@ lastUpdated: 2026-09-10
 
 ## Czym są agenci niestandardowi?
 
-[Agenci niestandardowi][custom-agents-concept] w GitHub Copilot pozwalają tworzyć wyspecjalizowanych asystentów AI dostosowanych do konkretnych zadań lub domen w przepływie pracy deweloperskiej. Definiując agentów przez pliki markdown w folderze `.github/agents` repozytorium, możesz dać Copilotowi skupione instrukcje, dobre praktyki, wzorce kodowania i wiedzę domenową, które pomagają mu skuteczniej wykonywać określone typy pracy. Zespoły mogą kodyfikować swoją ekspertyzę w wielokrotnego użytku agentach — agent dostępności egzekwujący zgodność z [WCAG][wcag], agent bezpieczeństwa stosujący praktyki bezpiecznego kodowania albo agent testujący utrzymujący spójne wzorce testów.
+[Agenci niestandardowi][custom-agents-concept] w GitHub Copilot pozwalają tworzyć wyspecjalizowanych asystentów AI dostosowanych do konkretnych zadań lub domen w trakcie pracy programistycznej. Definiując agentów przez pliki markdown w folderze `.github/agents` repozytorium, możesz dać Copilotowi skupione instrukcje, dobre praktyki, wzorce kodowania i wiedzę domenową, które pomagają mu skuteczniej wykonywać określone typy pracy. Zespoły mogą konsolidować swoją wiedzę w agentach wielokrotnego użytku — agent dostępności egzekwujący zgodność z [WCAG][wcag], agent bezpieczeństwa stosujący praktyki bezpiecznego programowania albo agent testujący utrzymujący spójne wzorce testów.
 
-Agenci niestandardowi są definiowani plikami markdown w folderze `.github/agents` projektu albo globalnie w `~/.copilot/agents`. Każdy plik ma YAML frontmatter z co najmniej polami `name` i `description`, a następnie treść markdown definiującą zachowanie, ekspertyzę i instrukcje agenta.
+Agenci niestandardowi są definiowani plikami markdown w folderze `.github/agents` projektu albo globalnie w `~/.copilot/agents`. Każdy plik ma nagłówek YAML z co najmniej polami `name` i `description`, a następnie treść markdown definiującą zachowanie, ekspertyzę i instrukcje agenta.
 
 ### Agenci niestandardowi a skille agenta
 
-Między agentami niestandardowymi a [skillami agenta][agent-skills-concept] jest pewne logiczne zachodzenie. Oba są głównie definiowane plikami markdown i mówią AI, jak wykonywać operacje. Najczystszy sposób rozróżnienia: **agent niestandardowy** to pracownik, a **skille** to narzędzia.
+Między agentami niestandardowymi a [skillami agenta][agent-skills-concept] jest pewne logiczne zachodzenie. Oba są głównie definiowane plikami markdown i mówią naszemu AI, jak wykonywać operacje. Najczystszy sposób rozróżnienia: **agent niestandardowy** to pracownik, a **skille** to narzędzia.
 
 Agenci niestandardowi mają własne okno kontekstu i są zbudowani do orkiestracji skilli (a nawet innych agentów) w ramach swojej pracy. W tych warsztatach agent niestandardowy dostępności przegląda i aktualizuje witrynę pod kątem wytycznych dostępności; w ramach tej pracy może wywoływać skille, takie jak skill przepływu pull requestów lub skill uruchamiający i zarządzający testami.
 
 > [!NOTE]
-> Nie ma jednej „właściwej” metody tworzenia agenta niestandardowego. Jak w całej AI, testuj i iteruj, aby znaleźć to, co działa w Twoich środowiskach i scenariuszach.
+> Nie ma jednej „właściwej” metody tworzenia agenta niestandardowego. Jak w każdym przypadku pracy z AI, testuj i iteruj, aby znaleźć to, co działa w Twoich środowiskach i scenariuszach.
 
 ## Scenariusz
 
@@ -36,13 +36,13 @@ Podczas tego ćwiczenia:
 
 ## Przegląd agenta niestandardowego dostępności
 
-Agent niestandardowy dostępności został już dla Ciebie utworzony. Przejrzyjmy zawartość, aby zrozumieć, jak pokieruje Copilotem.
+Agent niestandardowy dostępności został już dla Ciebie utworzony. Przejrzyjmy jego treść, aby zrozumieć, jak pokieruje Copilotem.
 
 1. Otwórz `.github/agents/accessibility.md`.
-2. Zwróć uwagę na YAML frontmatter z polami `name` i `description`.
+2. Zwróć uwagę na nagłówek YAML z polami `name` i `description`.
 
 > [!CAUTION]
-> Frontmatter z `name` i `description` jest wymagany dla agentów niestandardowych.
+> Nagłówek z `name` i `description` jest wymagany dla agentów niestandardowych.
 
 3. Następnie przejrzyj kolejne sekcje, które podkreślają:
    - Główne obowiązki przy generowaniu kodu dla dostępnej witryny.
@@ -71,14 +71,14 @@ Możesz uruchomić agenta niestandardowego w Copilot CLI poleceniem `/agent`. Wy
 
 ## Podsumowanie i kolejne kroki
 
-To ćwiczenie omówiło [agentów niestandardowych][custom-agents] w GitHub Copilot — wyspecjalizowanych asystentów AI dostosowanych do konkretnych zadań i domen. Dzięki agentom niestandardowym możesz kodyfikować ekspertyzę i standardy zespołu w wielokrotnego użytku agentach, które pomagają Copilotowi skuteczniej wykonywać określone typy pracy.
+To ćwiczenie omówiło [agentów niestandardowych][custom-agents] w GitHub Copilot — wyspecjalizowanych asystentów AI dostosowanych do konkretnych zadań i domen. Dzięki agentom niestandardowym możesz opisywać sposób pracy i standardy zespołu w agentach wielokrotnego użytku, które pomagają Copilotowi skuteczniej wykonywać określone typy pracy.
 
-Poznałeś te pojęcia:
+Poznałeś następujące pojęcia:
 
 - jak definiuje się agentów niestandardowych.
 - użycie agenta niestandardowego w Copilot CLI.
 
-W następnym kroku poznasz [kilka poleceń slash][next-lesson], aby odkryć dodatkowe triki z Copilot CLI.
+W następnym kroku poznasz [kilka poleceń slash][next-lesson], pozwalających odkryć dodatkowe triki z Copilot CLI.
 
 ## Zasoby
 

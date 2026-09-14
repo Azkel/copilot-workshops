@@ -7,7 +7,7 @@ authors:
 lastUpdated: 2026-09-09
 ---
 
-Funkcja filtrowania jest zbudowana, zweryfikowana i jej działanie było przetestowane w przeglądarce. Ostatni krok to jej scalenie. W tych warsztatach scaliłeś już dwukrotnie — za każdym razem otwierałeś pull request i sam go scalałeś na github.com. Tym razem pozwolisz aplikacji wziąć na siebie ciężką pracę dzięki **Agent Merge**, które przeprowadza pull request przez cały cykl życia z wnętrza aplikacji.
+Funkcja filtrowania jest zbudowana, zweryfikowana i jej działanie było przetestowane w przeglądarce. Ostatni krok to jej scalenie. W tych warsztatach scaliłeś już dwukrotnie — za każdym razem otwierałeś pull request i sam go scalałeś na github.com. Tym razem pozwolisz aplikacji wziąć na siebie ciężką pracę dzięki **Agent Merge**, który przeprowadza pull request przez cały cykl życia z wnętrza aplikacji.
 
 Podczas tej lekcji:
 
@@ -21,9 +21,9 @@ W ostatnich modułach zbadałeś różne poziomy automatyzacji — od tworzenia 
 
 ## Przedstawiamy Agent Merge
 
-**Agent Merge** automatyzuje ostatnią część wdrażania pull requesta przez aplikację Copilot. Gdy je włączysz, sesja aplikacji czyta Twój pull request, zajmuje się tym, co go blokuje — naprawiając nieudane walidacje CI, odpowiadając na komentarze innych programistów, robiąc rebase w razie potrzeby — i scala go, gdy tylko GitHub na to pozwoli. Działa w tle, przetrwa restarty aplikacji i wyłącza się samo, gdy pull request zostanie scalony.
+**Agent Merge** automatyzuje ostatnią część wdrażania pull requesta przez aplikację Copilot. Gdy go włączysz, sesja aplikacji czyta Twój pull request, zajmuje się tym, co go blokuje — naprawiając nieudane walidacje CI, odpowiadając na komentarze innych programistów, robiąc rebase w razie potrzeby — i scala go, gdy tylko GitHub na to pozwoli. Działa w tle, przetrwa restarty aplikacji i wyłącza się sam, gdy pull request zostanie scalony.
 
-Dotąd to Ty klikałeś **Merge pull request** na github.com. Agent Merge przenosi tę odpowiedzialność na agenta, żebyś mógł przejść do kolejnego zadania, podczas gdy ono przeprowadza PR do końca. Nadal przeglądasz i zatwierdzasz pracę — agent zajmuje się tylko tą żmudną, mechaniczną częścią.
+Dotąd to Ty klikałeś **Merge pull request** na github.com. Agent Merge przenosi tę odpowiedzialność na agenta, żebyś mógł przejść do kolejnego zadania, podczas gdy on przeprowadza PR do końca. Nadal przeglądasz i zatwierdzasz pracę — agent zajmuje się tylko tą żmudną, mechaniczną częścią.
 
 ## Użyj Agent Merge do zarządzania PR
 
@@ -50,7 +50,7 @@ Po chwili zauważysz, że Copilot znów zabierze się do pracy, patrząc na waru
 
 ## Podsumowanie i kolejne kroki
 
-Zautomatyzowałeś kilka części procesu deweloperskiego, w tym generowanie kodu, testowanie i walidację,a teraz także proces pull request. W tej lekcji:
+Zautomatyzowałeś kilka części procesu deweloperskiego, w tym generowanie kodu, testowanie i walidację, a teraz także proces pull request. W tej lekcji:
 
 - poznałeś, czym jest Agent Merge i jak automatyzuje cykl życia scalania.
 - włączyłeś Agent Merge w sesji filtrowania.

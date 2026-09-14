@@ -28,7 +28,7 @@ GitHub Copilot w **Visual Studio Code** i GitHub Codespaces. Pracuj w trybie age
 
 ### 🤖 [Copilot App](app/)
 
-**Aplikacja GitHub Copilot** — aplikacja desktopowa oparta na Copilot CLI. Uruchamiaj równoległe sesje agentów, przełączaj tryby sesji, współpracuj na kanwach i zarządzaj zgłoszeniami oraz pull requestami w GitHubie natywnie — wykorzystując między innymi **Agent Merge**, który tworzy pull requesty z opcją rebase, implementuje uwagi z przeglądu, poprawki CI i scala zmiany pomiędzy branchami.
+**Aplikacja GitHub Copilot** — aplikacja desktopowa oparta na Copilot CLI. Uruchamiaj równoległe sesje agentów, przełączaj tryby sesji, współpracuj na kanwach i zarządzaj zgłoszeniami oraz pull requestami w GitHubie natywnie — wykorzystując między innymi **Agent Merge**, który tworzy pull requesty z opcją rebase, implementuje uwagi z przeglądu, poprawki CI i scala zmiany pomiędzy gałęziami.
 
 ### ☁️ [Copilot Cloud Agent](../cloud/)
 

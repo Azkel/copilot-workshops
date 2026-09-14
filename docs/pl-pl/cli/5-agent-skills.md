@@ -6,13 +6,13 @@ authors:
 lastUpdated: 2026-09-10
 ---
 
-Tworzenie aplikacji często obejmuje powtarzalne zadania, takie jak generowanie buildów, uruchamianie testów czy tworzenie pull requestów. **Skille agenta (agent skills)** pozwalają dać Copilotowi — i innym agentom AI — wskazówki, jak wykonywać te zadania. Skill to folder z instrukcjami, skryptami i zasobami, które agent może wczytać na żądanie. [Agent Skills to otwarty standard][agent-skills-repo] używany przez różne agenty, więc ten sam skill może działać w Copilot Chat w trybie agenta, Copilot cloud agent, Copilot CLI oraz aplikacji GitHub Copilot.
+Tworzenie aplikacji często obejmuje powtarzalne zadania, takie jak generowanie buildów, uruchamianie testów czy tworzenie pull requestów (PR). **Skille agenta (agent skills)** pozwalają przekazać Copilotowi — i innym agentom AI — wskazówki, jak wykonywać te zadania. Skill to folder z instrukcjami, skryptami i zasobami, które agent może wczytać na żądanie. [Agent Skills to otwarty standard][agent-skills-repo] używany przez różne agenty, więc ten sam skill może działać w Copilot Chat w trybie agenta, agentach Copilot w chmurze, Copilot CLI oraz aplikacji GitHub Copilot.
 
 Zobaczmy, jak skill może zapewnić, że pull requesty spełniają wymagania zespołu.
 
 ## Scenariusz
 
-Zespół ma zestaw wymagań dla pull requestów (PR):
+Zespół ma zestaw wymagań dla pull requestów:
 
 - jasne komunikaty commitów, z plikami pogrupowanymi logicznie.
 - wszystkie testy muszą przejść przed utworzeniem PR.
@@ -32,7 +32,7 @@ Podczas tego ćwiczenia:
 
 ## Tworzenie skilli agenta
 
-Skille znajdują się w folderze `.github/skills` projektu albo globalnie w `~/.copilot/skills`. Każdy skill to folder zawierający plik `SKILL.md` z YAML frontmatter (pola `name` i `description`), a następnie instrukcje w markdown:
+Skille znajdują się w folderze `.github/skills` projektu albo globalnie w `~/.copilot/skills`. Każdy skill to folder zawierający plik `SKILL.md` z nagłówkiem YAML (pola `name` i `description`), a następnie instrukcje w markdown:
 
 ```yaml
 ---
@@ -48,14 +48,14 @@ Skille mogą też zawierać podfoldery ze skryptami, zasobami i materiałami ref
 
 ## Wykonywanie skilli
 
-Skille są wczytywane dynamicznie, gdy agent uzna, że są potrzebne. Decyzja, których skilli użyć, wynika z opisu w pliku `SKILL.md`. Dlatego ważne są jasne opisy definiujące przypadek użycia skillu.
+Skille są wczytywane dynamicznie, gdy agent uzna, że są potrzebne. Decyzja, których skilli użyć, wynika z opisu w pliku `SKILL.md`. Dlatego ważne są jasne opisy definiujące przypadek użycia, który ma zostać zastosowany.
 
 ## Przegląd skillu PR
 
 Ponieważ Tailspin Toys ma zestaw wymagań dotyczących tworzenia PR-ów, utworzyli skill, który pomaga narzędziom AI generować PR-y zgodne z tymi wytycznymi. Przejrzyjmy skill, aby zrozumieć, co zrobi.
 
 1. Otwórz `.github/skills/make-contribution/SKILL.md`.
-2. Zwróć uwagę na nazwę i opis. Zwróć uwagę, jak opis podkreśla scenariusz użycia — zawsze gdy prosisz o utworzenie pull requestu lub commitowanie kodu.
+2. Zwróć uwagę na nazwę i opis. Zauważ, jak opis podkreśla scenariusz użycia — zawsze gdy prosisz o utworzenie pull requestu lub commitowanie kodu.
 3. Przeczytaj skill. Zwróć uwagę na reguły dotyczące tworzenia gałęzi, generowania commitów oraz zawartości pull requestu.
 
 ## Użycie skillu
@@ -63,7 +63,7 @@ Ponieważ Tailspin Toys ma zestaw wymagań dotyczących tworzenia PR-ów, utworz
 Jak wspomniano wcześniej, skille są automatycznie wywoływane przez Copilot CLI. Wystarczy więc poprosić Copilota o utworzenie PR!
 
 1. Wróć do codespace. Jeśli go zamknąłeś, przejdź do repozytorium na GitHub.com, wybierz **Code** > **Codespaces**, a następnie ponownie otwórz istniejący codespace.
-2. Wróć do otwartej sesji Copilot CLI. Jeśli terminal jest zamknięty lub wyszedłeś z Copilot CLI, otwórz terminal. Użyj kombinacji <kbd>Ctrl</kbd>+<kbd>\`</kbd>, a następnie uruchom go z katalogu głównego repozytorium poleceniem `copilot --yolo --enable-all-github-mcp-tools`. Zaufaj folderowi projektu, jeśli zostaniesz o to poproszony, potem uruchom `/models` i wybierz **Auto**.
+2. Wróć do otwartej sesji Copilot CLI. Jeśli terminal jest zamknięty lub wyszedłeś z Copilot CLI, otwórz terminal. Użyj kombinacji <kbd>Ctrl</kbd>+<kbd>\`</kbd>, a następnie uruchom go z katalogu głównego repozytorium poleceniem `copilot --yolo --enable-all-github-mcp-tools`. Zaufaj folderowi projektu, jeśli zostaniesz o to poproszony, potem wywołaj polecenie `/models` i wybierz **Auto**.
 3. Poproś Copilota o utworzenie PR, używając poniższego polecenia:
 
     ```
@@ -73,7 +73,7 @@ Jak wspomniano wcześniej, skille są automatycznie wywoływane przez Copilot CL
 4. Copilot potwierdzi żądanie. Po chwili zauważysz, że Copilot wskaże, iż korzysta ze skillu **make-contribution**.
 5. Następnie Copilot będzie postępował zgodnie z instrukcjami w skillu. Zacznie od uruchomienia testów, potem utworzy gałąź, committy i w końcu PR.
 6. Gdy PR zostanie utworzony, wróć do repozytorium i otwórz PR. Zwróć uwagę, że sekcje odpowiadają wytycznym ze skillu i wymaganiom zespołu.
-7. Przed przejściem do następnego ćwiczenia zresetuj lokalny obszar roboczy do świeżej gałęzi z `main`, aby praca nad dostępnością pozostała oddzielona od tego PR dotyczącego filtrowania:
+7. Przed przejściem do następnego ćwiczenia zresetuj lokalny obszar roboczy do świeżej gałęzi z `main`, aby praca nad usprawnieniami dostępności pozostała oddzielona od poprzedniego PR dotyczącego filtrowania:
 
     ```bash
     git checkout main

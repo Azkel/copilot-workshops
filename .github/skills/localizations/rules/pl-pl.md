@@ -18,7 +18,7 @@ English-to-Polish translation quality is best evaluated by checking case inflect
 ### Key Evaluation Pillars for Polish
 
 - **Regional Standard:** Use standard Polish (`pl-PL`) as used in technical documentation in Poland. Prefer natural forms such as **plik**, **repozytorium**, **kliknij**, **zaloguj się**, and **poczta e-mail** / **e-mail**, according to context.
-- **Reader Address and Register:** For technical documentation, use a professional, direct style with consistent second-person singular (**ty** / imperative forms such as **Uruchom**, **Otwórz**, **Wybierz**). Do not alternate between formal **Pan/Pani** and informal **ty** within a document.
+- **Reader Address and Register:** For technical documentation, use a professional, direct style with consistent second-person singular (**ty** / imperative forms such as **Uruchom**, **Otwórz**, **Wybierz**). Do not alternate between formal **Pan/Pani** and informal **ty** within a document. Past-tense and adjectival forms addressing the learner use the conventional masculine singular of Polish technical docs (**zainstalowałeś**, **użyłeś**, **Powinieneś**). Do not switch to plural-*państwo* / *oni* forms or doubled feminine/masculine pairs unless the English source explicitly requires inclusive double forms.
 - **Grammatical Agreement:** Verify case, gender, number, and adjective agreement, especially around untranslated product names and code terms. Inflect surrounding Polish words correctly even when the product name stays in English.
 - **Natural Syntax:** Restructure dense English noun stacks. Polish often needs prepositions, genitive constructions, or subordinate clauses rather than long sequences of nominal modifiers.
 - **Punctuation:** Follow Polish punctuation rules. Prefer Polish quotation marks („ ”) in running prose when natural; do not invent capitalization after a colon unless the following text independently requires it.
@@ -59,11 +59,13 @@ Mirror the English harness structure, but keep these Polish naming patterns esta
 - **Harness product names**
   - GitHub Copilot app → **Aplikacja GitHub Copilot** (short forms: **aplikacja Copilot**, **aplikacja** when unambiguous)
   - GitHub Copilot CLI → keep **GitHub Copilot CLI** / **Copilot CLI**
-  - Copilot Cloud Agent → **Agent chmurowy Copilot** on the locale landing; in lesson prose prefer **cloud agent** / **Copilot cloud agent** when referring to the product capability (matches CLI docs)
+  - Copilot Cloud Agent → **Agent chmurowy Copilot** on the locale landing; in lesson/exercise prose prefer **agent w chmurze** / **agent Copilot w chmurze** / **agenci w chmurze** (English *cloud agent* is acceptable in mixed product lists such as “Copilot Chat, Copilot CLI i Copilot cloud agent”)
   - VS Code harness remains **VS Code** / **Visual Studio Code** and **GitHub Codespaces**
+  - **Agent Merge** stays English; agree Polish pronouns/adjectives as masculine (**który**, **go**, **sam**, **on**)
 - **Lesson vs exercise labels** (do not mix within a harness)
-  - `docs/pl-pl/app/**` → **Lekcja** / **Lekcje**; titles like `Lekcja N - …` (hyphen)
-  - `docs/pl-pl/cli/**` → **Ćwiczenie** / **Ćwiczenia**; titles like `Ćwiczenie N — …` (em dash) or `Ćwiczenie 0: …` when the English source uses a colon
+  - `docs/pl-pl/app/**` → **Lekcja** / **Lekcje**; titles like `Lekcja N - …` (ASCII hyphen)
+  - `docs/pl-pl/cli/**` → **Ćwiczenie** / **Ćwiczenia**; titles like `Ćwiczenie N - …` (ASCII hyphen) or `Ćwiczenie 0: …` when the English source uses a colon
+  - Locale landing (`docs/pl-pl/README.md`) may say **ćwiczenia** generically when referring to all harnesses together; keep **Lekcja** / **Ćwiczenie** inside each harness
 - **Landing slugs:** `docs/pl-pl/README.md` → `slug: pl-pl`; harness landings → `slug: pl-pl/app`, `slug: pl-pl/cli`, etc.
 - Common section titles to reuse: **Scenariusz**, **Wymagania wstępne**, **Rozpocznij**, **Podsumowanie i kolejne kroki**, **Zasoby**, **Dobre praktyki**.
 
@@ -78,15 +80,17 @@ Mirror the English harness structure, but keep these Polish naming patterns esta
   | English | Polish workshop form | Notes |
   | :--- | :--- | :--- |
   | harness | **środowisko** | Workshop sense: VS Code / CLI / App / Cloud. Never leave **harness** in learner-facing prose. |
+  | infrastructure (scaffolding around the tool) | **infrastruktura** | Review/best-practices sense: instructions, skills, agents that shape output quality. Do **not** use **środowisko** here — that word is reserved for harness. |
   | pull request | **pull request** / **PR** | Keep English; avoid **żądanie ściągnięcia**. Inflect surrounding Polish (*pull requesta*, *pull requestami*). |
   | issue | **zgłoszenie** | Optional `(issues)` on first mention when clarifying GitHub Issues; keep UI labels like **When an issue is created** in English. |
-  | branch | **gałąź** / **gałęzie** | Prefer over English *branch* in prose. |
+  | branch | **gałąź** / **gałęzie** | Prefer over English *branch* / *branchami* in prose. |
   | commit | **commit** | Prefer **commit** for Git objects; Polish verb forms as needed (*commitować* only if natural). |
-  | merge (verb/noun) | **scal** / **scalanie** | Keep product name **Agent Merge** unchanged. |
+  | merge (verb/noun) | **scal** / **scalanie** | Keep product name **Agent Merge** unchanged; masculine agreement in Polish. |
+  | helper (code unit) | **helper** | Keep English when naming a helper module/function (*fundament helpera*, *publishers helper*). Optional paraphrase **funkcja wspomagająca** only when not naming a specific helper. |
   | custom instructions | **instrukcje niestandardowe** | Instruction files → **pliki instrukcji**; headings like **Pliki instrukcji**. |
   | custom agent | **agent niestandardowy** / **agenci niestandardowi** | Agree number/gender with surrounding Polish. |
-  | agent skill(s) | **skill** / **skille** / **skilli** / **skillu** | Keep English root; apply Polish inflection. Prefer **skille agenta**; first mention may use **Skille agenta (agent skills)**. Do not force **umiejętność** for the product feature. |
-  | slash command(s) | **polecenie slash** / **polecenia slash** | Keep **slash**; do not invent **polecenia ukośnikowe**. |
+  | agent skill(s) | **skill** / **skille** / **skilli** / **skillu** | Keep English root; apply Polish inflection. Prefer **skille agenta**; first mention may use **Skille agenta (agent skills)**. Titles: **Korzystanie ze skilli agenta**. Do not use **umiejętność** for the product feature. |
+  | slash command(s) | **polecenie slash** / **polecenia slash** | Keep **slash**; do not invent **polecenia ukośnikowe**. Prefer **polecenie** over **komenda** in prose. |
   | MCP server | **serwer MCP** | Keep **MCP** and product server names (**Playwright MCP**, **GitHub MCP Server**). |
   | canvas / canvases | **kanwa** / **kanwy** | |
   | session | **sesja** / **sesja agenta** | |
@@ -94,12 +98,12 @@ Mirror the English harness structure, but keep these Polish naming patterns esta
   | plan mode | **tryb planowania** | |
   | workspace | **obszar roboczy** | Prefer over English *workspace* in prose. |
   | quick chat(s) | **szybki czat** / **szybkie czaty** | Sidebar/UI label **Quick chats** may stay English when mirroring the product surface. |
-  | codespace | **codespace** | Keep English; inflect surrounding Polish (*w codespace*, *codespace'u* only if unavoidable — prefer *w codespace*). |
+  | codespace | **codespace** | Keep English lowercase in prose (*w codespace*); UI chrome **Codespaces** stays as in the product. |
   | worktree | **worktree** / **git worktree** | Keep English. |
   | diff | **diff** | Keep English in UI/review contexts (*widok diff*, *Przejrzyj diff*). |
   | prompt | **prompt** | Keep English for the Copilot input; instructional prose around it is Polish. |
   | automation(s) | **automatyzacja** / **automatyzacje** | UI labels like **Automations**, **New automation** stay English. |
-  | code review | **przegląd kodu** / **przegląd** | |
+  | code review | **przegląd kodu** / **przegląd** | Prefer over **przeglądanie kodu**. |
 
 - For critical or unfamiliar jargon, the first occurrence in a file may include the English source term in parentheses when it improves lookup, for example, **Skille agenta (agent skills)** or **środowisko uruchomieniowe (runtime)**. Apply this selectively.
 - Keep variables, function names, APIs, CLI commands (`npm install`), file names, and code exactly as in the source. Translate only human-language comments and explanatory prose inside code blocks.
@@ -109,7 +113,7 @@ Mirror the English harness structure, but keep these Polish naming patterns esta
 #### Tone and Instructions
 
 - Use concise professional prose. Prefer direct instructions such as **Uruchom poniższe polecenie**.
-- Address the learner with consistent second-person singular (**ty**) and masculine past-tense narrative forms common in Polish technical docs (**zainstalowałeś**, **użyłeś**, **przejrzałeś**) unless the source explicitly requires inclusive double forms.
+- Address the learner with consistent second-person singular (**ty**) and masculine past-tense / modal forms common in Polish technical docs (**zainstalowałeś**, **użyłeś**, **przejrzałeś**, **Powinieneś**). Plural-*oni* / *państwo* address and feminine/masculine doublets are out of scope for this workshop unless the English source explicitly requires them.
 - Prefer **polecenie** (or **zapytanie** when asking for an example/output) over **monit** for what the learner sends to Copilot (`Użyj poniższego polecenia`, `Wyślij poniższe polecenie`). English *prompt* may remain in UI sense as **pole monitu** / **interfejs** when naming the input box; do not force **monit** for instructional steps.
 - Keyboard: **Wciśnij** for single keys (`Enter`); **Użyj kombinacji** for chords (`Ctrl`+`C`).
 - Browser auth flows: **postępuj zgodnie z instrukcjami** (not *monitami*).
@@ -139,6 +143,9 @@ Mirror the English harness structure, but keep these Polish naming patterns esta
 | Mixing **Lekcja** and **Ćwiczenie** in one harness | **Lekcja** in app, **Ćwiczenie** in CLI | Preserves the established per-harness naming. |
 | **"GitHub Copilot app"** left untranslated in prose | **"Aplikacja GitHub Copilot"** | Matches the localized product name used on landings and lessons. |
 | Leaving UI labels like **Ready to merge** translated | Keeping product UI chrome in English | Learner can match on-screen controls. |
+| **"Agent Merge, które/ono"** | **"Agent Merge, który/on"** | Product name takes masculine agreement in Polish. |
+| **"środowisko"** for instructions/skills scaffolding | **"infrastruktura"** | Keeps **środowisko** = harness only. |
+| Title **"… umiejętności agenta"** for agent skills | **"… skilli agenta"** | Product feature stays **skill**, not **umiejętność**. |
 
 ## Evaluator Scoring Rubric
 

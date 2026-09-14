@@ -49,7 +49,7 @@ Najprostsza opcja na każdej platformie to oficjalny instalator:
 
 ## Skonfiguruj repozytorium
 
-Warsztaty będą prowadzone na własnej kopii projektu Tailspin Toys. Utwórz ją teraz za pomocą [repozytorium szablonu][template-repository]. Nowe repozytorium zawiera wszystkie pliki potrzebne w laboratorium - w następnej lekcji podłączysz je do aplikacji.
+Warsztaty będą prowadzone na własnej kopii projektu Tailspin Toys. Utwórz ją teraz za pomocą [repozytorium szablonu][template-repository]. Nowe repozytorium zawiera wszystkie pliki potrzebne w tych warsztatach — w następnej lekcji podłączysz je do aplikacji.
 
 1. W nowym oknie przeglądarki przejdź do repozytorium tych warsztatów na GitHubie: `https://github.com/github-samples/tailspin-toys`.
 2. Utwórz własną kopię repozytorium, wybierając przycisk **Use this template** na stronie repozytorium. Następnie wybierz **Create a new repository**.

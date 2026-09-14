@@ -31,7 +31,7 @@ Instrukcje niestandardowe pozwalają przekazać Copilotowi kontekst i preferencj
 
 Są dwa typy plików instrukcji:
 
-- `.github/copilot-instructions.md` — pojedynczy plik instrukcji wysyłany do Copilota przy **każdym** żądaniu dla repozytorium. Powinien zawierać informacje na poziomie projektu — kontekst istotny dla większości żądań czatu lub CLI wysyłanych do Copilota. Może obejmować używany stos technologiczny, przegląd tego, co jest kompilowane, dobre praktyki i inne globalne wskazówki.
+- `.github/copilot-instructions.md` — pojedynczy plik instrukcji wysyłany do Copilota przy **każdym** żądaniu dla repozytorium. Powinien zawierać informacje na poziomie projektu — kontekst istotny dla większości żądań czatu lub CLI wysyłanych do Copilota. Może obejmować używany stos technologiczny, przegląd tego, co budujesz, dobre praktyki i inne globalne wskazówki.
 - Pliki `.github/instructions/*.instructions.md` można tworzyć dla konkretnych zadań lub typów plików. Użyj ich, by podać wytyczne dla określonych języków (np. TypeScript lub Astro) albo zadań takich jak tworzenie komponentu UI czy nowego zestawu testów jednostkowych.
 
 > [!NOTE]

@@ -10,19 +10,19 @@ W ostatnich ćwiczeniach poznałeś niektóre z najczęstszych przypadków użyc
 
 - interakcję z GitHubem i innymi serwerami MCP.
 - używanie plików instrukcji do kierowania generowaniem kodu.
-- implementację skilli dodających narzędzia do zestawu Copilot CLI.
+- implementację skilli dodających narzędzia do funkcjonalności Copilot CLI.
 - wywoływanie agentów niestandardowych do zaawansowanych i bardziej złożonych zadań.
-- używanie poleceń slash do zarządzania sesją oraz opcjonalne łączenie z cloud agent przez `/delegate`.
+- używanie poleceń slash do zarządzania sesją oraz opcjonalne łączenie z agentami w chmurze przez `/delegate`.
 
 Omówmy kilka poleceń slash, dobre praktyki i kolejne kroki.
 
 ## Polecenia slash
 
-Copilot CLI ma szereg poleceń slash do interakcji z nim, w tym takie, które pozwalają go konfigurować lub zobaczyć, co dzieje się za kulisami. Już użyłeś `/clear`, aby rozpocząć nową rozmowę czyszczącą bieżący kontekst, oraz `/mcp` do przeglądania i zarządzania serwerami MCP. Kilka dodatkowych, które mogą być pomocne:
+Copilot CLI ma szereg poleceń slash do interakcji z nim, w tym takie, które pozwalają go dokładniej skonfigurować lub zobaczyć, co dzieje się za kulisami. Już użyłeś `/clear`, aby rozpocząć nową rozmowę czyszczącą bieżący kontekst, oraz `/mcp` do przeglądania i zarządzania serwerami MCP. Kilka dodatkowych, które mogą być pomocne:
 
 | Polecenie          | Opis                                                          |
 | ------------------ | ------------------------------------------------------------- |
-| `/add-dir`         | Dodaj katalog do listy zaufanych dla Copilot                  |
+| `/add-dir`         | Dodaj katalog do listy zaufanych dla Copilota                  |
 | `/clear`, `/new`   | Wyczyść historię rozmowy i zacznij od nowa                    |
 | `/compact`         | Podsumuj historię rozmowy, aby zmniejszyć użycie okna kontekstu |
 | `/context`         | Pokaż użycie tokenów okna kontekstu i wizualizację            |
@@ -30,7 +30,7 @@ Copilot CLI ma szereg poleceń slash do interakcji z nim, w tym takie, które po
 | `/model`           | Wybierz model AI do użycia (Claude Sonnet, GPT-5 itd.)        |
 | `/plan <prompt>`   | Utwórz plan implementacji przed kodowaniem                    |
 | `/review <prompt>` | Uruchom agenta przeglądu kodu do analizy zmian                |
-| `/delegate`        | Deleguj zadanie do Copilot cloud agent do przetwarzania asynchronicznego |
+| `/delegate`        | Deleguj zadanie do agenta Copilot w chmurze do przetwarzania asynchronicznego |
 | `/session`         | Pokaż informacje o sesji i podsumowanie obszaru roboczego |
 | `/share`           | Udostępnij sesję do pliku markdown lub gista GitHub           |
 | `/skills`          | Zarządzaj skillami w celu rozszerzenia możliwości             |
@@ -41,13 +41,13 @@ Copilot CLI ma szereg poleceń slash do interakcji z nim, w tym takie, które po
 
 ## Dobre praktyki
 
-Przy korzystaniu z dowolnego narzędzia AI jakość wyniku w dużej mierze zależy od infrastruktury. Solidne pliki instrukcji, agenci niestandardowi i skille agenta odgrywają rolę — każde z nich poznałeś w tych warsztatach. [awesome-copilot][awesome-copilot] to dobre źródło szablonów, a sam Copilot może wygenerować ich szkielet jako punkt startowy.
+Przy korzystaniu z dowolnego narzędzia AI jakość wyniku w dużej mierze zależy od przygotowanej infrastruktury. Solidne pliki instrukcji, agenci niestandardowi i skille agenta odgrywają rolę — każde z nich poznałeś w tych warsztatach. [awesome-copilot][awesome-copilot] to dobre źródło szablonów, a sam Copilot może wygenerować ich szkielet jako punkt startowy.
 
 Kontekst nadal ma znaczenie tak samo jak infrastruktura. Jasne opisanie *czego* chcesz, *dlaczego* i *jak* znacząco zmienia wynik. Jeśli jakaś informacja pomoże Copilotowi — przekaż ją.
 
 ## Kolejne kroki
 
-Najlepszym sposobem na poprawę umiejętności z dowolnym narzędziem jest dalsze jego używanie! Używaj go do kodu produkcyjnego, hobbystycznego, do tej małej aplikacji, którą masz w głowie od lat, ale nigdy nie zabrałeś się do budowy. Dziel się wnioskami z zespołem i ucz się od zespołu. I jak zawsze — przeglądaj dokumentację.
+Najlepszym sposobem na poprawę umiejętności z dowolnym narzędziem jest wykorzystanie go do dalszych eksperymentów i pracy! Używaj go do kodu produkcyjnego, hobbystycznego, do tej małej aplikacji, którą masz w głowie od lat, ale nigdy nie zabrałeś się do budowy. Dziel się wnioskami z zespołem i ucz się od zespołu. I jak zawsze — przeglądaj dokumentację.
 
 Jeśli chcesz poznać więcej ekosystemu GitHub Copilot, zobacz [środowisko VS Code](../../vscode/) lub [środowisko Cloud agent](../../cloud/).
 

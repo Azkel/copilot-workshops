@@ -6,7 +6,7 @@ authors:
 lastUpdated: 2026-09-10
 ---
 
-[GitHub Copilot CLI][about-copilot-cli] to wielozadaniowy oparty na pracy agentów asystent programowania działający w terminalu. Pozwala eksplorować kod źródłowy, generować nowy, uruchamiać polecenia i korzystać z zewnętrznych narzędzi — wszystko za pomocą linii poleceń. Możesz zlecać zadania, prosić o zmiany samemu skupiając się na wysoko-poziomowych zadaniach. Pierwszy krok, jak można się spodziewać, to instalacja narzędzia! Na szczęście da się to zrobić za pomocą innych narzędzi, które już znasz.
+[GitHub Copilot CLI][about-copilot-cli] to wielozadaniowy oparty na pracy agentów asystent programowania działający w terminalu. Pozwala eksplorować kod źródłowy, generować nowy, uruchamiać polecenia i korzystać z zewnętrznych narzędzi — wszystko za pomocą linii poleceń. Możesz zlecać zadania i prosić o zmiany, samemu skupiając się na zadaniach wysokiego poziomu. Pierwszy krok, jak można się spodziewać, to instalacja narzędzia! Na szczęście da się to zrobić za pomocą innych narzędzi, które już znasz.
 
 Podczas tego ćwiczenia:
 

@@ -6,11 +6,11 @@ authors:
 lastUpdated: 2026-09-10
 ---
 
-Jak każde dobre narzędzie CLI, GitHub Copilot CLI zawiera wiele poleceń slash do interakcji z nim. Te polecenia udostępniają zaawansowane funkcje, informacje „za kulisami” lub dodatkowe opcje konfiguracji. Już poznałeś kilka z nich: `/clear` do czyszczenia kontekstu i `/mcp` do przeglądania serwerów MCP. Przyjrzyjmy się kilku innym potężnym, w tym `/context`, `/model`, `/share` i `/delegate`.
+Jak każde dobre narzędzie CLI, GitHub Copilot CLI zawiera wiele poleceń slash pozwalających wchodzić w zaawansowane interakcje. Te polecenia udostępniają zaawansowane funkcje, informacje „za kulisami” lub dodatkowe opcje konfiguracji. Już poznałeś kilka z nich: `/clear` do czyszczenia kontekstu i `/mcp` do przeglądania serwerów MCP. Przyjrzyjmy się kilku bardziej zaawansowanym, w tym `/context`, `/model`, `/share` i `/delegate`.
 
 ## Scenariusz
 
-Zakończyłeś podstawowe przepływy CLI. Spójrzmy teraz na kilka dodatkowych możliwości — udostępnianie sesji, przełączanie modeli i delegowanie zadań do [Copilot cloud agent][about-cloud-agent].
+Zakończyłeś podstawowe przepływy CLI. Spójrzmy teraz na kilka dodatkowych możliwości — udostępnianie sesji, przełączanie modeli i delegowanie zadań do [agentów chmurowych Copilot][about-cloud-agent].
 
 Podczas tego ćwiczenia użyjesz:
 
@@ -21,7 +21,7 @@ Podczas tego ćwiczenia użyjesz:
 
 ## Udostępnianie sesji
 
-Korzystanie z dowolnego narzędzia, w tym AI, to umiejętność. Wspólna praca w zespole i dzielenie się wnioskami to najlepszy sposób na poprawę doświadczenia wszystkich i generowanie kodu wyższej jakości. W tym celu Copilot CLI oferuje polecenie `/share`. Polecenie `/share` może wygenerować plik markdown lub gist GitHub ze szczegółami sesji, w tym użytymi poleceniami i logiką, którą podążał Copilot.
+Korzystanie z dowolnego narzędzia, w tym AI, to umiejętność, którą trzeba nabyć. Wspólna praca w zespole i dzielenie się wnioskami to najlepszy sposób na poprawę doświadczenia wszystkich i generowanie kodu wyższej jakości. W tym celu Copilot CLI oferuje polecenie `/share`. Polecenie `/share` może wygenerować plik markdown lub gist GitHub ze szczegółami sesji, w tym użytymi poleceniami i logiką, którą podążał Copilot.
 
 Utwórzmy gist GitHub, który moglibyśmy udostępnić zespołowi.
 
@@ -33,7 +33,7 @@ Utwórzmy gist GitHub, który moglibyśmy udostępnić zespołowi.
     /share gist
     ```
 
-4. W ciągu chwili Copilot utworzy gist i wyświetli link.
+4. Po chwili Copilot utworzy gist i wyświetli link.
 5. Skopiuj tekst linku.
 6. W nowej karcie przeglądarki wklej link, aby przejrzeć gist. Zwróć uwagę, jak gist podkreśla wysłane polecenia, użyte skille i agentów, tok myślenia Copilota, a nawet kod i wyniki lokalnie uruchomionych poleceń.
 
@@ -83,15 +83,15 @@ Przy większych lub bardziej złożonych zadaniach możesz dojść do maksymalne
 
 W większości sesji z Copilotem kontekst jest efektywnie zarządzany przez samego Copilota bez szczególnych wskazówek. Czasem jednak zdecydujesz się ręcznie polecić Copilotowi wyczyszczenie lub skompaktowanie historii:
 
-- Jeśli przechodzisz do innej części aplikacji albo do niezwiązanego zadania, możesz użyć `/clear`, aby zacząć od nowa i uniknąć mylenia Copilota starszym, niepowiązanym kontekstem.
+- Jeśli przechodzisz do innej części aplikacji albo do niezwiązanego zadania, możesz użyć `/clear`, aby zacząć od nowa i uniknąć zmylenia Copilota starszym, niepowiązanym kontekstem.
 - Jeśli zbliżasz się do maksymalnego okna kontekstu, możesz ręcznie wykonać `/compact`, aby kontrolować moment kompaktowania.
 
 > [!CAUTION]
-> Ponownie — w większości przypadków Copilot zarządza kontekstem bez Twojej bezpośredniej interakcji. Jeśli zauważysz, że Copilot jest nieco zdezorientowany starszymi informacjami, albo zamierzasz przejść do niezwiązanego zadania, rozważ użycie poleceń ręcznych.
+> Ponownie — w większości przypadków Copilot zarządza kontekstem bez Twojej bezpośredniej interakcji. Jeśli zauważysz, że Copilot jest nieco zdezorientowany starszymi informacjami, albo zamierzasz przejść do niezwiązanego zadania, rozważ użycie tych poleceń samodzielnie.
 
 ## Wybór modelu
 
-Różne modele mają różne mocne strony, a różni deweloperzy mają różne preferencje. Copilot CLI pozwala listować i wybierać model, którego chcesz użyć!
+Różne modele mają różne mocne strony, a różni deweloperzy mają różne preferencje. Copilot CLI pozwala wyświetlać listę modeli i wybierać model, którego chcesz użyć!
 
 1. Wyświetl listę modeli, wysyłając do Copilot CLI poniższe polecenie slash:
 
@@ -105,12 +105,12 @@ Różne modele mają różne mocne strony, a różni deweloperzy mają różne p
 > [!CAUTION]
 > Wybór modelu jest zapamiętywany w Copilot CLI.
 
-## Delegowanie do cloud agent (opcjonalne)
+## Delegowanie do agenta w chmurze (opcjonalne)
 
-Czasem chcesz dalej pracować w terminalu, ale przekazać dłuższe zadanie do Copilot cloud agent. Polecenie `/delegate` wysyła bieżącą sesję Copilot CLI na GitHub.com, gdzie cloud agent ją przejmuje, pracuje asynchronicznie i po zakończeniu otwiera pull request.
+Czasem chcesz dalej pracować w terminalu, ale przekazać dłuższe zadanie do agenta Copilot w chmurze. Polecenie `/delegate` wysyła bieżącą sesję Copilot CLI na GitHub.com, gdzie agent chmurowy ją przejmuje, będzie nad nią pracować asynchronicznie i po zakończeniu otwiera pull request.
 
 > [!NOTE]
-> `/delegate` wymaga cloud agent, dostępnego w planach Copilot Student, Pro, Pro+, Business lub Enterprise — w każdym planie oprócz Copilot Free. Jeśli nie masz dostępu, przeczytaj tę sekcję i pomiń kroki praktyczne.
+> `/delegate` wymaga agentów chmurowych, dostępnych w planach Copilot Student, Pro, Pro+, Business lub Enterprise — w każdym planie oprócz Copilot Free. Jeśli nie masz dostępu, przeczytaj tę sekcję i pomiń kroki treningowe.
 
 1. Najpierw wyczyść bieżącą sesję, aby nie delegować zgromadzonego kontekstu tych warsztatów:
 
@@ -118,13 +118,13 @@ Czasem chcesz dalej pracować w terminalu, ale przekazać dłuższe zadanie do C
     /clear
     ```
 
-2. Wyślij małe, dobrze określone polecenie. Na przykład możesz oddelegować paginację z celu rozszerzonego (stretch goal) z backlogu:
+2. Wyślij małe, dobrze określone polecenie. Na przykład możesz oddelegować paginację z dodatkowych celów (stretch goal) z backlogu:
 
     ```
     Implement pagination on the game list page so it shows a fixed number of games per page with Previous and Next controls, and add tests.
     ```
 
-3. Wyślij poniższe polecenie slash, aby przekazać sesję do cloud agent, i przejrzyj polecenie, które chcesz oddelegować:
+3. Wyślij poniższe polecenie slash, aby przekazać sesję do agenta w chmurze, i przejrzyj polecenie, które chcesz oddelegować:
 
     ```
     /delegate
@@ -135,14 +135,14 @@ Czasem chcesz dalej pracować w terminalu, ale przekazać dłuższe zadanie do C
 
 ## Podsumowanie i kolejne kroki
 
-Polecenia slash w Copilot CLI pozwalają go konfigurować, udostępniać sesje i uzyskiwać wewnętrzne informacje o tym, jak Copilot pracuje. Podczas tego ćwiczenia użyłeś lub poznałeś:
+Polecenia slash w Copilot CLI pozwalają konfigurować jego zachowanie, udostępniać sesje i uzyskiwać wewnętrzne informacje o tym, jak Copilot pracuje. Podczas tego ćwiczenia użyłeś lub poznałeś:
 
 - `/share` do utworzenia gista GitHub, aby udostępnić sesję zespołowi.
 - `/context`, aby zobaczyć kontekst, którego obecnie używa Copilot CLI.
 - `/model`, aby przejrzeć listę dostępnych modeli i w razie potrzeby wybrać nowy.
 - `/delegate` jako opcjonalny most do cloud agent.
 
-Jest oczywiście więcej dostępnych poleceń slash i więcej do odkrycia z Copilot CLI! W następnym kroku [przejrzyj to, czego się nauczyłeś][next-lesson], oraz kolejne kroki dalszej nauki.
+Jest oczywiście więcej dostępnych poleceń slash i więcej do odkrycia z Copilot CLI! W następnym kroku [przejrzyj to, czego się nauczyłeś][next-lesson], oraz kolejne kroki pozwalające na dalszą naukę.
 
 ## Zasoby
 
