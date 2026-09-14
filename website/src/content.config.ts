@@ -2,6 +2,7 @@ import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { docsSchema } from '@astrojs/starlight/schema';
 import { z } from 'astro:schema';
+import { captureLoader } from '../../.github/skills/build-and-verify-docs/scripts/capture.mjs';
 
 // We use Astro's `glob()` loader directly (instead of Starlight's `docsLoader()`)
 // so we can exclude underscore-prefixed *directories* like `_images/`. Starlight's
@@ -16,10 +17,10 @@ import { z } from 'astro:schema';
 // fields pre-stage the metadata the awesome-copilot Learning Hub mirror expects.
 export const collections = {
   docs: defineCollection({
-    loader: glob({
+    loader: captureLoader(glob({
       base: '../docs',
       pattern: ['**/*.{md,mdx}', '!**/_*/**', '!**/_*'],
-    }),
+    })),
     schema: docsSchema({
       extend: z.object({
         authors: z.array(z.string()).optional(),
