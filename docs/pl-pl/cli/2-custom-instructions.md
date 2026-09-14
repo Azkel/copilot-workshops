@@ -8,7 +8,7 @@ lastUpdated: 2026-09-10
 
 [← Poprzednie ćwiczenie: Instalacja Copilot CLI][previous-lesson] · [Następne ćwiczenie: Generowanie kodu z CLI →][next-lesson]
 
-Kontekst jest kluczowy przy pracy z generatywną AI. Jeśli zadanie ma być wykonane w określony sposób — albo istnie kontekst, który Copilot powinien znać — chcesz mieć pewność, że te informacje są dostępne dla agenta. Masz kilka narzędzi, które pomagają Copilotowi; poznamy je w trakcie tych warsztatów. Zaczynamy od [plików instrukcji][instruction-files], które zwykle skupiają się na tym, jak sam kod powinien być ustrukturyzowany. Dzięki temu Copilot rozumie nie tylko *jaki* kod chcesz, ale też *jak* powinien być zbudowany.
+Kontekst jest kluczowy przy pracy z generatywną AI. Jeśli zadanie ma być wykonane w określony sposób — albo istnieje kontekst, który Copilot powinien znać — chcesz mieć pewność, że te informacje są dostępne dla agenta. Masz kilka narzędzi, które pomagają Copilotowi; poznamy je w trakcie tych warsztatów. Zaczynamy od [plików instrukcji][instruction-files], które zwykle skupiają się na tym, jak sam kod powinien być ustrukturyzowany. Dzięki temu Copilot rozumie nie tylko *jaki* kod chcesz, ale też *jak* powinien być zbudowany.
 
 Podczas tego ćwiczenia:
 
@@ -46,7 +46,7 @@ Są dwa typy plików instrukcji:
 > [!NOTE]
 > W IDE pliki instrukcji są używane tylko do generowania kodu w Copilot Chat — nie do uzupełnień kodu ani sugestii następnej edycji.
 >
-> Copilot Chat, Copilot CLI i Copilot cloud agent korzystają zarówno z plików na poziomie repozytorium, jak i z plików `*.instructions.md` (zaczyjających się od `applyTo`) przy generowaniu kodu.
+> Copilot Chat, Copilot CLI i Copilot cloud agent korzystają zarówno z plików na poziomie repozytorium, jak i z plików `*.instructions.md` (z front matter `applyTo`) przy generowaniu kodu.
 >
 > Ponadto Copilot [obsługuje pliki instrukcji według innych standardów][custom-instructions-support], w tym AGENTS.md i CLAUDE.md.
 
@@ -104,7 +104,7 @@ Będziesz wprowadzać zmiany w kodzie, więc utwórz gałąź do pracy.
 Aby zobaczyć wpływ instrukcji niestandardowych, zacznij od wygenerowania kodu przy obecnych instrukcjach. Później zaktualizujesz plik i uruchomisz polecenie uzupełniające.
 
 > [!CAUTION]
-> `--yolo` włącza pełne automatyczne uprawnienia (`--allow-all-tools`, `--allow-all-paths` i `--allow-all-urls`). Używaj go tylko w izolowanym środowisku, takim jak Codespace lub maszyna wirtualna, i nigdy nie ustawiaj go jako domyślnego aliasu w codziennej pracy. Szczegóły: [Allowing and denying tool use][allow-all-warning].
+> `--yolo` włącza pełne automatyczne uprawnienia (`--allow-all-tools`, `--allow-all-paths` i `--allow-all-urls`). Używaj go tylko w izolowanym środowisku, takim jak codespace lub maszyna wirtualna, i nigdy nie ustawiaj go jako domyślnego aliasu w codziennej pracy. Szczegóły: [Allowing and denying tool use][allow-all-warning].
 
 Uruchomienie Copilot CLI z **katalogu głównego repozytorium** zapewnia automatyczne wczytanie `.github/copilot-instructions.md`. `--enable-all-github-mcp-tools` włącza narzędzia GitHub MCP do odczytu/zapisu, aby Copilot mógł czytać backlog i otwierać pull requesty w dalszej części tych warsztatów.
 

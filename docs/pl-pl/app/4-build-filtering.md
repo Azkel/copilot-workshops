@@ -7,7 +7,7 @@ authors:
 lastUpdated: 2026-09-09
 ---
 
-Dotąd wprowadziliśmy kilka małych zmian w projekcie. Większe zmiany wymagają jednak bardziej rozbudowanego procesu. Na szczęście aplikacja GitHub Copilot jest zbudowana tak, by współpracować z istniejącymi przepływami i zapewniać, że budujemy właściwe rzeczy we właściwy sposób. To pierwsza z trzech lekcji, w których przejdziesz typowy proces tworzenia oprogramowania: zaczynając od zgłoszenia (issue), wygenerujesz nową funkcję, a umiejętność (skill) agenta uruchomi testy walidacyjne i lintery.
+Dotąd wprowadziliśmy kilka małych zmian w projekcie. Większe zmiany wymagają jednak bardziej rozbudowanego procesu. Na szczęście aplikacja GitHub Copilot jest zbudowana tak, by współpracować z istniejącymi przepływami i zapewniać, że budujemy właściwe rzeczy we właściwy sposób. To pierwsza z trzech lekcji, w których przejdziesz typowy proces tworzenia oprogramowania: zaczynając od zgłoszenia (issue), wygenerujesz nową funkcję, a skill agenta uruchomi testy walidacyjne i lintery.
 
 Podczas tej lekcji:
 
@@ -72,7 +72,7 @@ Otwórzmy zgłoszenie, rozpocznijmy nową sesję i utwórzmy plan, przełączaj�
 > [!NOTE]
 > Ponieważ Copilot jest probabilistyczny, dodatkowe pytania będą się różnić. W rzeczywistości może w ogóle nie zadać pytań! To całkowicie normalne.
 
-1. Po zakończeniu Copilot zaproponuje podsumowanie planu. Przejrzyj plan. Powinieneś zobaczyć propozycję zbudowania zapytań, dodawania kontrolek filtrów i oczywiście testów. W razie potrzeby przekaż informację zwrotną — agent uwzględni Twoje sugestie w nowej wersji.
+7. Po zakończeniu Copilot zaproponuje podsumowanie planu. Przejrzyj plan. Powinieneś zobaczyć propozycję zbudowania zapytań, dodawania kontrolek filtrów i oczywiście testów. W razie potrzeby przekaż informację zwrotną — agent uwzględni Twoje sugestie w nowej wersji.
 
 ## Zbuduj to z Autopilot
 
