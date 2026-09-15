@@ -2,7 +2,6 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import remarkGithubAdmonitionsToDirectives from 'remark-github-admonitions-to-directives';
-import { verificationIntegration } from '../.github/skills/build-and-verify-docs/scripts/capture.mjs';
 
 // Lesson callouts are authored in GitHub admonition syntax (`> [!NOTE]`). This
 // remark plugin rewrites them into Starlight aside directives before Starlight
@@ -28,7 +27,6 @@ export default defineConfig({
     ],
   },
   integrations: [
-    verificationIntegration(),
     starlight({
       title: 'Copilot Workshops',
       description:

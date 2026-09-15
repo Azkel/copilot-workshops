@@ -10,7 +10,7 @@ These encode conventions unique to this Astro + Starlight workshop content repo.
 
 | Skill | What it does | Use it when |
 |---|---|---|
-| [`build-and-verify-docs`](./build-and-verify-docs/SKILL.md) | Bundled scripts for type checks, a clean build, source-derived output verification, and offline links; AI guidance for semantic, visual, and structural review. | Building, previewing, or verifying the site; before every commit/PR. |
+| [`build-and-verify-docs`](./build-and-verify-docs/SKILL.md) | Small Bash and PowerShell wrappers for existing type checks, build, and offline links; AI guidance for source-page, semantic, visual, and structural review. | Building, previewing, or verifying the site; before every commit/PR. |
 | [`check-content-alignment`](./check-content-alignment/SKILL.md) | Uses the diff and current content tree to find inconsistent repeated passages, parallel concepts, translations, and cross-references. Reports candidates without editing content. | After lesson edits or when reviewing content drift. |
 | [`validate-site-playwright`](./validate-site-playwright/SKILL.md) | Optional deeper **browser** QA: drives the Playwright MCP server against a local preview to confirm pages render, catch console/hydration errors, find broken images, and confirm Starlight components mounted. | A deeper render/visual pass before a PR that changes how pages render. Complements (doesn't replace) `build-and-verify-docs`. |
 
