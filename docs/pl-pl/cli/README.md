@@ -9,7 +9,7 @@ lastUpdated: 2026-09-10
 
 **[GitHub Copilot CLI](https://docs.github.com/copilot/concepts/agents/about-copilot-cli)** umieszcza GitHub Copilot w terminalu jako agentycznego asystenta programowania. Eksploruje bazy kodu, generuje kod, uruchamia polecenia i łączy się z zewnętrznymi narzędziami — wszystko z linii poleceń, dzięki czemu możesz pozostać w przepływie pracy bez przełączania się na edytor graficzny.
 
-Podczas tych ćwiczeń zainstalujesz i uwierzytelnisz Copilot CLI, a następnie dasz mu kontekst projektu za pomocą instrukcji niestandardowych, zanim użyjesz trybu planowania do świadomego wygenerowania funkcji. Połączysz serwer Playwright MCP, aby przetestować tę funkcję w prawdziwej przeglądarce, a potem rozszerzysz Copilota o skille agenta wielokrotnego użytku i agentów niestandardowych. Na koniec poznasz polecenia slash do zarządzania kontekstem, modelami i udostępnianiem, a zakończysz przeglądem tego, co zbudowałeś.
+Podczas tych ćwiczeń zainstalujesz i uwierzytelnisz Copilot CLI, a następnie dasz mu kontekst projektu za pomocą instrukcji niestandardowych, zanim użyjesz trybu planowania do świadomego wygenerowania funkcji. Połączysz serwer Playwright MCP, aby przetestować tę funkcję w prawdziwej przeglądarce, a potem rozszerzysz Copilota o skille agenta wielokrotnego użytku i agentów niestandardowych. Na koniec poznasz polecenia slash do zarządzania kontekstem, modelami i udostępnianiem, a zakończysz przeglądem tego, co zbudowałeś. Możesz też przejść przez [opcjonalną serię trzech modułów z GitHub Copilot CLI i Foundry][foundry], aby przygotować model, zbudować i wdrożyć hostowanego agenta oraz zintegrować go z witryną.
 
 ## Ćwiczenia
 
@@ -23,7 +23,8 @@ Podczas tych ćwiczeń zainstalujesz i uwierzytelnisz Copilot CLI, a następnie 
 | [5. Skille agenta][ex5] | Skille | Rozszerz Copilota o wyspecjalizowane skille |
 | [6. Agenci niestandardowi][ex6] | Agenci | Przejrzyj i użyj agentów niestandardowych |
 | [7. Polecenia slash][ex7] | Funkcje CLI | Poznaj kontekst, modele, udostępnianie i opcjonalne delegowanie do cloud agent |
-| [8. Podsumowanie][ex8] | Podsumowanie | Przypomnij kluczowe pojęcia i kolejne kroki |
+| [9. Podsumowanie][ex9] | Podsumowanie | Przypomnij kluczowe pojęcia i kolejne kroki |
+| [Opcjonalnie: Foundry][foundry] | Hostowani agenci | Przygotuj model, zbuduj i wdróż concierge oraz podłącz go do witryny w trzech modułach |
 
 ## Wymagania wstępne
 
@@ -51,5 +52,6 @@ Przed udziałem w tych warsztatach upewnij się, że masz:
 [ex5]: 5-agent-skills/
 [ex6]: 6-custom-agents/
 [ex7]: 7-slash-commands/
-[ex8]: 8-review/
+[foundry]: 8-foundry-agent/
+[ex9]: 9-review/
 [callout-student-plan-education]: https://github.com/education/students

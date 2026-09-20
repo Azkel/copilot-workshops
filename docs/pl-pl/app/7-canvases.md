@@ -5,6 +5,9 @@ authors:
   - geektrainer
   - azkel
 lastUpdated: 2026-09-09
+next:
+  link: /copilot-workshops/pl-pl/app/9-review/
+  label: "Podsumowanie i kolejne kroki"
 ---
 
 Dotąd kierowałeś agentami przez czat. Ale wiele pracy nie żyje w rozmowie — żyje na tablicy, w dokumencie albo na liście zadań. **Kanwy** dają Tobie i agentowi współdzieloną powierzchnię właśnie do takiej pracy, bezpośrednio w aplikacji. Podczas tej lekcji utworzysz prostą kanwę do planowania i śledzenia backlogu, nad którym pracowałeś.
@@ -114,7 +117,7 @@ Utworzyłeś współdzieloną powierzchnię, na której Ty i agent możecie wsp�
 - zapisałeś i scaliłeś kanwę z repozytorium za pomocą Agent Merge.
 - otworzyłeś kanwę w nowej sesji i użyłeś jej do rozpoczęcia pracy.
 
-Gdy backlog jest widoczny, zrób krok wstecz, by przejrzeć wszystko, co zbudowałeś, i dokąd iść dalej. Przejdź do [Lekcji 8 - Podsumowanie i kolejne kroki][next-lesson].
+Gdy backlog jest widoczny, kontynuuj [przeglądem tego, co zbudowałeś][next-lesson]. Jeśli chcesz opcjonalne rozszerzenie z Microsoft Foundry Canvas, zobacz [Opcjonalnie: Foundry][foundry-canvas].
 
 ## Zasoby
 
@@ -122,7 +125,8 @@ Gdy backlog jest widoczny, zrób krok wstecz, by przejrzeć wszystko, co zbudowa
 - [Kanwy na Awesome Copilot][awesome-copilot-canvases]
 - [O aplikacji GitHub Copilot][about-copilot-app]
 
-[next-lesson]: ../8-review/
+[next-lesson]: ../9-review/
+[foundry-canvas]: ../8-foundry-canvas/
 [canvas-docs]: https://docs.github.com/copilot/how-tos/github-copilot-app/working-with-canvas-extensions
 [awesome-copilot-canvases]: https://awesome-copilot.github.com/extensions/
 [about-copilot-app]: https://docs.github.com/copilot/concepts/agents/github-copilot-app

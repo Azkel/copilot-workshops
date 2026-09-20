@@ -9,7 +9,7 @@ lastUpdated: 2026-09-09
 
 [**Aplikacja GitHub Copilot**](https://docs.github.com/copilot/concepts/agents/github-copilot-app) to aplikacja desktopowa oparta na Copilot CLI, która umożliwia rozwój kodu sterowany agentami w jednym, skoncentrowanym obszarze roboczym. Dodaje równoległe sesje agentów, przełączalne tryby sesji, współdzielone kanwy oraz natywne zarządzanie zgłoszeniami (issues) i pull requestami GitHub — w tym opcję **Agent Merge**, który przeprowadza pull request przez rebase za Ciebie, uwzględniając uwagi od innych programistów, poprawki wynikające z walidacji CI i scalenie kodu.
 
-W ramach tych lekcji zainstalujesz aplikację i skonfigurujesz projekt, a następnie zapoznasz się z interfejsem aplikacji oraz backlogiem, który szablon dla Ciebie przygotował. Zaczniesz od małej zmiany — dodania oceny w formie gwiazdek — potem dodasz zestaw instrukcji niestandardowych na podstawie zgłoszonego w backlogu zgłoszenia, zbudujesz funkcję filtrowania w izolowanej sesji agenta i zweryfikujesz ją za pomocą skillu wielokrotnego użytku. Dodasz serwer Playwright MCP, aby zbadać funkcję w prawdziwej przeglądarce, a następnie przejrzysz metody automatyzacji scalania kończącej się tym, że **Agent Merge** scali Twój pull request. Na koniec będziesz współpracować na współdzielonej kanwie i zautomatyzujesz powtarzalną pracę — pełna pętla od pomysłu do scalonej funkcji.
+W ramach tych lekcji zainstalujesz aplikację i skonfigurujesz projekt, a następnie zapoznasz się z interfejsem aplikacji oraz backlogiem, który szablon dla Ciebie przygotował. Zaczniesz od małej zmiany — dodania oceny w formie gwiazdek — potem dodasz zestaw instrukcji niestandardowych na podstawie zgłoszonego w backlogu zgłoszenia, zbudujesz funkcję filtrowania w izolowanej sesji agenta i zweryfikujesz ją za pomocą skillu wielokrotnego użytku. Dodasz serwer Playwright MCP, aby zbadać funkcję w prawdziwej przeglądarce, a następnie przejrzysz metody automatyzacji scalania kończącej się tym, że **Agent Merge** scali Twój pull request. Na koniec będziesz współpracować na współdzielonej kanwie i zautomatyzujesz powtarzalną pracę — pełna pętla od pomysłu do scalonej funkcji. Opcjonalne rozszerzenie w trzech modułach wykorzystuje Microsoft Foundry Canvas do przygotowania projektu i modelu, zbudowania oraz wdrożenia agenta i podłączenia go do witryny.
 
 ## Lekcje
 
@@ -23,7 +23,8 @@ W ramach tych lekcji zainstalujesz aplikację i skonfigurujesz projekt, a nastę
 | [5. Testowanie z Playwright MCP][ex5] | Narzędzia zewnętrzne | Dodaj serwer Playwright MCP i przetestuj funkcjonalność w przeglądarce |
 | [6. Scalanie z Agent Merge][ex6] | Scalanie | Pozwól Agent Merge naprawić i scalić pull request filtrowania |
 | [7. Planowanie z kanwami][ex7] | Współpraca | Utwórz współdzieloną kanwę do planowania i śledzenia pracy |
-| [8. Podsumowanie i kolejne kroki][ex8] | Podsumowanie | Zautomatyzuj powtarzalne zadania i odkryj, co dalej |
+| [9. Podsumowanie i kolejne kroki][ex9] | Podsumowanie | Zautomatyzuj powtarzalne zadania i odkryj, co dalej |
+| [Opcjonalnie: Foundry][foundry-canvas] | Agenci AI | Przygotuj projekt i model, zbuduj i wdróż agenta opartego o katalog oraz podłącz go do witryny |
 
 ## Wymagania wstępne
 
@@ -54,6 +55,7 @@ Przed udziałem w tych warsztatach upewnij się, że masz:
 [ex5]: 5-mcp-playwright/
 [ex6]: 6-agent-merge/
 [ex7]: 7-canvases/
-[ex8]: 8-review/
+[foundry-canvas]: 8-foundry-canvas/
+[ex9]: 9-review/
 [install-git]: https://github.com/git-guides/install-git
 [callout-student-plan-education]: https://github.com/education/students

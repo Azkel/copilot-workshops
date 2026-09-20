@@ -142,7 +142,7 @@ Polecenia slash w Copilot CLI pozwalają konfigurować jego zachowanie, udostęp
 - `/model`, aby przejrzeć listę dostępnych modeli i w razie potrzeby wybrać nowy.
 - `/delegate` jako opcjonalny most do cloud agent.
 
-Jest oczywiście więcej dostępnych poleceń slash i więcej do odkrycia z Copilot CLI! W następnym kroku [przejrzyj to, czego się nauczyłeś][next-lesson], oraz kolejne kroki pozwalające na dalszą naukę.
+Jest oczywiście więcej dostępnych poleceń slash i więcej do odkrycia z Copilot CLI! W następnym kroku [przejrzyj to, czego się nauczyłeś][next-lesson], oraz kolejne kroki pozwalające na dalszą naukę. Jeśli chcesz opcjonalne wyzwanie przed zakończeniem, [zbuduj concierge z GitHub Copilot CLI i Foundry][foundry-lesson] w serii trzech modułów.
 
 ## Zasoby
 
@@ -153,7 +153,8 @@ Jest oczywiście więcej dostępnych poleceń slash i więcej do odkrycia z Copi
 - [Wybór modeli w Copilot CLI][selecting-models]
 
 [previous-lesson]: ../6-custom-agents/
-[next-lesson]: ../8-review/
+[next-lesson]: ../9-review/
+[foundry-lesson]: ../8-foundry-agent/
 [using-copilot-cli]: https://docs.github.com/copilot/how-tos/use-copilot-agents/use-copilot-cli
 [about-copilot-cli]: https://docs.github.com/copilot/concepts/agents/about-copilot-cli
 [about-cloud-agent]: https://docs.github.com/copilot/concepts/agents/cloud-agent/about-cloud-agent
