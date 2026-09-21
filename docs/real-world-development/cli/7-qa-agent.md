@@ -28,13 +28,15 @@ The customizations you've used have different jobs. Repository instructions desc
 
 Before opening the feature PR, you'll ask Copilot to create a reusable QA profile. The profile will define both the checks QA performs and the boundaries it must follow.
 
-1. Confirm the filtering conversation is in Interactive mode.
+1. Return to your Codespace and confirm the filtering conversation is in Interactive mode.
 2. Ask the default agent to create the new custom agent:
 
    ```plaintext
    Create a custom agent named QA in .github/agents/qa.agent.md. It should check features against their issues and agreed requirements, follow the repository instructions, run the quality-checks skill, use Playwright MCP to verify behavior, and add tests when coverage is missing.
 
-   Have it report each requirement as pass, fail, or blocked with supporting evidence. It must ask before changing implementation code, and it must not commit changes or open pull requests. Use the current model and available tools. Just create the profile for now so I can review it.
+   Have it report each requirement as pass, fail, or blocked with supporting evidence. It must ask before changing implementation code, and it must not commit changes or open pull requests.
+
+   Just create the profile for now so I can review it.
    ```
 
 ## Inspect the profile
@@ -51,22 +53,23 @@ Before using the new agent, review its profile to confirm Copilot captured the i
 
 Copilot CLI loads project agents when a conversation starts. Resume the same filtering conversation after creating the profile, then select QA so it can use the issue and planning decisions already in context.
 
-1. Exit Copilot CLI with `/exit`.
-2. From the `game-filters-cli` branch, resume the conversation:
+1. Enable the agent by using the following prompt:
 
-   ```bash
-   copilot --resume "CLI filtering workflow" --yolo
+   ```plaintext
+   /agent QA
    ```
 
-3. Enter `/agent`, select **QA**, and confirm it is the active agent.
-4. Ask QA to review the feature:
+> [!NOTE]
+> Because you just created the agent it may not show in the list of available agents. It's there, and the command above will activate it.
+
+2. Use the following prompt to ask the QA agent to review the feature:
 
    ```plaintext
    Review the filtering feature against the issue and the decisions in our plan. Is it ready for a PR?
    ```
 
-5. Confirm QA uses the correct issue and planning decisions. Provide the issue URL or missing context if it asks.
-6. Read through the report it provides once it's done doing its work!
+3. The QA agent gets to work!
+4. Read through the report it provides once it's done doing its work!
 
 ## Summary and next steps
 

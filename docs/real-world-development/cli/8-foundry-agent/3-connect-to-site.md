@@ -23,7 +23,7 @@ Backers discover games on the Tailspin Toys website, not in a developer's termin
 
 The website integration needs the deployed agent from Module 2. You'll keep that agent running in Foundry while the proxy and website run locally.
 
-1. Return to the Tailspin Toys repository on the `foundry-agent-cli` branch and your existing Copilot CLI session.
+1. Return to your Codespace, then open the Tailspin Toys repository on the `foundry-agent-cli` branch and your existing Copilot CLI session.
 2. Confirm that the Backer Concierge is deployed and that the remote invocation from [Build and deploy the agent][previous-lesson] passed. If you already removed the Azure resources, recreate them through the earlier modules before continuing.
 
 > [!IMPORTANT]

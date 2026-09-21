@@ -36,46 +36,41 @@ There are many other MCP servers available. GitHub hosts an [MCP registry][mcp-r
 
 ## Add the Playwright MCP server
 
-MCP servers configured for Copilot CLI may already be available, so check before adding a duplicate.
+Let's add the Playwright MCP server to allow Copilot to interact with the website as a user would.
 
-1. Enter:
-
-   ```plaintext
-   /mcp list
-   ```
-
-2. If a connected Playwright server is listed, continue to the next section.
-3. If Playwright is missing, enter:
+1. Return to your Codespace.
+2. Open the add MCP server dialog by entering the following command in Copilot CLI:
 
    ```plaintext
    /mcp add
    ```
 
-4. Name the server `playwright`, choose a local or STDIO server, and use this command:
+3. For name, enter `playwright`, then press <kbd>Tab</kbd>.
+4. Confirm a server type of **STDIO** by pressing <kbd>Enter</kbd>, then press <kbd>Tab</kbd>.
+5. Paste the following into the **Command** dialog:
 
    ```plaintext
-   npx -y @playwright/mcp@latest --headless
+   npx -y @playwright/mcp@latest --headless --no-sandbox
    ```
 
-   If the form separates the command from its arguments, use `npx` as the command and `-y`, `@playwright/mcp@latest`, and `--headless` as the arguments.
-
-5. Review the publisher and command, save the configuration, then use `/mcp list` to confirm the server is connected.
-
-> [!NOTE]
-> Copilot CLI does not load `.vscode/mcp.json`, which is why this lesson checks the active CLI configuration.
+6. Press <kbd>Control</kbd>+<kbd>S</kbd> (Mac) or <kbd>Ctrl</kbd>+<kbd>S</kbd> (Windows/Linux) to save the new MCP server.
+7. Press <kbd>Esc</kbd> to exit the MCP dialog.
 
 ## Ask Copilot to explore the feature via Playwright
 
-The issue and your planning decisions are already in context. Copilot can start the application and use the headless browser tools from the same Codespace.
+Previously you manually confirmed the functionality behaves as expected. Now let's use the Playwright server you just added to Copilot to allow Copilot to do the same!
 
-1. Use the following prompt:
+1. Use the following prompt to tell Copilot to use the Playwright MCP server to validate the functionality:
 
    ```plaintext
    Start the app and use Playwright MCP to check filtering against the issue and our plan. Tell me what works and what doesn't, without making changes. Stop the server you started when you're done.
    ```
 
-2. Sit back and watch!
-3. Read the report and compare it with the filtering issue and the decisions you made during planning.
+> [!NOTE]
+> You don't actually need to tell Copilot to use the MCP server as it will typically figure it out on its own. But since you know what it should be using, it's never a bad idea to help point it in the right direction! It'll help ensure more consistent results, and save a few tokens along the way.
+
+2. Watch as Copilot lists the various steps its performing in the browser to confirm the functionality works.
+3. Read the report and ensure everything behaves as expected.
 
 Copilot will start the server, use Playwright to interact with the website, stop the server, and give you a report.
 

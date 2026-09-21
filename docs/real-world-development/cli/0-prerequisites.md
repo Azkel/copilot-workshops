@@ -37,17 +37,15 @@ Next up, you'll use a Codespace to complete the workshop.
 2. Select **Code**.
 3. Select the **Codespaces** tab, then select **Create codespace on main**.
 4. Wait for the Codespace setup to finish. The template installs the project dependencies, Playwright Chromium, and the local database for you.
-5. Open a terminal in the repository root and start the application:
+5. If prompted with **Do you trust the authors of the files in this folder?**, select **Trust Folder & Continue**.
+6. Open a terminal in the repository root and start the application:
 
    ```bash
    npm run dev
    ```
 
-6. When Codespaces reports that port `4321` is available, select **Open in Browser** and confirm the Tailspin Toys site loads.
-7. Return to the terminal and stop the development server with <kbd>Ctrl</kbd>+<kbd>C</kbd>.
-
-> [!NOTE]
-> This workshop is built to run inside a Codespace or local [dev container][dev-containers]. Both provide the prerequisites for a smooth experience. If you'd prefer to run it locally, open the cloned repository in Visual Studio Code and select **Reopen in Container** when prompted.
+7. When Codespaces reports that port `4321` is available, select **Open in Browser** and confirm the Tailspin Toys site loads.
+8. Return to the terminal and stop the development server with <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 ## Summary and next steps
 
@@ -69,4 +67,3 @@ Next, you'll [install GitHub Copilot CLI][next-lesson] in your Codespace and aut
 [codespaces-quickstart]: https://docs.github.com/codespaces/getting-started/quickstart
 [next-lesson]: ../1-install-copilot-cli/
 [codespaces]: https://github.com/features/codespaces
-[dev-containers]: https://code.visualstudio.com/docs/devcontainers/containers

@@ -23,7 +23,7 @@ You've wrapped the core CLI workflow. Now let's look at a few additional capabil
 
 When working on larger or more complex tasks, you may bump into the maximum context window for the model. Copilot CLI automatically compacts the conversation when needed, and you can inspect or compact it yourself with slash commands.
 
-1. Start Copilot CLI from the repository root if it is not already open.
+1. Return to your Codespace and start Copilot CLI from the repository root if it is not already open.
 2. Enter:
 
    ```plaintext

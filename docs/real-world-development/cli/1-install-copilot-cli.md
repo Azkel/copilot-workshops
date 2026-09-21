@@ -24,17 +24,27 @@ Your team is starting to use AI agents to work through a growing backlog. Copilo
 You can install Copilot CLI through [npm][install-cli], WinGet, and Homebrew. Since GitHub Codespaces comes with Node.js preinstalled, you'll use npm.
 
 1. Return to your Codespace and open a terminal.
-2. Install Copilot CLI globally:
+2. Verify Node.js is installed and meets the version requirement:
+
+   ```bash
+   node --version
+   ```
+
+   You should see version 24 or higher.
+
+3. Install Copilot CLI globally:
 
    ```bash
    npm install -g @github/copilot
    ```
 
-3. Verify the installation:
+4. Verify the installation:
 
    ```bash
    copilot --version
    ```
+
+   You should see the version number displayed.
 
 ## Authenticate with GitHub
 
@@ -47,7 +57,15 @@ On first launch, Copilot CLI prompts you to authenticate with your GitHub accoun
    ```
 
 2. If prompted, follow the device-code instructions to authenticate and authorize Copilot CLI.
-3. When Copilot CLI asks whether you trust the files in this folder, verify that the path is your Tailspin Toys repository, then choose the option that remembers trust for this folder.
+3. Copilot CLI displays the following prompt:
+
+   ```plaintext
+   Copilot can read files in this folder and, with your permission, edit them or run code and shell commands. It will remember your permissions for the rest of this session.
+
+   Do you trust the files in this folder?
+   ```
+
+4. Verify that the path is your Tailspin Toys repository, then answer yes by selecting **Yes, and remember this folder for future sessions**.
 
 > [!NOTE]
 > In a Codespace, you may already be authenticated through your GitHub session. If Copilot CLI starts without prompting for authentication, you're good to go!
@@ -56,22 +74,23 @@ On first launch, Copilot CLI prompts you to authenticate with your GitHub accoun
 
 Commands at the normal shell prompt run directly in your Codespace. After Copilot CLI starts, natural language goes to the agent and slash commands control the conversation.
 
-1. Enter `/help` to see the commands available in your installed version.
-2. Ask Copilot a simple question to verify everything is working:
+1. Enter `/model`, use the arrow keys to select **Auto**, press <kbd>Enter</kbd>, then press <kbd>Enter</kbd> again to confirm.
+2. Enter `/help` to see the commands available in your installed version, then press <kbd>Esc</kbd> to close the help screen.
+3. Ask Copilot a simple question to verify everything is working:
 
    ```plaintext
-   What files are in this project?
+   What are the key files in this project?
    ```
 
-3. Read the response and notice how Copilot explores the repository before answering.
-4. Enter `/mcp list` and confirm the built-in GitHub MCP server is available.
-5. Ask Copilot to find the filtering issue:
+4. Read the response and notice how Copilot explores the repository before answering.
+5. Enter `/mcp list` and confirm the built-in GitHub MCP server is available.
+6. Ask Copilot to find the filtering issue:
 
    ```plaintext
    Using GitHub MCP, find the issue in this repository titled "Allow users to filter games by category and publisher." Give me its URL and a short summary. Don't change anything.
    ```
 
-6. Open the URL and read the issue. You'll use it after completing a quick first change.
+7. Open the URL and read the issue. You'll use it after completing a quick first change.
 
 > [!TIP]
 > A normal Copilot CLI session works in the branch currently checked out in your terminal; it does not automatically create a worktree. You'll create a feature branch before each change.
@@ -80,13 +99,16 @@ Commands at the normal shell prompt run directly in your Codespace. After Copilo
 
 Copilot CLI normally asks before using tools outside its established permissions. For this workshop, you'll relaunch it with `--yolo`, a user-approved shortcut that removes those approval prompts inside the Codespace so you can focus on the exercises.
 
-`--yolo` allows Copilot to use all tools, paths, and URLs available to the session. The Codespace limits access to your local computer, but authenticated GitHub resources are still real. Review changes before publishing or merging them.
+> [!CAUTION]
+> `--yolo` enables full automatic permissions (`--allow-all-tools`, `--allow-all-paths`, and `--allow-all-urls`). Use it only in an isolated environment like a Codespace or VM, and never alias it as your default for day-to-day development. See [Allowing and denying tool use][allow-all-warning] for details.
+
+For this workshop, `--enable-all-github-mcp-tools` turns on the read/write GitHub MCP tools that later lessons use to work with issues and pull requests. The Codespace limits access to your local computer, but authenticated GitHub resources are still real. Review changes before publishing or merging them.
 
 1. Exit Copilot CLI with `/exit`.
 2. Relaunch it from the repository root:
 
    ```bash
-   copilot --yolo
+   copilot --yolo --enable-all-github-mcp-tools
    ```
 
 3. Ask another quick question about the project to confirm the conversation is working, then exit with `/exit`.
@@ -115,3 +137,4 @@ Next, you'll [start your first focused change][next-lesson] and use Copilot CLI 
 [install-cli]: https://docs.github.com/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli
 [about-copilot-cli]: https://docs.github.com/copilot/concepts/agents/about-copilot-cli
 [cli-reference]: https://docs.github.com/copilot/reference/copilot-cli-reference/cli-command-reference
+[allow-all-warning]: https://docs.github.com/copilot/concepts/agents/about-copilot-cli#allowing-and-denying-tool-use

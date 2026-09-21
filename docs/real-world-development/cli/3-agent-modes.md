@@ -29,7 +29,7 @@ Tailspin Toys' catalog is growing, and visitors need to narrow the games by cate
 
 Introducing AI coding agents to your development flow doesn't change the fundamentals. If anything, they become even more important! Most developers follow a flow that resembles:
 
-1. Open a filed issue with details of what needs to be done.
+1. Start from a filed issue that describes what needs to be done.
 2. Create a plan of what needs to be built.
 3. Build and review the code.
 4. Run the tests to validate the code.
@@ -54,9 +54,12 @@ Start in Plan mode, review the plan, then use Autopilot to implement it.
 
 ## Start from the issue
 
-Confirm the star-rating PR is merged and your local `main` is up to date before starting.
+Before starting the filtering work, return to your Codespace and make sure the repository and terminal are ready.
 
-1. In the shell, create a feature branch:
+1. Return to your Codespace. If it is stopped, restart it before continuing.
+2. Confirm the star-rating PR is merged.
+3. If the terminal isn't open, press <kbd>Control</kbd>+<kbd>\`</kbd> (Mac) or <kbd>Ctrl</kbd>+<kbd>\`</kbd> (Windows/Linux).
+4. Update `main`, then create a branch for the filtering work:
 
    ```bash
    git checkout main
@@ -64,40 +67,45 @@ Confirm the star-rating PR is merged and your local `main` is up to date before 
    git checkout -b game-filters-cli
    ```
 
-2. Start a named conversation so it is easy to resume in later lessons:
+5. Start Copilot CLI:
 
    ```bash
-   copilot --name "CLI filtering workflow" --yolo
+   copilot --yolo
    ```
 
-3. Use GitHub MCP to retrieve the actual issue:
+6. Press <kbd>Tab</kbd> twice to open the **Issues** tab.
+7. Press <kbd>A</kbd> to display all issues.
+8. Use the arrow keys to highlight the issue titled **Allow users to filter games by category and publisher**.
+9. Press <kbd>C</kbd> to add the issue to the prompt and return to the **Session** tab.
 
-   ```plaintext
-   Find the issue in this repository titled "Allow users to filter games by category and publisher." Read it and give me its URL.
-   ```
-
-4. Open the issue URL and compare it with Copilot's summary.
+Notice how the prompt now starts with `#7` (or a similar number). The `#` allows you to bring an issue or pull request (PR) on GitHub into context.
 
 ## Plan the filtering feature
 
-Planning gives you a chance to review the approach before Copilot writes code. Copilot already has the feature request in context.
+Planning gives you a chance to define the approach to be taken for implementing a feature or performing tasks before handing it over to Copilot. It's always a good idea for anything complex to spend a bit of time planning. Let's switch to plan mode, and ask Copilot to create the plan.
 
-1. Enter `/plan`, then send:
+1. Press <kbd>Shift</kbd>+<kbd>Tab</kbd> to switch to Plan mode. Confirm the mode indicator below the prompt displays **Plan**.
+2. After the issue reference added in the prior step, enter the following prompt:
 
    ```plaintext
-   Build this feature.
+   Create a plan for implementing this feature.
    ```
 
-2. Answer Copilot's questions and compare the plan with the issue's acceptance criteria. Check that it covers category and publisher filtering, accessible controls, data-access changes, and tests.
-3. Discuss any unclear behavior, such as how multiple categories combine or what happens when no games match.
-4. Ask for changes to the plan before approving it.
+Copilot gets to work on building out the plan! It'll start by exploring the project, then determining the best approach.
+
+3. Along the way, Copilot may ask questions about how the filtering capabilities should work. Answer them based on your preferences. There are no wrong answers here!
+4. Once the plan is complete, press <kbd>Control</kbd>+<kbd>E</kbd> (Mac) or <kbd>Ctrl</kbd>+<kbd>E</kbd> (Windows/Linux) to expand the plan.
+5. Scroll up and down to review the plan.
+6. Ask Copilot to revise any part of the plan that does not match your decisions.
 
 ## Approve Autopilot
 
-Once you're happy with the plan, you can allow Copilot to build it.
+With the plan written and reviewed, it's time to implement it! Let's let Copilot do its thing by using autopilot.
 
-1. Approve the option to implement the plan with Autopilot.
-2. Confirm the mode indicator shows **Autopilot**.
+Autopilot will allow Copilot to iterate on the problem until it believes it's complete.
+
+1. Select **Accept plan and build on autopilot (recommended)**, or the similarly labeled option in your installed version.
+2. Confirm the mode indicator below the prompt displays **Autopilot**.
 3. Watch as Copilot iterates through the established plan, generates code, and runs tests.
 
 > [!NOTE]
@@ -107,10 +115,11 @@ Once you're happy with the plan, you can allow Copilot to build it.
 
 Once the code is generated, it needs to be reviewed before it's merged, just like any other code. Let's both review the code and run the site to ensure everything looks good.
 
-1. Press <kbd>Shift</kbd>+<kbd>Tab</kbd> until the mode indicator shows **Interactive**.
+1. Press <kbd>Shift</kbd>+<kbd>Tab</kbd> to enter Interactive mode. Confirm the mode indicator no longer displays **Plan** or **Autopilot**.
 2. Enter `/diff` and inspect the filtering implementation and tests.
 3. Compare the result with the issue and the decisions you made during planning.
-4. Review the output from the project's checks and ask Copilot to resolve any failures.
+4. Once the code is reviewed, press <kbd>Esc</kbd> to exit the diff view.
+5. Review the output from the project's checks and ask Copilot to resolve any failures.
 
 ## Explore the new functionality
 
@@ -122,9 +131,10 @@ OK, the code looks good — but does it run? Let's start the app like we did bef
    Start the app so I can try the filtering feature in my browser. Tell me the URL and leave the server running.
    ```
 
-2. Open the forwarded site and try category filtering, publisher filtering, and the combinations you agreed on in the plan.
-3. Confirm reset and empty-result behavior match the issue and your decisions.
-4. When finished, ask Copilot to stop the development server it started.
+2. When Codespaces reports that port `4321` is available, select **Open in Browser**.
+3. Try category filtering, publisher filtering, and the combinations you agreed on in the plan.
+4. Confirm reset and empty-result behavior match the issue and your decisions.
+5. Return to your Codespace and ask Copilot to stop the development server it started.
 
 ## Summary and next steps
 

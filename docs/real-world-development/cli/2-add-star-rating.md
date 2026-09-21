@@ -28,23 +28,18 @@ Inside a conversation you'll see three things: your prompts and the agent's resp
 
 ## Start a conversation and request our change
 
-Let's start a new conversation to begin exploring the project and implementing our feature. A plain CLI session uses the current checkout, so you'll create the feature branch first.
+Let's start a new conversation to begin implementing our feature.
 
-1. In the shell, create a branch from `main`:
-
-   ```bash
-   git checkout main
-   git pull --ff-only
-   git checkout -b star-ratings-cli
-   ```
-
-2. Start Copilot CLI:
+1. Return to your Codespace.
+2. If the terminal isn't open from before, select <kbd>Ctl</kbd>+<kbd>\`</kbd>.
+3. If not already open, start Copilot by using the following command:
 
    ```bash
    copilot --yolo
    ```
 
-3. Use the following prompt to request the change:
+4. Ensure a new session is started by using the slash command `/new` and selecting <kbd>Enter</kbd>.
+4. Use the following prompt to request the change:
 
    ```plaintext
    Show each game's starRating out of 5 in the game cards on the list page. If the rating is null, show "No rating yet". Keep the card layout as it is, add tests, and run the relevant checks.
@@ -60,6 +55,7 @@ All AI-generated changes deserve a review before they're merged, even small ones
 2. Confirm the game card displays the numeric rating when it is present and `No rating yet` when `starRating` is `null`.
 3. Confirm the tests cover both states.
 4. Review the results of the checks Copilot ran and ask it to fix any failures.
+5. Once your review is complete, select <kbd>Esc</kbd> to exit the diff screen.
 
 > [!NOTE]
 > Because Copilot, like all generative AI tools, is probabilistic rather than deterministic, your exact code may vary. Review the behavior rather than expecting one exact implementation.
@@ -76,8 +72,7 @@ Of course we shouldn't just read the code and assume it works. Let's ask Copilot
 
 2. When Codespaces reports that port `4321` is available, select **Open in Browser**.
 3. Confirm game cards display their ratings out of five.
-4. The template currently gives every seeded game a rating, so rely on the tests to confirm the `No rating yet` fallback rather than changing the seed data.
-5. Return to Copilot and ask it to stop the server it started:
+4. Return to Copilot and ask it to stop the server it started:
 
    ```plaintext
    Stop the development server you started.
@@ -93,14 +88,16 @@ You've now created the feature! It's time to create a pull request (PR) to merge
    Commit the reviewed star-rating changes with an appropriate commit message.
    ```
 
-2. Enter `/pr create`. Copilot CLI can push the existing commit when it creates the PR; review the resulting PR title and description.
-3. Open the PR URL and review the changed files and checks.
-4. Once ready, select **Merge pull request**, then confirm the merge.
-5. Exit Copilot CLI with `/exit`, then update your local `main`:
+2. Enter `/pr create`. Copilot CLI pushes the existing commit when it creates the PR and displays the PR URL.
+3. Open the PR by holding <kbd>Command</kbd> (Mac) or <kbd>Ctrl</kbd> (Windows/Linux) and selecting the URL displayed by Copilot CLI.
+4. Review the changed files and checks.
+5. Once ready, select **Merge pull request**, then confirm the merge.
+6. Return to your Codespace and exit Copilot CLI with `/exit`.
+7. Update your local `main`:
 
    ```bash
    git checkout main
-   git pull --ff-only
+   git pull
    ```
 
 ## Summary and next steps

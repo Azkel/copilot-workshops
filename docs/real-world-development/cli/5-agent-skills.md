@@ -33,7 +33,7 @@ Skills can reside in a project's `.github/skills` folder to become a repository 
 
 Let's explore the skill the Tailspin Toys team created for running tests and linters, named `quality-checks`.
 
-1. In the Codespaces editor, open `.github/skills/quality-checks/SKILL.md`.
+1. Return to your Codespace. In the Codespaces editor, open `.github/skills/quality-checks/SKILL.md`.
 2. Read the `name` and `description` at the top. The description helps Copilot understand when to call the skill.
 3. Read the instructions and note how they guide Copilot through the testing and linting process.
 4. Notice that the skill does not yet contain a **Results output formatting** section.
@@ -56,7 +56,7 @@ Skills are callable directly through Copilot CLI or by using natural language. L
 OK, we'd like a better report that tells us what ran, whether it succeeded, and what the tools actually reported. Let's update our skill to create that report for us!
 
 1. Return to `.github/skills/quality-checks/SKILL.md`.
-2. Add the following section near the end of the file:
+2. Add the following section to the end of the file:
 
    ```markdown
    ## Results output formatting
@@ -64,7 +64,7 @@ OK, we'd like a better report that tells us what ran, whether it succeeded, and 
    Upon completion, report each command that ran and whether it passed, failed, or was blocked. Include test counts, durations, errors, warnings, and other metrics only when the tool reports them. Identify the next action for any failure or blocker, and never describe a skipped or incomplete check as passed.
    ```
 
-3. Save the file.
+3. The file is automatically saved.
 
 ## Run the updated skill
 
@@ -82,7 +82,7 @@ With our change made, let's see it in action! Copilot CLI can reload edited skil
    Run the tests and linters.
    ```
 
-3. Note the report at the end and compare it with the first report. Confirm every metric comes from the tools rather than an invented percentage.
+3. Note the report at the end and compare it with the first report.
 
 ## Summary and next steps
 

@@ -32,35 +32,13 @@ Up to this point you've selected **Merge pull request** yourself. Agent Merge ca
 
 With all of your code created, let's review it together, create the PR, and allow Agent Merge to manage the rest of the process.
 
-1. Enter `/agent`, select the default agent, and confirm it is active.
-2. Ask Copilot for a final review:
-
-   ```plaintext
-   Review everything on this branch against the filtering issue and our plan. Is it ready for a PR?
-   ```
-
-3. Enter `/diff`, inspect the complete change, and resolve anything that still needs attention.
-4. Ask Copilot to commit the reviewed work:
-
-   ```plaintext
-   Commit the reviewed filtering and quality workflow changes with an appropriate commit message.
-   ```
-
-5. Enter `/pr create`. Review the resulting PR title and description. `/pr create` can push the existing commit as part of creating the PR.
-6. Open the resulting PR and inspect its commits, changed files, linked issue, and checks.
-7. Once you decide the PR is ready for Agent Merge, return to Copilot CLI and enter:
-
-   ```plaintext
-   /pr automerge
-   ```
-
-   `/pr agentmerge` is an alias for the same command.
-
-   In this `--yolo` session, the command can act immediately.
-
-8. Follow the progress in Copilot CLI and on the PR.
-9. If Agent Merge changes code, review the new commit and affected checks.
-10. Confirm the PR is merged.
+1. Return to your Codespace.
+2. Open the agent dialog by entering `/agent`.
+3. Select **Default** from the list of options and select <kbd>Enter</kbd>.
+4. Create a new PR by using the command `/pr create`.
+5. Activate agent merge by using `/pr agentmerge`
+6. Copilot will watch the continuous integration process on the PR. Once everything succeeds, it will perform the merge.
+7. Ensure you see a message from Copilot saying something similar to "PR #14 was squash-merged successfully."
 
 > [!IMPORTANT]
 > Agent Merge does not bypass required approvals, branch protection, merge queues, repository settings, or missing permissions. If it is blocked, read the reported reason and complete the reviewed merge manually when your repository permits it.

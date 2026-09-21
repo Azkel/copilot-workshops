@@ -26,7 +26,7 @@ You'll use Azure to host the Backer Concierge and Copilot CLI to guide the work.
 > The [cleanup instructions][cleanup] cover stopping after this module as well as finishing the series.
 
 1. Confirm that you have an Azure subscription. If you need one, the available options include a [free Azure subscription with $200 credit][azure-free] or [Azure for Students with $100 credit][azure-students].
-2. Return to your Tailspin Toys codespace and open a terminal.
+2. Return to your Tailspin Toys Codespace and open a terminal.
 3. Install the Azure CLI in the dev container:
 
     ```bash
