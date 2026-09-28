@@ -21,7 +21,7 @@ For PR/CI rules, see **[CONTRIBUTING.md](./CONTRIBUTING.md)**.
 
 - **`docs/`** — **Lesson source (plain Markdown). Edit here.** Browsable directly on github.com, no build required.
   - `README.md` — Workshop landing page (also the published site's home via `slug: index`).
-  - `first-steps/` — Guided introductory workshops, including the GitHub Copilot app tour adapted from James Montemagno's GitHub Copilot App Lab.
+  - `first-steps/` — Guided introductory workshops for the GitHub Copilot app, GitHub Copilot CLI, and VS Code, adapted from James Montemagno's [First Steps with GitHub Copilot](https://github.com/jamesmontemagno/first-steps-with-github-copilot) (MIT).
   - `real-world-development/` — Scenario-based workshops organized by environment: `cli/`, `vscode/`, `cloud/`, and `app/`.
   - `es-es/`, `ja-jp/`, `ko-kr/`, `pt-br/`, `zh-cn/` — Translated locale trees that mirror available English category and workshop paths.
   - `_images/` — Screenshots and diagrams (shared across all locales).

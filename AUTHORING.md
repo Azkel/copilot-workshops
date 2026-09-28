@@ -13,6 +13,9 @@ copilot-workshops/
 ├── docs/                        ← Markdown source. EDIT HERE. Browsable on github.com.
 │   ├── README.md                ← Workshop landing page (also site home via slug: index)
 │   ├── first-steps/             ← Guided introductory workshops
+│   │   ├── copilot-app/         ← GitHub Copilot app tour
+│   │   ├── copilot-cli/         ← GitHub Copilot CLI first steps
+│   │   └── vscode/              ← VS Code first steps
 │   ├── real-world-development/  ← Scenario workshops organized by environment
 │   │   ├── cli/                 ← Copilot CLI lessons, including the optional 8-foundry-agent/ series
 │   │   ├── vscode/              ← VS Code lessons, including the optional 7-foundry-toolkit/ series

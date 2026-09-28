@@ -3,7 +3,7 @@ slug: zh-cn
 title: "GitHub Copilot 研讨会"
 authors:
   - geektrainer
-lastUpdated: 2026-09-16
+lastUpdated: 2026-09-28
 ---
 
 根据学习目标和期望的深入程度选择研讨会。**入门体验**提供 GitHub Copilot 引导式介绍，**真实场景开发**则使用完整应用程序和团队待办事项，练习面向生产环境的工作流。
@@ -15,6 +15,14 @@ lastUpdated: 2026-09-16
 ### [GitHub Copilot app 导览][first-steps-app]
 
 从空文件夹创建 Space Quiz，将其发布到 GitHub，实现一个议题，完成 Copilot 审查，安排自动化任务，并探索 Canvas 工作流。
+
+### [GitHub Copilot CLI 入门][first-steps-cli]
+
+在终端中构建同一个 Space Quiz，审查差异，在工作树中并行运行会话，先规划再编辑，并在不离开 shell 的情况下创建、合并和委派拉取请求。
+
+### [VS Code 入门][first-steps-vscode]
+
+在 VS Code 中构建 Space Quiz，在集成浏览器中测试，通过源代码管理发布，使用 GitHub 工具处理议题和拉取请求，并将工作交给云会话。
 
 ## 真实场景开发
 
@@ -30,4 +38,6 @@ lastUpdated: 2026-09-16
 > 如果在讲师指导的研讨会中遇到无法正常运行的内容，请向导师求助。
 
 [first-steps-app]: ../first-steps/copilot-app/
+[first-steps-cli]: ../first-steps/copilot-cli/
+[first-steps-vscode]: ../first-steps/vscode/
 [real-world-development]: ../real-world-development/

@@ -8,7 +8,7 @@ This repo hosts the **workshop content** for **Copilot Workshops**, published as
 
 - `docs/` — **Source Markdown for all lessons. Edit here.** Browsable directly on github.com; no build required.
   - `README.md` — Workshop landing page (also the site home via `slug: index` frontmatter).
-  - `first-steps/` — Guided introductory workshops. Each workshop has its own folder and `README.md` landing page.
+  - `first-steps/` — Guided introductory workshops (`copilot-app/`, `copilot-cli/`, and `vscode/`). Each workshop has its own folder and `README.md` landing page.
   - `real-world-development/` — Scenario-based workshops organized by environment (`cli/`, `vscode/`, `cloud/`, and `app/`). Each environment's landing page is a `README.md` routed via a slug matching the full category path. Each workshop opens with its own `0-prerequisites.md` setup lesson.
   - `es-es/`, `ja-jp/`, `ko-kr/`, `pt-br/`, `zh-cn/` — Localized content at the locale-root paths required by Starlight. Translated pages mirror the English path beneath each locale directory; untranslated pages use Starlight's English fallback.
   - `_images/` — Screenshots and diagrams (shared across all locales).

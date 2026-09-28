@@ -3,7 +3,7 @@ slug: ja-jp
 title: "GitHub Copilot ワークショップ"
 authors:
   - geektrainer
-lastUpdated: 2026-09-16
+lastUpdated: 2026-09-28
 ---
 
 学びたい内容と深さに合わせてワークショップを選びます。**はじめの一歩**では GitHub Copilot をガイドに沿って体験し、**実践的な開発**では完成したアプリケーションとチームのバックログを使って、本番環境を意識したワークフローを学びます。
@@ -15,6 +15,14 @@ lastUpdated: 2026-09-16
 ### [GitHub Copilot app ツアー][first-steps-app]
 
 空のフォルダーから Space Quiz を作成し、GitHub への公開、Issue の実装、Copilot レビュー、オートメーションのスケジュール設定、Canvas ワークフローの体験まで進めます。
+
+### [GitHub Copilot CLI のはじめの一歩][first-steps-cli]
+
+同じ Space Quiz をターミナルから作成し、差分のレビュー、worktree での並列セッション、編集前の計画、シェルを離れずに行うプル リクエストの作成、マージ、委任まで進めます。
+
+### [VS Code のはじめの一歩][first-steps-vscode]
+
+VS Code で Space Quiz を作成し、統合ブラウザーでのテスト、ソース管理での公開、GitHub ツールを使った Issue とプル リクエストの操作、クラウド セッションへの委任まで進めます。
 
 ## 実践的な開発
 
@@ -30,4 +38,6 @@ VS Code、Copilot CLI、GitHub Copilot app、Copilot cloud agent から選択で
 > 講師が進行するワークショップで正しく動作しない場合は、メンターに相談してください。
 
 [first-steps-app]: ../first-steps/copilot-app/
+[first-steps-cli]: ../first-steps/copilot-cli/
+[first-steps-vscode]: ../first-steps/vscode/
 [real-world-development]: ../real-world-development/
