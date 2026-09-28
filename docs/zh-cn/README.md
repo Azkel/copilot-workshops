@@ -20,7 +20,7 @@ lastUpdated: 2026-09-28
 
 在终端中构建同一个 Space Quiz，审查差异，在工作树中并行运行会话，先规划再编辑，并在不离开 shell 的情况下创建、合并和委派拉取请求。
 
-### [VS Code 入门][first-steps-vscode]
+### [Visual Studio Code 入门][first-steps-vscode]
 
 在 VS Code 中构建 Space Quiz，在集成浏览器中测试，通过源代码管理发布，使用 GitHub 工具处理议题和拉取请求，并将工作交给云会话。
 
@@ -30,7 +30,7 @@ lastUpdated: 2026-09-28
 
 ### [浏览真实场景开发研讨会][real-world-development]
 
-可以选择 VS Code、Copilot CLI、GitHub Copilot app 或 Copilot 云智能体。
+可以选择 GitHub Copilot CLI、GitHub Copilot app、GitHub Copilot 云智能体或 Visual Studio Code。
 
 > [!CAUTION]
 > GitHub Copilot 具有概率性而非确定性，因此具体代码和修改的文件可能与示例不同。出现细微差异属于正常现象。

@@ -1,5 +1,5 @@
 ---
-title: "VS Code first steps"
+title: "Visual Studio Code first steps"
 description: "Take a guided tour of GitHub Copilot in Visual Studio Code by building, testing, and shipping a Space Quiz."
 slug: first-steps/vscode
 authors:

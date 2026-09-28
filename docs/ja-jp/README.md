@@ -20,7 +20,7 @@ lastUpdated: 2026-09-28
 
 同じ Space Quiz をターミナルから作成し、差分のレビュー、worktree での並列セッション、編集前の計画、シェルを離れずに行うプル リクエストの作成、マージ、委任まで進めます。
 
-### [VS Code のはじめの一歩][first-steps-vscode]
+### [Visual Studio Code のはじめの一歩][first-steps-vscode]
 
 VS Code で Space Quiz を作成し、統合ブラウザーでのテスト、ソース管理での公開、GitHub ツールを使った Issue とプル リクエストの操作、クラウド セッションへの委任まで進めます。
 
@@ -30,7 +30,7 @@ Tailspin Toys アプリケーションとバックログを使い、現実的な
 
 ### [実践的な開発ワークショップを見る][real-world-development]
 
-VS Code、Copilot CLI、GitHub Copilot app、Copilot cloud agent から選択できます。
+GitHub Copilot CLI、GitHub Copilot app、GitHub Copilot cloud agent、Visual Studio Code から選択できます。
 
 > [!CAUTION]
 > GitHub Copilot は決定論的ではなく確率的に動作するため、生成されるコードや変更されるファイルは例と異なる場合があります。多少の違いは想定される動作です。

@@ -33,7 +33,7 @@ You:
 - [Follow best practices for writing prompts that hold up on real code][best-practices].
 - [Compare Copilot plans][copilot-plans].
 
-Run the same Space Quiz through a different way of working with the [GitHub Copilot app first steps workshop][first-steps-app] or the [VS Code first steps workshop][first-steps-vscode]. If you are ready for a deeper scenario using a complete application and team backlog, continue with the [real-world Copilot CLI workshop][real-world-cli].
+Run the same Space Quiz through a different way of working with the [GitHub Copilot app first steps workshop][first-steps-app] or the [Visual Studio Code first steps workshop][first-steps-vscode]. If you are ready for a deeper scenario using a complete application and team backlog, continue with the [real-world Copilot CLI workshop][real-world-cli].
 
 [install-cli]: https://docs.github.com/copilot/how-tos/set-up/install-copilot-cli
 [about-cli]: https://docs.github.com/copilot/concepts/agents/about-copilot-cli

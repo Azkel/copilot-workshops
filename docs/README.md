@@ -20,7 +20,7 @@ Build a Space Quiz from an empty folder, publish it to GitHub, implement an issu
 
 Build the same Space Quiz from your terminal, review diffs, run parallel sessions in worktrees, plan before editing, and create, merge, and delegate pull requests without leaving the shell.
 
-### [VS Code first steps][first-steps-vscode]
+### [Visual Studio Code first steps][first-steps-vscode]
 
 Build the Space Quiz in VS Code, test it in the integrated browser, publish with Source Control, work with issues and pull requests through GitHub tools, and hand off to a cloud session.
 
@@ -30,7 +30,7 @@ Practice GitHub Copilot in a realistic software development lifecycle using the 
 
 ### [Browse the real-world development workshops][real-world-development]
 
-Choose from VS Code, Copilot CLI, the GitHub Copilot app, or the Copilot cloud agent.
+Choose from GitHub Copilot CLI, the GitHub Copilot app, the GitHub Copilot cloud agent, or Visual Studio Code.
 
 > [!CAUTION]
 > GitHub Copilot is probabilistic rather than deterministic, so the exact code and files changed may vary from the examples. Small differences are expected.

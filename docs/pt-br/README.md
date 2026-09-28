@@ -20,7 +20,7 @@ Crie um Space Quiz a partir de uma pasta vazia, publique-o no GitHub, implemente
 
 Crie o mesmo Space Quiz pelo terminal, revise as diferenças, execute sessões em paralelo em worktrees, planeje antes de editar e crie, mescle e delegue pull requests sem sair do shell.
 
-### [Primeiros passos com o VS Code][first-steps-vscode]
+### [Primeiros passos com o Visual Studio Code][first-steps-vscode]
 
 Crie o Space Quiz no VS Code, teste-o no navegador integrado, publique-o com o Controle do Código-Fonte, trabalhe com problemas e pull requests usando as ferramentas do GitHub e delegue trabalho a uma sessão na nuvem.
 
@@ -30,7 +30,7 @@ Pratique o GitHub Copilot em um ciclo de vida de desenvolvimento de software rea
 
 ### [Explore os workshops de desenvolvimento em cenários reais][real-world-development]
 
-Escolha entre VS Code, Copilot CLI, o aplicativo GitHub Copilot ou o agente de nuvem do Copilot.
+Escolha entre o GitHub Copilot CLI, o aplicativo GitHub Copilot, o agente de nuvem do GitHub Copilot ou o Visual Studio Code.
 
 > [!CAUTION]
 > Como o GitHub Copilot é probabilístico, e não determinístico, o código exato e os arquivos alterados podem ser diferentes dos exemplos. Pequenas diferenças são esperadas.

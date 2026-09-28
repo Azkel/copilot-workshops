@@ -93,7 +93,7 @@ export default defineConfig({
               ],
             },
             {
-              label: 'VS Code',
+              label: 'Visual Studio Code',
               items: [
                 { label: 'Overview', link: '/first-steps/vscode/' },
                 { label: '0. Prerequisites and setup', link: '/first-steps/vscode/0-prerequisites/' },
@@ -116,66 +116,7 @@ export default defineConfig({
           items: [
             { label: 'Overview', link: '/real-world-development/' },
             {
-              label: 'VS Code',
-              items: [
-                { label: 'Overview', link: '/real-world-development/vscode/' },
-                { label: '0. Prerequisites', link: '/real-world-development/vscode/0-prerequisites/' },
-                { label: '1. Custom instructions', link: '/real-world-development/vscode/1-custom-instructions/' },
-                { label: '2. Agent mode', link: '/real-world-development/vscode/2-agent-mode/' },
-                { label: '3. Testing with Playwright MCP', link: '/real-world-development/vscode/3-mcp/' },
-                { label: '4. Custom agents', link: '/real-world-development/vscode/4-custom-agents/' },
-                { label: '5. Managing agents', link: '/real-world-development/vscode/5-managing-agents/' },
-                { label: '6. Iterating', link: '/real-world-development/vscode/6-iterating/' },
-                {
-                  label: 'Optional: Incorporate Foundry',
-                  translations: {
-                    'es-ES': 'Opcional: Incorporar Foundry',
-                    'ja-JP': '省略可能: Foundry を組み込む',
-                    'ko-KR': '선택 사항: Foundry 통합',
-                    'pt-BR': 'Opcional: Incorporar o Foundry',
-                    'zh-CN': '可选：集成 Foundry',
-                  },
-                  items: [
-                    { label: 'Overview', link: '/real-world-development/vscode/7-foundry-toolkit/' },
-                    {
-                      label: 'Prepare a project and model',
-                      link: '/real-world-development/vscode/7-foundry-toolkit/1-project-and-model/',
-                      translations: {
-                        'es-ES': 'Preparar un proyecto y un modelo',
-                        'ja-JP': 'プロジェクトとモデルを準備する',
-                        'ko-KR': '프로젝트 및 모델 준비',
-                        'pt-BR': 'Preparar um projeto e um modelo',
-                        'zh-CN': '准备项目和模型',
-                      },
-                    },
-                    {
-                      label: 'Build and deploy an agent',
-                      link: '/real-world-development/vscode/7-foundry-toolkit/2-build-and-deploy/',
-                      translations: {
-                        'es-ES': 'Crear e implementar un agente',
-                        'ja-JP': 'エージェントを構築してデプロイする',
-                        'ko-KR': '에이전트 빌드 및 배포',
-                        'pt-BR': 'Criar e implantar um agente',
-                        'zh-CN': '构建并部署代理',
-                      },
-                    },
-                    {
-                      label: 'Connect the agent to the site',
-                      link: '/real-world-development/vscode/7-foundry-toolkit/3-connect-to-site/',
-                      translations: {
-                        'es-ES': 'Conectar el agente al sitio',
-                        'ja-JP': 'エージェントをサイトに接続する',
-                        'ko-KR': '사이트에 에이전트 연결',
-                        'pt-BR': 'Conectar o agente ao site',
-                        'zh-CN': '将代理连接到网站',
-                      },
-                    },
-                  ],
-                },
-              ],
-            },
-            {
-              label: 'Copilot CLI',
+              label: 'GitHub Copilot CLI',
               items: [
                 { label: 'Overview', link: '/real-world-development/cli/' },
                 { label: '0. Prerequisites', link: '/real-world-development/cli/0-prerequisites/' },
@@ -247,7 +188,7 @@ export default defineConfig({
               ],
             },
             {
-              label: 'Copilot app',
+              label: 'GitHub Copilot app',
               items: [
                 { label: 'Overview', link: '/real-world-development/app/' },
                 { label: '0. Prerequisites', link: '/real-world-development/app/0-prerequisites/' },
@@ -311,7 +252,7 @@ export default defineConfig({
               ],
             },
             {
-              label: 'Copilot cloud agent',
+              label: 'GitHub Copilot cloud agent',
               items: [
                 { label: 'Overview', link: '/real-world-development/cloud/' },
                 { label: '0. Prerequisites', link: '/real-world-development/cloud/0-prerequisites/' },
@@ -320,6 +261,65 @@ export default defineConfig({
                 { label: '3. Custom agents', link: '/real-world-development/cloud/3-custom-agents/' },
                 { label: '4. Managing agents', link: '/real-world-development/cloud/4-managing-agents/' },
                 { label: '5. Iterating', link: '/real-world-development/cloud/5-iterating/' },
+              ],
+            },
+            {
+              label: 'Visual Studio Code',
+              items: [
+                { label: 'Overview', link: '/real-world-development/vscode/' },
+                { label: '0. Prerequisites', link: '/real-world-development/vscode/0-prerequisites/' },
+                { label: '1. Custom instructions', link: '/real-world-development/vscode/1-custom-instructions/' },
+                { label: '2. Agent mode', link: '/real-world-development/vscode/2-agent-mode/' },
+                { label: '3. Testing with Playwright MCP', link: '/real-world-development/vscode/3-mcp/' },
+                { label: '4. Custom agents', link: '/real-world-development/vscode/4-custom-agents/' },
+                { label: '5. Managing agents', link: '/real-world-development/vscode/5-managing-agents/' },
+                { label: '6. Iterating', link: '/real-world-development/vscode/6-iterating/' },
+                {
+                  label: 'Optional: Incorporate Foundry',
+                  translations: {
+                    'es-ES': 'Opcional: Incorporar Foundry',
+                    'ja-JP': '省略可能: Foundry を組み込む',
+                    'ko-KR': '선택 사항: Foundry 통합',
+                    'pt-BR': 'Opcional: Incorporar o Foundry',
+                    'zh-CN': '可选：集成 Foundry',
+                  },
+                  items: [
+                    { label: 'Overview', link: '/real-world-development/vscode/7-foundry-toolkit/' },
+                    {
+                      label: 'Prepare a project and model',
+                      link: '/real-world-development/vscode/7-foundry-toolkit/1-project-and-model/',
+                      translations: {
+                        'es-ES': 'Preparar un proyecto y un modelo',
+                        'ja-JP': 'プロジェクトとモデルを準備する',
+                        'ko-KR': '프로젝트 및 모델 준비',
+                        'pt-BR': 'Preparar um projeto e um modelo',
+                        'zh-CN': '准备项目和模型',
+                      },
+                    },
+                    {
+                      label: 'Build and deploy an agent',
+                      link: '/real-world-development/vscode/7-foundry-toolkit/2-build-and-deploy/',
+                      translations: {
+                        'es-ES': 'Crear e implementar un agente',
+                        'ja-JP': 'エージェントを構築してデプロイする',
+                        'ko-KR': '에이전트 빌드 및 배포',
+                        'pt-BR': 'Criar e implantar um agente',
+                        'zh-CN': '构建并部署代理',
+                      },
+                    },
+                    {
+                      label: 'Connect the agent to the site',
+                      link: '/real-world-development/vscode/7-foundry-toolkit/3-connect-to-site/',
+                      translations: {
+                        'es-ES': 'Conectar el agente al sitio',
+                        'ja-JP': 'エージェントをサイトに接続する',
+                        'ko-KR': '사이트에 에이전트 연결',
+                        'pt-BR': 'Conectar o agente ao site',
+                        'zh-CN': '将代理连接到网站',
+                      },
+                    },
+                  ],
+                },
               ],
             },
           ],

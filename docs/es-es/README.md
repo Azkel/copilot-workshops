@@ -20,7 +20,7 @@ Crea un cuestionario sobre el espacio desde una carpeta vacía, publícalo en Gi
 
 Crea el mismo cuestionario desde la terminal, revisa las diferencias, ejecuta sesiones en paralelo en árboles de trabajo, planifica antes de editar y crea, combina y delega solicitudes de incorporación de cambios sin salir del shell.
 
-### [Primeros pasos con VS Code][first-steps-vscode]
+### [Primeros pasos con Visual Studio Code][first-steps-vscode]
 
 Crea el cuestionario en VS Code, pruébalo en el explorador integrado, publícalo con Control de código fuente, trabaja con incidencias y solicitudes de incorporación de cambios mediante las herramientas de GitHub y delega trabajo a una sesión en la nube.
 
@@ -30,7 +30,7 @@ Practica con GitHub Copilot en un ciclo de vida de desarrollo de software realis
 
 ### [Consulta los talleres de desarrollo en escenarios reales][real-world-development]
 
-Elige entre VS Code, Copilot CLI, la aplicación GitHub Copilot o el agente de Copilot en la nube.
+Elige entre GitHub Copilot CLI, la aplicación GitHub Copilot, el agente de GitHub Copilot en la nube o Visual Studio Code.
 
 > [!CAUTION]
 > GitHub Copilot es probabilístico y no determinista, por lo que el código exacto y los archivos modificados pueden variar respecto a los ejemplos. Es normal que haya pequeñas diferencias.

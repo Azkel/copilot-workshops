@@ -23,7 +23,7 @@ Build a colorful Space Quiz from an empty folder and take it through the develop
 
 Learn the terminal-first loop: build and review diffs before Git writes anything, run sessions side by side in worktrees, plan before you edit, manage context, then create, merge, and delegate work without leaving your shell.
 
-### [VS Code first steps][vscode]
+### [Visual Studio Code first steps][vscode]
 
 Use the editor loop: build in a workspace, polish elements from the integrated browser, inspect context, test before Git writes, plan before you edit, and let GitHub tools handle issues, pull requests, and cloud sessions without leaving VS Code.
 
