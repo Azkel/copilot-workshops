@@ -1,9 +1,9 @@
 ---
-title: "Lesson 7 - Explore a Canvas"
+title: "Lesson 11 - Explore a Canvas"
 description: "Install a Repository Issues Kanban Canvas and start a session from an issue card."
 authors:
   - jamesmontemagno
-lastUpdated: 2026-09-16
+lastUpdated: 2026-09-28
 ---
 
 A **Canvas** is a shared, bidirectional surface where you and an agent can update the same plan, board, checklist, or dashboard. Explore a Kanban Canvas that turns repository issues into a visual workflow.
@@ -32,6 +32,10 @@ In this lesson, you will:
 5. Open the automatically generated session.
 6. Confirm that the selected issue is available as session context.
 
+![Illustration of the Repository Issues Kanban Canvas with Backlog, Plan, Ready, and Implement lanes. Issue 13, Review screen, is being dragged from Backlog into the Plan lane, while issue 12, Per-question timer, remains in Backlog.](../../_images/first-steps-app-canvas-kanban.svg)
+
+When you drop a card into a lane, the Canvas hands that issue to a new session with the issue already loaded.
+
 > [!NOTE]
 > The current Repository Issues Kanban extension moves cards with pointer-based drag and drop. If you cannot use that interaction, note the issue number on the board, open the issue in **My work**, then select **New session**. This creates the same issue-grounded session without moving the card.
 
@@ -39,8 +43,8 @@ The Canvas provides a visual way to select and begin work while keeping the agen
 
 ## Summary and next steps
 
-You used a shared visual surface to start an agent session. Continue to [Lesson 8: Review and next steps][next-lesson].
+You used a shared visual surface to start an agent session. Continue to [Lesson 12: Review and next steps][next-lesson].
 
 [canvas-gallery]: https://awesome-copilot.github.com/extensions/
 [kanban-extension]: https://awesome-copilot.github.com/extension/accessibility-kanban/
-[next-lesson]: ../8-review/
+[next-lesson]: ../12-review/

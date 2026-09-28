@@ -3,15 +3,16 @@ title: "Lesson 0 - Prerequisites and setup"
 description: "Verify the workshop prerequisites, install the GitHub Copilot app, and get familiar with its workspace."
 authors:
   - jamesmontemagno
-lastUpdated: 2026-09-16
+lastUpdated: 2026-09-28
 ---
 
-Before you build the Space Quiz, verify your development tools, install the GitHub Copilot app, and get familiar with its main workspace.
+Before you build the Space Quiz, confirm that you have what you need, install the GitHub Copilot app, and get familiar with its workspace.
 
 In this lesson, you will:
 
 - verify the workshop prerequisites.
 - install and sign in to the GitHub Copilot app.
+- choose a model for your sessions.
 - identify the app's primary work areas.
 - try a quick chat.
 
@@ -19,50 +20,55 @@ In this lesson, you will:
 
 You need:
 
-- a GitHub account with Copilot Student or a paid Copilot plan.
-- [Git][git] installed. Run `git --version` to verify it.
-- [Node.js 22 or later][nodejs] installed. Run `node --version` to verify it.
+- a GitHub account with a [Copilot plan][copilot-plans].
 - a computer running macOS, Windows, or Linux.
 
+The app ships with Git, so there is nothing else to install.
+
 > [!NOTE]
-> If you use Copilot Business or Copilot Enterprise, your administrator must enable the **Copilot CLI** policy before the app will work.
+> If you use Copilot Business or Copilot Enterprise, your administrator must enable the **Copilot CLI** policy before agent sessions will work.
 
 ## Install and configure the app
 
-1. Open the [GitHub Copilot app download page][download-app].
-2. Download the app for your operating system and follow the installation instructions.
-3. Open the app.
-4. Select **Sign in to GitHub** and authenticate. If you use GitHub Enterprise Server, select **Use GitHub Enterprise** and enter your server address.
-5. If the app asks you to connect a repository or local folder, skip that step for now. You will create a new project in the next lesson.
-6. Choose a theme, then select **Finish**.
+1. Download and install the [GitHub Copilot app][download-app] for your operating system.
+2. Open the app.
+3. Select **Sign in to GitHub** and authenticate.
+4. Choose a theme, then select **Finish**.
 
-For your first session, choose **GPT-5.3-Codex** if it is available. Otherwise, choose **Auto**.
+## Choose a model
 
-## Explore the workspace
+Use the following preference order when you choose a model, and select the first option available to you:
+
+1. **GPT-6-Luna** (recommended).
+2. **Auto**, as a balanced backup.
+3. Any model from the [list of active models][active-models].
+
+Model availability depends on your plan, organization policy, and product version.
+
+## Find your way around
 
 The app brings the development workflow into one place:
 
-- **Home**: Choose a project, configure a session, and send a prompt.
-- **Sessions**: Run agents in isolated workspaces, including several sessions in parallel.
-- **Quick chats**: Ask questions and brainstorm without creating a branch or worktree.
-- **My work**: Browse issues and pull requests, check CI, start sessions, and review changes.
-- **Automations**: Save agent tasks to run on demand or on a schedule.
+- **New**: Start a session on a project, or choose **Chat** for a quick question.
+- **My work**: Browse your GitHub issues and pull requests.
+- **Automations**: Schedule recurring agent work on a repository.
+- **Customize**: Change themes and models, and manage Canvas extensions.
 
 ## Try a quick chat
 
-Open a quick chat and send the following prompt:
+Not every question needs a workspace. From **New**, choose **Chat** instead of a project. A chat has no repository attached and cannot edit files, so it is the fastest way to ask a question, get an explanation, or think through an approach before you start a real session.
+
+Send the following prompt in a chat:
 
 ```plaintext
 How does the GitHub Copilot app use worktrees?
 ```
 
-Quick chats are useful for questions that do not need a project workspace or code changes.
-
 ## Summary and next steps
 
-You verified the prerequisites, installed the app, and explored its main work areas. Continue to [Lesson 1: Create the Space Quiz workspace][next-lesson].
+You verified the prerequisites, installed the app, chose a model, and explored its main work areas. Continue to [Lesson 1: Create the Space Quiz workspace][next-lesson].
 
-[git]: https://git-scm.com/downloads
-[nodejs]: https://nodejs.org/
+[copilot-plans]: https://github.com/features/copilot/plans
 [download-app]: https://gh.io/app
+[active-models]: https://docs.github.com/copilot/reference/copilot-billing/models-and-pricing
 [next-lesson]: ../1-create-workspace/

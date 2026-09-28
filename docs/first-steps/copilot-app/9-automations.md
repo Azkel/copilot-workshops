@@ -1,9 +1,9 @@
 ---
-title: "Lesson 6 - Automate issue triage"
+title: "Lesson 9 - Automate issue triage"
 description: "Create and run a weekly automation that summarizes recent open issues."
 authors:
   - jamesmontemagno
-lastUpdated: 2026-09-16
+lastUpdated: 2026-09-28
 ---
 
 Use an automation to turn a recurring issue-triage task into a scheduled agent workflow.
@@ -15,6 +15,10 @@ In this lesson, you will:
 - run the automation immediately and review its result.
 
 ## Create the automation
+
+![Illustration of the Copilot app Automations view with All, Local, and Cloud filters, a search box, Templates and New automation buttons, and two weekly automation cards for the space-quiz project: Issue triage and Accessibility audit.](../../_images/first-steps-app-automations.svg)
+
+Automations run the same prompt on a schedule, each in its own session, so an automation never disturbs your work. You can filter by **All**, **Local**, or **Cloud**, and run any automation on demand.
 
 1. Open **Automations**.
 2. Choose the template for a new weekly automation.
@@ -33,6 +37,6 @@ Review the generated summary and confirm that it references the recent open issu
 
 ## Summary and next steps
 
-You created a reusable agent workflow that runs on a schedule. Continue to [Lesson 7: Explore a Canvas][next-lesson].
+You created a reusable agent workflow that runs on a schedule. Continue to [Lesson 10: Continue a session remotely][next-lesson].
 
-[next-lesson]: ../7-canvas/
+[next-lesson]: ../10-remote/

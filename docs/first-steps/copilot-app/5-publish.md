@@ -1,9 +1,9 @@
 ---
-title: "Lesson 3 - Publish the project"
+title: "Lesson 5 - Publish the project"
 description: "Turn the local Space Quiz experiment into a public GitHub repository."
 authors:
   - jamesmontemagno
-lastUpdated: 2026-09-16
+lastUpdated: 2026-09-28
 ---
 
 Publish the Space Quiz so you can manage issues, use isolated worktrees, and complete a pull request workflow.
@@ -33,6 +33,6 @@ After the agent finishes:
 
 ## Summary and next steps
 
-Your project is now a GitHub repository. Continue to [Lesson 4: Work with issues and sessions][next-lesson].
+Your project is now a GitHub repository. Continue to [Lesson 6: Work with issues and sessions][next-lesson].
 
-[next-lesson]: ../4-issues-and-sessions/
+[next-lesson]: ../6-issues-and-sessions/
