@@ -3,7 +3,7 @@ title: "레슨 5 - quality-checks 스킬 사용자 지정 및 사용"
 description: "기존 quality-checks 스킬을 살펴보고 보고서 형식을 사용자 지정한 다음 필터링을 검증합니다."
 authors:
   - geektrainer
-lastUpdated: 2026-09-11
+lastUpdated: 2026-09-29
 ---
 
 코드 작성에는 코드 자체를 작성하는 것보다 더 많은 작업이 필요합니다. 코드가 작동하는지 수동으로 검증하고 지침 파일을 사용하여 표준을 따르게 했습니다. 하지만 테스트, 린트, 그 밖의 지속적 통합(CI) 요소는 어떻게 처리해야 할까요?
@@ -12,13 +12,13 @@ lastUpdated: 2026-09-11
 
 이 레슨에서는 다음 작업을 수행합니다.
 
-- 기존 `quality-checks` 스킬과 함께 제공되는 스크립트를 살펴봅니다.
+- 기존 `quality-checks` 스킬을 살펴봅니다.
 - 결과 형식을 사용자 지정합니다.
 - 스킬을 실행하고 출력을 검토합니다.
 
 ## 시나리오
 
-Tailspin Toys에는 끌어오기 요청(PR)을 만들기 전에 항상 실행해야 하는 단위 테스트와 엔드투엔드 테스트 모음이 있습니다. 예상할 수 있듯 이러한 테스트를 올바르고 일관되게 실행하는 것이 중요합니다. 팀은 이미 이러한 테스트를 실행하는 에이전트 스킬을 만들었지만, 더 읽기 쉬운 출력을 원합니다.
+Tailspin Toys는 단위 테스트, 린트, 타입 검사에 `quality-checks` 스킬을 사용합니다. 팀은 결과를 더 쉽게 읽을 수 있도록 보고서를 개선하려고 합니다.
 
 ## 지침, 스크립트, 리소스
 
@@ -31,7 +31,7 @@ Tailspin Toys에는 끌어오기 요청(PR)을 만들기 전에 항상 실행해
 
 ## 스킬 살펴보기
 
-Tailspin Toys 팀이 테스트와 린터 실행을 위해 만든 `quality-checks` 스킬을 살펴봅니다.
+Tailspin Toys 팀이 단위 테스트, 린트, 타입 검사 실행을 위해 만든 `quality-checks` 스킬을 살펴봅니다.
 
 1. **Files** 캔버스가 열려 있지 않으면 검토 패널에서 **+**, **File**을 차례로 선택합니다.
 2. `.github/skills/quality-checks/SKILL.md`를 검색합니다.
@@ -40,32 +40,29 @@ Tailspin Toys 팀이 테스트와 린터 실행을 위해 만든 `quality-checks
 
 ## 변경 전 스킬 실행
 
-스킬은 슬래시(`/`) 명령으로 직접 호출하거나 자연어로 호출할 수 있습니다. 설명에는 테스트나 린트 실행 요청이 있을 때마다 이 스킬을 사용한다고 명시되어 있습니다. Copilot에 테스트 실행을 요청하여 스킬을 실행합니다.
+스킬은 슬래시(`/`) 명령으로 직접 호출하거나 자연어로 호출할 수 있습니다. 스킬의 세 가지 검사를 실행하도록 Copilot에 요청합니다.
 
 1. 모드 드롭다운에서 **Interactive**를 선택하여 Copilot이 해당 모드인지 확인합니다.
-2. 다음 프롬프트로 Copilot에 테스트와 린터 실행을 요청합니다. 그러면 스킬이 호출됩니다.
+2. 다음 프롬프트로 스킬을 호출합니다.
 
     ```plaintext
-    Run the tests and linters.
+    Run the quality-checks skill for unit tests, lint, and type checks.
     ```
 
 3. 마지막에 표시되는 보고서를 확인합니다.
 
 ## 보고서 사용자 지정
 
-실행한 테스트, 성공률과 실패율, 실행 시간을 보여 주는 더 나은 보고서를 원합니다. Copilot이 이 보고서를 만들도록 스킬을 업데이트합니다.
+무엇을 실행했는지, 성공했는지, 도구가 실제로 무엇을 보고했는지 보여 주는 더 나은 보고서를 원합니다. 이 보고서를 생성하도록 스킬을 업데이트합니다.
 
 1. **Files** 캔버스로 돌아갑니다.
 2. 아직 열려 있지 않으면 `.github/skills/quality-checks/SKILL.md`를 엽니다.
-3. 파일 아래쪽의 **Results output formatting** 헤더를 찾습니다.
-4. 해당 헤더 바로 아래에 다음 내용을 추가하여 원하는 형식으로 결과가 표시되게 합니다.
+3. 파일 끝에 다음 섹션을 추가합니다.
 
     ```markdown
-    Upon completion of all tests, generate a report that provides a quick overview of both success and failure of the tests, and how long they took to ran. In particular, we need sections for:
+    ## Results output formatting
 
-    - Unit tests, total number of tests, number succeeded, number failed, a percentage thereof, and the amount of time testing took.
-    - End to end tests, total number of tests, number succeeded, number failed, a percentage thereof, and the amount of time testing took.
-    - Linting, number of lines scanned, number of violations, and the percentage of lines of code that meet the linting requirements.
+    Upon completion, report each command that ran and whether it passed, failed, or was blocked. Include test counts, durations, errors, warnings, and other metrics only when the tool reports them. Identify the next action for any failure or blocker, and never describe a skipped or incomplete check as passed.
     ```
 
 파일이 자동으로 저장됩니다.
@@ -75,10 +72,10 @@ Tailspin Toys 팀이 테스트와 린터 실행을 위해 만든 `quality-checks
 변경 사항을 적용했으므로 같은 프롬프트를 사용하여 스킬을 실행해 봅니다.
 
 1. 모드 드롭다운에서 **Interactive**를 선택하여 Copilot이 해당 모드인지 확인합니다.
-2. 다음 프롬프트로 Copilot에 테스트와 린터 실행을 요청합니다. 그러면 스킬이 호출됩니다.
+2. 다음 프롬프트로 스킬을 호출합니다.
 
     ```plaintext
-    Run the tests and linters.
+    Run the quality-checks skill for unit tests, lint, and type checks.
     ```
 
 3. 마지막에 표시되는 보고서를 확인합니다.
@@ -87,7 +84,7 @@ Tailspin Toys 팀이 테스트와 린터 실행을 위해 만든 `quality-checks
 
 기존 에이전트 스킬을 사용자 지정하고 사용했습니다. 이 레슨에서는 다음 작업을 수행했습니다.
 
-- `quality-checks` 스킬과 함께 제공되는 스크립트를 살펴봤습니다.
+- 단위 테스트, 린트, 타입 검사를 위한 `quality-checks` 스킬을 살펴봤습니다.
 - 결과 형식을 사용자 지정했습니다.
 - 스킬을 실행하고 출력을 검토했습니다.
 

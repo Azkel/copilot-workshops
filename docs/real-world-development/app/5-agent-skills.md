@@ -3,7 +3,7 @@ title: "Lesson 5 - Customize and use a quality-checks skill"
 description: "Explore the existing quality-checks skill, customize its report format, and use it to validate filtering."
 authors:
   - geektrainer
-lastUpdated: 2026-09-11
+lastUpdated: 2026-09-29
 ---
 
 There's more to writing code that just writing code. We've been able to validate the code works manually, and used instructions files to ensure it follows our standards. But how about testing? Linting? All the other parts of continuous integration (CI)?
@@ -12,13 +12,13 @@ For these types of tasks, **agent skills** are the best fit! Skills help Copilot
 
 In this lesson, you will:
 
-- explore the existing `quality-checks` skill and its bundled scripts.
+- explore the existing `quality-checks` skill.
 - customize the format of its results.
 - run the skill and review its output.
 
 ## Scenario
 
-Tailspin Toys has a collection of unit and end to end tests which always need to be run before any pull request (PR) is made. As you might expect, ensuring these are run correctly and consistently is important. The team has already created an agent skill to run these tests, but they want to enhance the output for better readability.
+Tailspin Toys uses the `quality-checks` skill for unit tests, lint, and type checks. The team wants to improve the report to make the results easier to read.
 
 ## Instructions, scripts, and resources
 
@@ -31,7 +31,7 @@ Skills can reside in a projects `.github/skills` folder to become a repository a
 
 ## Explore the skill
 
-Let's explore the skill the Tailspin Toys team created for running tests and linters, named `quality-checks`.
+Let's explore the skill the Tailspin Toys team created for running unit tests, lint, and type checks, named `quality-checks`.
 
 1. If you don't already have a **Files** canvas open, in the review panel, select **+**, then **File**
 2. Search for `.github/skills/quality-checks/SKILL.md`.
@@ -40,32 +40,29 @@ Let's explore the skill the Tailspin Toys team created for running tests and lin
 
 ## Run the skill before making a change
 
-Skills are callable directly via a slash (`/`) command, or by using natural language to call the skill. If you notice the description, it highlights the fact the skill is to be used whenever a request is made to run tests or linting. Let's run the skill by asking Copilot to run our tests!
+Skills are callable directly via a slash (`/`) command, or by using natural language to call the skill. Let's ask Copilot to run the skill's three checks.
 
 1. Ensure Copilot is in **Interactive** mode by selecting it from the mode dropdown.
-2. Use the following prompt to ask Copilot to run the tests and linter, which will call the skill:
+2. Use the following prompt to call the skill:
 
     ```plaintext
-    Run the tests and linters.
+    Run the quality-checks skill for unit tests, lint, and type checks.
     ```
 
 3. Note the report at the end.
 
 ## Customize the report
 
-OK, we'd like to get a better report that shows us the tests that ran, success/failure rates, and how long they took to run. Let's update our skill to have Copilot create that report for us!
+OK, we'd like a better report that tells us what ran, whether it succeeded, and what the tools actually reported. Let's update our skill to create that report!
 
 1. Return to the **Files** canvas.
 2. If not already open, open `.github/skills/quality-checks/SKILL.md`.
-3. Find the header at the bottom of the file that reads **Results output formatting**.
-4. Just below that header, add the following to ensure our results are displayed to our specifications:
+3. Add the following section to the end of the file:
 
     ```markdown
-    Upon completion of all tests, generate a report that provides a quick overview of both success and failure of the tests, and how long they took to ran. In particular, we need sections for:
+    ## Results output formatting
 
-    - Unit tests, total number of tests, number succeeded, number failed, a percentage thereof, and the amount of time testing took.
-    - End to end tests, total number of tests, number succeeded, number failed, a percentage thereof, and the amount of time testing took.
-    - Linting, number of lines scanned, number of violations, and the percentage of lines of code that meet the linting requirements.
+    Upon completion, report each command that ran and whether it passed, failed, or was blocked. Include test counts, durations, errors, warnings, and other metrics only when the tool reports them. Identify the next action for any failure or blocker, and never describe a skipped or incomplete check as passed.
     ```
 
 The file will automatically be saved.
@@ -75,10 +72,10 @@ The file will automatically be saved.
 With our change made, let's see it in action! We'll use the exact same prompt as before.
 
 1. Ensure Copilot is in **Interactive** mode by selecting it from the mode dropdown.
-2. Use the following prompt to ask Copilot to run the tests and linter, which will call the skill:
+2. Use the following prompt to call the skill:
 
     ```plaintext
-    Run the tests and linters.
+    Run the quality-checks skill for unit tests, lint, and type checks.
     ```
 
 3. Note the report at the end.
@@ -87,7 +84,7 @@ With our change made, let's see it in action! We'll use the exact same prompt as
 
 You've customized and used an existing agent skill. In this lesson, you:
 
-- explored the `quality-checks` skill and its bundled scripts.
+- explored the `quality-checks` skill for unit tests, lint, and type checks.
 - customized the format of its results.
 - ran the skill and reviewed its output.
 

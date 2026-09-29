@@ -3,7 +3,7 @@ title: "Lição 10 - Encerramento e próximos passos"
 description: "Recapitule o fluxo do aplicativo, os dois marcos de PR, os exercícios de canvas e as práticas reutilizáveis de qualidade e explore outros recursos."
 authors:
   - geektrainer
-lastUpdated: 2026-07-09
+lastUpdated: 2026-09-29
 ---
 
 Você usou o aplicativo GitHub Copilot em um fluxo contínuo da Tailspin Toys. Você:
@@ -11,7 +11,7 @@ Você usou o aplicativo GitHub Copilot em um fluxo contínuo da Tailspin Toys. V
 - conectou um repositório, explorou o espaço de trabalho do aplicativo e o backlog predefinido e experimentou um chat rápido.
 - iniciou uma sessão específica de avaliação por estrelas, revisou o resultado em um canvas de navegador e fez manualmente o merge do primeiro pull request (PR).
 - começou pela issue de filtragem, definiu a abordagem no modo **Plan**, desenvolveu-a no modo **Autopilot** e a revisou no modo **Interactive**.
-- orientou o agente com instruções personalizadas e depois personalizou a skill `quality-checks` existente e a usou para executar lint, testes de unidade, testes de ponta a ponta e verificações de tipos.
+- orientou o agente com instruções personalizadas e depois personalizou a skill `quality-checks` existente e a usou para executar testes de unidade, lint e verificações de tipos.
 - adicionou o servidor do Model Context Protocol (MCP) do Playwright e o usou para explorar a filtragem em um navegador real.
 - criou e selecionou um agente personalizado QA para avaliar requisitos, cobertura, resultados dos scripts da skill e evidências do navegador.
 - revisou toda a alteração de filtragem e autorizou o **Agent Merge** no segundo PR.
@@ -28,7 +28,7 @@ Desde o planejamento da filtragem até a abertura do PR, você usou a mesma sess
 
 ## Diferentes tipos de verificação
 
-Você verificou o código de várias formas: testes automatizados, sua própria inspeção no navegador e a exploração do navegador pelo Copilot via MCP. A skill quality-checks executou as verificações do projeto e apresentou os resultados no novo formato. O QA reuniu esses resultados com uma revisão dos requisitos e da cobertura de testes antes do PR.
+Você verificou o código de várias formas: testes automatizados, sua própria inspeção no navegador e a exploração do navegador pelo Copilot via MCP. A skill `quality-checks` executou testes de unidade, lint e verificações de tipos e apresentou os resultados no novo formato. O QA reuniu esses resultados com uma revisão dos requisitos e da cobertura de testes antes do PR.
 
 Os testes adicionados devem cobrir lacunas reais; uma execução de QA que não precisa de testes novos pode estar correta. Ferramentas ausentes, verificações ignoradas e falhas são bloqueios visíveis, não aprovações. Revise código e evidências antes de autorizar o merge e atualize as evidências afetadas após alterações.
 

@@ -3,7 +3,7 @@ title: "Lesson 10 - Wrap-up and next steps"
 description: "Recap the App workflow, two PR milestones, canvas exercises, and reusable quality practices, then explore further resources."
 authors:
   - geektrainer
-lastUpdated: 2026-07-09
+lastUpdated: 2026-09-29
 ---
 
 You used the GitHub Copilot app across a continuous Tailspin Toys workflow. You:
@@ -11,7 +11,7 @@ You used the GitHub Copilot app across a continuous Tailspin Toys workflow. You:
 - connected a repository, explored the app's workspace and seeded backlog, and tried a quick chat.
 - started a focused star-rating session, reviewed the result in a browser canvas, and manually merged your first pull request (PR).
 - started from the filtering issue, defined the approach in **Plan** mode, built it in **Autopilot** mode, and reviewed it in **Interactive** mode.
-- guided the agent with custom instructions, then customized the existing `quality-checks` skill and used it to run lint, unit tests, end-to-end tests, and type checks.
+- guided the agent with custom instructions, then customized the existing `quality-checks` skill and used it to run unit tests, lint, and type checks.
 - added the Playwright Model Context Protocol (MCP) server and used it to explore filtering in a real browser.
 - created and selected a quality assurance (QA) custom agent to assess requirements, coverage, skill results, and browser evidence.
 - reviewed the complete filtering change and authorized **Agent Merge** for your second PR.
@@ -28,7 +28,7 @@ From planning filtering through opening its PR, you used the same session, workt
 
 ## Different kinds of verification
 
-You checked the code in several ways: automated tests, your own browser inspection, and Copilot's browser exploration through MCP. The quality-checks skill ran the project checks and reported them in your new format. QA brought those results together with a review of requirements and test coverage before the PR.
+You checked the code in several ways: automated tests, your own browser inspection, and Copilot's browser exploration through MCP. The `quality-checks` skill ran unit tests, lint, and type checks and reported them in your new format. QA brought those results together with a review of requirements and test coverage before the PR.
 
 Tests added should close genuine gaps; a QA run that needs no new tests can be correct. Missing tools, skipped checks, and failures are visible blockers, not passes. Review code and evidence before authorizing merge, and refresh affected evidence after changes.
 

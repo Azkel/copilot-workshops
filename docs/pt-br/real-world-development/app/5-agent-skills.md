@@ -3,7 +3,7 @@ title: "Lição 5 - Personalizar e usar uma skill quality-checks"
 description: "Explore a skill quality-checks existente, personalize o formato do relatório e use-a para validar a filtragem."
 authors:
   - geektrainer
-lastUpdated: 2026-09-11
+lastUpdated: 2026-09-29
 ---
 
 Escrever código envolve mais do que apenas escrever código. Conseguimos validar manualmente que o código funciona e usamos arquivos de instruções para garantir que ele siga nossos padrões. Mas e os testes? O lint? Todas as outras partes da integração contínua (CI)?
@@ -12,13 +12,13 @@ Para esses tipos de tarefa, as **skills de agente** são a melhor opção! As sk
 
 Nesta lição, você vai:
 
-- explorar a skill `quality-checks` existente e os scripts incluídos nela.
+- explorar a skill `quality-checks` existente.
 - personalizar o formato dos resultados.
 - executar a skill e revisar sua saída.
 
 ## Cenário
 
-A Tailspin Toys tem um conjunto de testes de unidade e de ponta a ponta que sempre precisam ser executados antes da criação de qualquer pull request (PR). Como você pode imaginar, é importante garantir que esses testes sejam executados de forma correta e consistente. A equipe já criou uma skill de agente para executar esses testes, mas quer melhorar a saída para facilitar a leitura.
+A Tailspin Toys usa a skill `quality-checks` para testes de unidade, lint e verificações de tipos. A equipe quer melhorar o relatório para facilitar a leitura dos resultados.
 
 ## Instruções, scripts e recursos
 
@@ -31,7 +31,7 @@ As skills podem ficar na pasta `.github/skills` de um projeto para se tornarem u
 
 ## Explorar a skill
 
-Vamos explorar a skill criada pela equipe da Tailspin Toys para executar testes e linters, chamada `quality-checks`.
+Vamos explorar a skill criada pela equipe da Tailspin Toys para executar testes de unidade, lint e verificações de tipos, chamada `quality-checks`.
 
 1. Se você ainda não tiver um canvas de **Files** aberto, selecione **+** no painel de revisão e depois **File**.
 2. Pesquise `.github/skills/quality-checks/SKILL.md`.
@@ -40,32 +40,29 @@ Vamos explorar a skill criada pela equipe da Tailspin Toys para executar testes 
 
 ## Executar a skill antes de fazer uma alteração
 
-As skills podem ser chamadas diretamente com um comando de barra (`/`) ou por meio de linguagem natural. Como você pode observar na descrição, a skill deve ser usada sempre que houver uma solicitação para executar testes ou lint. Vamos executar a skill pedindo ao Copilot que rode nossos testes!
+As skills podem ser chamadas diretamente com um comando de barra (`/`) ou por meio de linguagem natural. Vamos pedir ao Copilot que execute as três verificações da skill.
 
 1. Confirme que o Copilot está no modo **Interactive**, selecionando-o no menu suspenso de modo.
-2. Use o prompt a seguir para pedir ao Copilot que execute os testes e o linter, o que chamará a skill:
+2. Use o prompt a seguir para chamar a skill:
 
     ```plaintext
-    Run the tests and linters.
+    Run the quality-checks skill for unit tests, lint, and type checks.
     ```
 
 3. Observe o relatório ao final.
 
 ## Personalizar o relatório
 
-Queremos um relatório melhor, que mostre os testes executados, as taxas de sucesso e falha e o tempo de execução. Vamos atualizar a skill para que o Copilot crie esse relatório!
+Queremos um relatório melhor, que mostre o que foi executado, se teve sucesso e o que as ferramentas realmente informaram. Vamos atualizar a skill para criar esse relatório!
 
 1. Volte ao canvas de **Files**.
 2. Se ainda não estiver aberto, abra `.github/skills/quality-checks/SKILL.md`.
-3. Localize o cabeçalho **Results output formatting** na parte inferior do arquivo.
-4. Logo abaixo desse cabeçalho, adicione o seguinte para garantir que os resultados sejam exibidos de acordo com nossas especificações:
+3. Adicione a seção a seguir ao final do arquivo:
 
     ```markdown
-    Upon completion of all tests, generate a report that provides a quick overview of both success and failure of the tests, and how long they took to ran. In particular, we need sections for:
+    ## Results output formatting
 
-    - Unit tests, total number of tests, number succeeded, number failed, a percentage thereof, and the amount of time testing took.
-    - End to end tests, total number of tests, number succeeded, number failed, a percentage thereof, and the amount of time testing took.
-    - Linting, number of lines scanned, number of violations, and the percentage of lines of code that meet the linting requirements.
+    Upon completion, report each command that ran and whether it passed, failed, or was blocked. Include test counts, durations, errors, warnings, and other metrics only when the tool reports them. Identify the next action for any failure or blocker, and never describe a skipped or incomplete check as passed.
     ```
 
 O arquivo será salvo automaticamente.
@@ -75,10 +72,10 @@ O arquivo será salvo automaticamente.
 Com a alteração feita, vamos vê-la em ação! Usaremos exatamente o mesmo prompt de antes.
 
 1. Confirme que o Copilot está no modo **Interactive**, selecionando-o no menu suspenso de modo.
-2. Use o prompt a seguir para pedir ao Copilot que execute os testes e o linter, o que chamará a skill:
+2. Use o prompt a seguir para chamar a skill:
 
     ```plaintext
-    Run the tests and linters.
+    Run the quality-checks skill for unit tests, lint, and type checks.
     ```
 
 3. Observe o relatório ao final.
@@ -87,7 +84,7 @@ Com a alteração feita, vamos vê-la em ação! Usaremos exatamente o mesmo pro
 
 Você personalizou e usou uma skill de agente existente. Nesta lição, você:
 
-- explorou a skill `quality-checks` e os scripts incluídos nela.
+- explorou a skill `quality-checks` para testes de unidade, lint e verificações de tipos.
 - personalizou o formato dos resultados.
 - executou a skill e revisou sua saída.
 

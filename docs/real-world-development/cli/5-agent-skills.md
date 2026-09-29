@@ -3,7 +3,7 @@ title: "Lesson 5 - Customize and use a quality-checks skill"
 description: "Explore the existing quality-checks skill, customize its report format, and use it to validate filtering."
 authors:
   - geektrainer
-lastUpdated: 2026-09-18
+lastUpdated: 2026-09-29
 ---
 
 There's more to writing code than just writing code. We've been able to validate the code works manually and used instruction files to ensure it follows our standards. But how about testing? Linting? All the other parts of continuous integration (CI)?
@@ -18,7 +18,7 @@ In this lesson, you will:
 
 ## Scenario
 
-Tailspin Toys has a collection of unit and end to end tests which always need to be run before any pull request (PR) is made. As you might expect, ensuring these are run correctly and consistently is important. The team has already created an agent skill to run these tests, but they want to enhance the output for better readability.
+Tailspin Toys uses the `quality-checks` skill for unit tests, lint, and type checks. The team wants to improve the report to make the results easier to read.
 
 ## Instructions, scripts, and resources
 
@@ -31,7 +31,7 @@ Skills can reside in a project's `.github/skills` folder to become a repository 
 
 ## Explore the skill
 
-Let's explore the skill the Tailspin Toys team created for running tests and linters, named `quality-checks`.
+Let's explore the skill the Tailspin Toys team created for running unit tests, lint, and type checks, named `quality-checks`.
 
 1. Return to your Codespace. In the Codespaces editor, open `.github/skills/quality-checks/SKILL.md`.
 2. Read the `name` and `description` at the top. The description helps Copilot understand when to call the skill.
@@ -40,20 +40,20 @@ Let's explore the skill the Tailspin Toys team created for running tests and lin
 
 ## Run the skill before making a change
 
-Skills are callable directly through Copilot CLI or by using natural language. Let's run the skill by asking Copilot to run our tests!
+Skills are callable directly through Copilot CLI or by using natural language. Let's ask Copilot to run the skill's three checks.
 
 1. Return to the filtering conversation in Interactive mode.
 2. Use the following prompt:
 
    ```plaintext
-   Run the tests and linters.
+   Run the quality-checks skill for unit tests, lint, and type checks.
    ```
 
 3. Note the report at the end.
 
 ## Customize the report
 
-OK, we'd like a better report that tells us what ran, whether it succeeded, and what the tools actually reported. Let's update our skill to create that report for us!
+OK, we'd like a better report that tells us what ran, whether it succeeded, and what the tools actually reported. Let's update our skill to create that report!
 
 1. Return to `.github/skills/quality-checks/SKILL.md`.
 2. Add the following section to the end of the file:
@@ -79,7 +79,7 @@ With our change made, let's see it in action! Copilot CLI can reload edited skil
 2. Use the exact same prompt as before:
 
    ```plaintext
-   Run the tests and linters.
+   Run the quality-checks skill for unit tests, lint, and type checks.
    ```
 
 3. Note the report at the end and compare it with the first report.
@@ -88,7 +88,7 @@ With our change made, let's see it in action! Copilot CLI can reload edited skil
 
 You've customized and used an existing agent skill. In this lesson, you:
 
-- explored the existing `quality-checks` skill.
+- explored the `quality-checks` skill for unit tests, lint, and type checks.
 - customized the format of its results.
 - reloaded and ran the skill.
 

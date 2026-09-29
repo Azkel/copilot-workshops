@@ -3,7 +3,7 @@ title: "レッスン 5 - quality-checks スキルのカスタマイズと使用"
 description: "既存の quality-checks スキルを確認し、報告形式をカスタマイズして、フィルター機能の検証に使用します。"
 authors:
   - geektrainer
-lastUpdated: 2026-09-11
+lastUpdated: 2026-09-29
 ---
 
 コードを書く作業には、単にコードを書く以上のことが含まれます。コードが動作することは手動で検証し、指示ファイルを使用して標準に従っていることも確認しました。しかし、テストや lint、継続的インテグレーション (CI) のその他の作業はどうでしょうか。
@@ -12,13 +12,13 @@ lastUpdated: 2026-09-11
 
 このレッスンでは、次の内容を学習します。
 
-- 既存の `quality-checks` スキルと同梱のスクリプトを確認する。
+- 既存の `quality-checks` スキルを確認する。
 - 結果の報告形式をカスタマイズする。
 - スキルを実行し、出力をレビューする。
 
 ## シナリオ
 
-Tailspin Toys には、pull request (PR) を作成する前に必ず実行する必要がある単体テストと E2E テストがあります。これらを正しく一貫して実行することが重要です。チームはすでにテスト実行用のエージェントスキルを作成していますが、読みやすい出力に改善したいと考えています。
+Tailspin Toys は、単体テスト、lint、型チェックに `quality-checks` スキルを使用します。チームは、結果を読みやすくするためにレポートを改善したいと考えています。
 
 ## 指示、スクリプト、リソース
 
@@ -31,7 +31,7 @@ Tailspin Toys には、pull request (PR) を作成する前に必ず実行する
 
 ## スキルを確認する
 
-Tailspin Toys チームがテストと linter の実行用に作成した `quality-checks` というスキルを確認します。
+Tailspin Toys チームが単体テスト、lint、型チェックの実行用に作成した `quality-checks` というスキルを確認します。
 
 1. **Files** キャンバスをまだ開いていない場合は、レビューパネルで **+**、**File** の順に選択します。
 2. `.github/skills/quality-checks/SKILL.md` を検索します。
@@ -40,32 +40,29 @@ Tailspin Toys チームがテストと linter の実行用に作成した `quali
 
 ## 変更前にスキルを実行する
 
-スキルはスラッシュ (`/`) コマンドで直接呼び出すことも、自然言語で呼び出すこともできます。このスキルの説明には、テストまたは lint の実行を依頼されたときに使用することが示されています。Copilot にテストの実行を依頼して、スキルを実行しましょう。
+スキルはスラッシュ (`/`) コマンドで直接呼び出すことも、自然言語で呼び出すこともできます。スキルの 3 種類のチェックを実行するよう Copilot に依頼しましょう。
 
 1. モードのドロップダウンから **Interactive** を選択し、Copilot が Interactive モードになっていることを確認します。
-2. 次のプロンプトを使って Copilot にテストと linter の実行を依頼し、スキルを呼び出します。
+2. 次のプロンプトを使ってスキルを呼び出します。
 
     ```plaintext
-    Run the tests and linters.
+    Run the quality-checks skill for unit tests, lint, and type checks.
     ```
 
 3. 最後に表示されるレポートを確認します。
 
 ## 報告形式をカスタマイズする
 
-実行したテスト、成功率と失敗率、実行にかかった時間を示す、よりわかりやすいレポートが必要です。Copilot がそのレポートを作成するようにスキルを更新しましょう。
+何を実行したか、成功したか、ツールが実際に何を報告したかがわかる、よりよいレポートが必要です。そのレポートを作成するようスキルを更新しましょう。
 
 1. **Files** キャンバスに戻ります。
 2. まだ開いていない場合は、`.github/skills/quality-checks/SKILL.md` を開きます。
-3. ファイルの末尾にある **Results output formatting** という見出しを見つけます。
-4. その見出しのすぐ下に次の内容を追加し、指定した形式で結果を表示するようにします。
+3. ファイルの末尾に次のセクションを追加します。
 
     ```markdown
-    Upon completion of all tests, generate a report that provides a quick overview of both success and failure of the tests, and how long they took to ran. In particular, we need sections for:
+    ## Results output formatting
 
-    - Unit tests, total number of tests, number succeeded, number failed, a percentage thereof, and the amount of time testing took.
-    - End to end tests, total number of tests, number succeeded, number failed, a percentage thereof, and the amount of time testing took.
-    - Linting, number of lines scanned, number of violations, and the percentage of lines of code that meet the linting requirements.
+    Upon completion, report each command that ran and whether it passed, failed, or was blocked. Include test counts, durations, errors, warnings, and other metrics only when the tool reports them. Identify the next action for any failure or blocker, and never describe a skipped or incomplete check as passed.
     ```
 
 ファイルは自動的に保存されます。
@@ -75,10 +72,10 @@ Tailspin Toys チームがテストと linter の実行用に作成した `quali
 変更したスキルを実際に試してみましょう。先ほどとまったく同じプロンプトを使用します。
 
 1. モードのドロップダウンから **Interactive** を選択し、Copilot が Interactive モードになっていることを確認します。
-2. 次のプロンプトを使って Copilot にテストと linter の実行を依頼し、スキルを呼び出します。
+2. 次のプロンプトを使ってスキルを呼び出します。
 
     ```plaintext
-    Run the tests and linters.
+    Run the quality-checks skill for unit tests, lint, and type checks.
     ```
 
 3. 最後に表示されるレポートを確認します。
@@ -87,7 +84,7 @@ Tailspin Toys チームがテストと linter の実行用に作成した `quali
 
 既存のエージェントスキルをカスタマイズして使用しました。このレッスンでは、次の作業を行いました。
 
-- `quality-checks` スキルと同梱のスクリプトを確認した。
+- 単体テスト、lint、型チェックを実行する `quality-checks` スキルを確認した。
 - 結果の報告形式をカスタマイズした。
 - スキルを実行し、出力をレビューした。
 

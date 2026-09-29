@@ -3,7 +3,7 @@ title: "Lección 5 - Personalizar y utilizar una habilidad quality-checks"
 description: "Explora la habilidad quality-checks existente, personaliza el formato de su informe y utilízala para validar el filtrado."
 authors:
   - geektrainer
-lastUpdated: 2026-09-11
+lastUpdated: 2026-09-29
 ---
 
 Escribir código implica mucho más que limitarse a escribirlo. Hemos podido validar manualmente que funciona y hemos utilizado archivos de instrucciones para garantizar que sigue nuestros estándares. Pero ¿qué ocurre con las pruebas, lint y el resto de las tareas de integración continua (CI)?
@@ -12,13 +12,13 @@ Para este tipo de tareas, las **habilidades de agente** son la mejor opción. La
 
 En esta lección:
 
-- explorarás la habilidad `quality-checks` existente y sus scripts incluidos.
+- explorarás la habilidad `quality-checks` existente.
 - personalizarás el formato de sus resultados.
 - ejecutarás la habilidad y revisarás su salida.
 
 ## Escenario
 
-Tailspin Toys dispone de un conjunto de pruebas unitarias y de un extremo a otro que siempre deben ejecutarse antes de crear cualquier solicitud de incorporación de cambios (PR). Como cabe esperar, es importante garantizar que se ejecuten de forma correcta y coherente. El equipo ya ha creado una habilidad de agente para ejecutar estas pruebas, pero quiere mejorar la salida para facilitar su lectura.
+Tailspin Toys utiliza la habilidad `quality-checks` para las pruebas unitarias, lint y las comprobaciones de tipos. El equipo quiere mejorar el informe para facilitar la lectura de los resultados.
 
 ## Instrucciones, scripts y recursos
 
@@ -38,32 +38,29 @@ Las habilidades pueden residir en la carpeta `.github/skills` de un proyecto par
 
 ## Ejecutar la habilidad antes de realizar un cambio
 
-Las habilidades se pueden invocar directamente mediante un comando con barra diagonal (`/`) o con lenguaje natural. La descripción destaca que la habilidad debe utilizarse cuando se solicite ejecutar pruebas o lint. Ejecutemos la habilidad pidiendo a Copilot que ejecute las pruebas.
+Las habilidades se pueden invocar directamente mediante un comando con barra diagonal (`/`) o con lenguaje natural. Pidamos a Copilot que ejecute las tres comprobaciones de la habilidad.
 
 1. Selecciona el modo **Interactive** en el menú desplegable para confirmar que Copilot lo utiliza.
-2. Utiliza la indicación siguiente para pedir a Copilot que ejecute las pruebas y el linter, lo que invocará la habilidad:
+2. Utiliza la indicación siguiente para invocar la habilidad:
 
     ```plaintext
-    Run the tests and linters.
+    Run the quality-checks skill for unit tests, lint, and type checks.
     ```
 
 3. Observa el informe final.
 
 ## Personalizar el informe
 
-Queremos un informe mejor que muestre las pruebas ejecutadas, las tasas de éxito y error y cuánto han tardado. Actualicemos la habilidad para que Copilot genere ese informe.
+Queremos un informe mejor que indique qué se ha ejecutado, si ha tenido éxito y qué han comunicado realmente las herramientas. Actualicemos la habilidad para generar ese informe.
 
 1. Vuelve al lienzo **Files**.
 2. Si aún no está abierto, abre `.github/skills/quality-checks/SKILL.md`.
-3. Busca al final del archivo el encabezado **Results output formatting**.
-4. Justo debajo, añade lo siguiente para que los resultados se muestren según nuestras especificaciones:
+3. Añade la siguiente sección al final del archivo:
 
     ```markdown
-    Upon completion of all tests, generate a report that provides a quick overview of both success and failure of the tests, and how long they took to ran. In particular, we need sections for:
+    ## Results output formatting
 
-    - Unit tests, total number of tests, number succeeded, number failed, a percentage thereof, and the amount of time testing took.
-    - End to end tests, total number of tests, number succeeded, number failed, a percentage thereof, and the amount of time testing took.
-    - Linting, number of lines scanned, number of violations, and the percentage of lines of code that meet the linting requirements.
+    Upon completion, report each command that ran and whether it passed, failed, or was blocked. Include test counts, durations, errors, warnings, and other metrics only when the tool reports them. Identify the next action for any failure or blocker, and never describe a skipped or incomplete check as passed.
     ```
 
 El archivo se guardará automáticamente.
@@ -73,10 +70,10 @@ El archivo se guardará automáticamente.
 Una vez realizado el cambio, veamos cómo funciona. Utilizaremos exactamente la misma indicación que antes.
 
 1. Selecciona el modo **Interactive** en el menú desplegable para confirmar que Copilot lo utiliza.
-2. Utiliza la indicación siguiente para pedir a Copilot que ejecute las pruebas y el linter, lo que invocará la habilidad:
+2. Utiliza la indicación siguiente para invocar la habilidad:
 
     ```plaintext
-    Run the tests and linters.
+    Run the quality-checks skill for unit tests, lint, and type checks.
     ```
 
 3. Observa el informe final.
@@ -85,7 +82,7 @@ Una vez realizado el cambio, veamos cómo funciona. Utilizaremos exactamente la 
 
 Has personalizado y utilizado una habilidad de agente existente. En esta lección:
 
-- has explorado la habilidad `quality-checks` y sus scripts incluidos.
+- has explorado la habilidad `quality-checks` para las pruebas unitarias, lint y las comprobaciones de tipos.
 - has personalizado el formato de sus resultados.
 - has ejecutado la habilidad y revisado su salida.
 
