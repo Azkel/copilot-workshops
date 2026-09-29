@@ -18,7 +18,7 @@ GitHub Copilot meets you wherever you work. Choose the environment that matches 
 
 ### [GitHub Copilot CLI][cli]
 
-Use the agentic assistant in your terminal. Connect MCP servers, generate code with plan mode, and build skills, custom agents, and slash commands.
+Use the agentic assistant in your terminal. Work with Plan and Autopilot modes, instructions, skills, custom agents, Playwright MCP, Agent Merge, and practical slash commands.
 
 ### [GitHub Copilot app][app]
 

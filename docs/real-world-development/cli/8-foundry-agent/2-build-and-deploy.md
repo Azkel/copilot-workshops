@@ -22,7 +22,7 @@ Tailspin Toys needs more than a one-off answer from a model. Backers expect the 
 
 This module builds on the working model from Module 1. You'll keep the same project and deployment rather than creating another set of Azure resources.
 
-1. Return to the Tailspin Toys repository on the `foundry-agent-cli` branch and your Copilot CLI session from Module 1.
+1. Return to your Codespace, then open the Tailspin Toys repository on the `foundry-agent-cli` branch and your Copilot CLI session from Module 1.
 2. Confirm that `db/catalog.json` is available and that you still have the Foundry project, selected model deployment, and Azure sign-in used for the model test. If you haven't completed that setup, finish [Prepare the project and model][previous-lesson] first.
 
 > [!IMPORTANT]

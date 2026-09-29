@@ -1,6 +1,9 @@
 {
     "cSpell.words": [
         "agentic",
+        "agentmerge",
+        "frontmatter",
+        "subfolders",
         "winget"
     ],
     "typescript.tsdk": "website/node_modules/typescript/lib"
