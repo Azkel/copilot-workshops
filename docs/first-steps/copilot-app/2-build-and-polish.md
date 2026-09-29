@@ -3,7 +3,7 @@ title: "Lesson 2 - Build and polish the quiz"
 description: "Build a single-file Space Quiz and refine it with the integrated browser and element picker."
 authors:
   - jamesmontemagno
-lastUpdated: 2026-09-16
+lastUpdated: 2026-09-28
 ---
 
 Use one detailed prompt to build the Space Quiz, verify its behavior in the integrated browser, and make a visual refinement with the element picker.
@@ -57,6 +57,6 @@ If you want to continue experimenting, ask the agent to:
 
 ## Summary and next steps
 
-You built, tested, inspected, and refined the Space Quiz. Continue to [Lesson 3: Publish the project][next-lesson].
+You built, inspected, and refined the Space Quiz. Continue to [Lesson 3: Inspect the session and test the quiz][next-lesson].
 
-[next-lesson]: ../3-publish/
+[next-lesson]: ../3-inspect-and-test/

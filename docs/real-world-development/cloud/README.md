@@ -1,6 +1,6 @@
 ---
 slug: real-world-development/cloud
-title: "Copilot cloud agent"
+title: "GitHub Copilot cloud agent"
 authors:
   - geektrainer
 lastUpdated: 2026-06-30
