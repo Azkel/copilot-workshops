@@ -1,6 +1,6 @@
 ---
 name: validate-site-playwright
-description: Render-validate the built Copilot Workshops site in a real browser using the Playwright MCP server. Use as an optional deeper QA pass — after the static checks in build-and-verify-docs — to confirm pages actually render: navigate the built routes, assert HTTP 200, catch console/hydration errors, find broken images, confirm Starlight Markdown features rendered, and optionally screenshot key pages. Trigger when asked to "validate the built site", "check the pages render", "do a browser/visual QA pass", or before opening a PR that changes rendered output.
+description: Render-validate the built Copilot Workshops site in a real browser using the Playwright MCP server. Use as an optional deeper QA pass — after the static checks in build-and-verify-docs — to confirm pages actually render. Trigger when asked to "validate the built site", "check the pages render", "do a browser/visual QA pass", or before opening a PR that changes rendered output.
 ---
 
 # Validate the built site with Playwright
@@ -39,7 +39,7 @@ Don't hard-code URLs. The built `dist/` is the source of truth for what routes e
 find website/dist -name index.html | grep -v 404 | sed 's#website/dist#/copilot-workshops#; s#/index.html#/#'
 ```
 
-Validate a **representative sample** that covers every layout and harness: the landing page (`/copilot-workshops/`), a per-harness prerequisites page (e.g. `cli/0-prerequisites/`), and at least one lesson from each of `cli/`, `vscode/`, `cloud/`, and `app/`. For a release pass or a change that touches shared layout/components, validate **all** routes.
+Validate a **representative sample** that covers every category and workshop: the landing page (`/copilot-workshops/`), a first-steps lesson, and at least one real-world development lesson from each of `cli/`, `vscode/`, `cloud/`, and `app/`. For a release pass or a change that touches shared layout/components, validate **all** routes.
 
 ## 3. Validate each route
 
