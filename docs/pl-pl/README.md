@@ -38,7 +38,7 @@ Wybierz spośród GitHub Copilot CLI, aplikacji GitHub Copilot, agenta chmuroweg
 >
 > Jeśli coś wygląda na uszkodzone lub nie działa poprawnie podczas warsztatów prowadzonych przez instruktora, poproś mentora o pomoc.
 
-[first-steps-app]: ../first-steps/copilot-app/
-[first-steps-cli]: ../first-steps/copilot-cli/
-[first-steps-vscode]: ../first-steps/vscode/
+[first-steps-app]: first-steps/copilot-app/
+[first-steps-cli]: first-steps/copilot-cli/
+[first-steps-vscode]: first-steps/vscode/
 [real-world-development]: real-world-development/
